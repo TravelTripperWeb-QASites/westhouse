@@ -1,0 +1,12 @@
+url: "http://www.westhousehotelnewyork.com"
+
+# Build settings
+default_lang: 'en'
+languages: ['en']
+
+exclude: ['sitemap.json']
+
+# page_gen:
+#   - data: 'books'
+#     template: 'book'
+#     dir: 'book'
