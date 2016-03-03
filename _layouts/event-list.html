@@ -1,0 +1,79 @@
+{% assign template_class = 'eventlist' %}
+
+{% template title:header %}
+
+		<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/6372/original/westhouse-hotel-new-york-events.jpg);">
+
+				<h1 class="contenttitle">Events</h1>
+
+			<div class="reserve"><a class="button1" href="#">Reserve</a></div>
+
+		</div>
+
+		<div id="contentwidget">
+		   <div class="logo"><a href="/"><img src="http://cdn.traveltripper.io/assets/712/original/logo3.png" alt="logo3" /></a></div>
+
+           <!-- include booking form -->
+
+            {% template title:booking_form_interior %}
+
+            <!-- // include booking form -->
+            
+		</div>
+
+		<div class="subnav">
+			<ul>
+			    
+				<li></li>
+				
+			
+			</ul>
+		</div>
+
+		<div id="maincontent">
+
+			<div class="container">
+
+				<h1>Upcoming Events</h1>
+                
+                {% region id:events_welcome_content %}
+
+				<br>
+				<br>
+
+				<ul class="stackers">
+                    {% models filter:LatestEvents %}
+					<li>
+						<a href="{% link id:952, instance:LatestEvents %}" class="dropanchor"></a>
+						<img src="{{ LatestEvents.image.url }}" alt="{{ LatestEvents.title }}">
+						<h2>{{ LatestEvents.title }}<span>{{ LatestEvents.date }}</span></h2>
+						<p>{{ LatestEvents.preview  | truncate: 210 }}</p>
+						<a href="{% link id:952, instance:LatestEvents %}" class="button">Continue</a>
+					</li>
+					{% endmodels %}
+				</ul>
+
+			</div>
+
+		</div>
+		
+<script type="text/javascript">
+    console.log('start define events')
+    var allEvents = [
+        {% models model:Event %}
+            {
+                title: "{{Event.title | json}}",
+                date: "{{Event.datemeta}}",
+                content: "{{Event.content | escape | newline_to_br }}"
+            },
+        {% endmodels %}
+    ];
+    
+    console.log("defined all events!")
+    
+</script>
+
+
+
+		
+{% template title:footer %}

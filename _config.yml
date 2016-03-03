@@ -6,6 +6,11 @@ languages: ['en']
 
 exclude: ['sitemap.json']
 
+page_gen:
+  - data: 'Blog'
+    template: 'blog-single'
+    dir: 'blog'
+
 # page_gen:
 #   - data: 'books'
 #     template: 'book'

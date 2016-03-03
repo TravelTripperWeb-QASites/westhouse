@@ -1,0 +1,75 @@
+{% assign template_class = 'bloglist' %}
+
+{% template title:header %}
+
+		<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/1972/original/WestHouse-HomePage-MainBanner.jpg);">
+
+			<h1 class="contenttitle">WestHouse. Your House</h1>
+
+			<div class="reserve"><a class="button1" href="#">Reserve</a></div>
+
+		</div>
+
+		<div id="contentwidget">
+		   <div class="logo"><a href="/"><img src="http://cdn.traveltripper.io/assets/712/original/logo3.png" alt="logo3" /></a></div>
+
+           <!-- include booking form -->
+
+            {% template title:booking_form_interior %}
+
+            <!-- // include booking form -->
+		</div>
+        
+        <!--
+        
+		<div class="subnav">
+		
+    			<ul>
+    			    {% models model:BlogCategory %}
+        				<li><a data-category-id="{{BlogCategory.id}}">{{BlogCategory.name}}</a></li>
+    	    		{% endmodels %}
+    			</ul>
+    		
+		</div>
+		
+        <div class="subnavmobile">
+			<ul>
+				{% models model:BlogCategory %}
+				<li><a href="{{BlogCategory.id}}"><span>{{BlogCategory.name}}</span></a></li>
+				{% endmodels %}
+				<div class="clear"></div>
+			</ul>
+			<div class="subclose"><i class="fa fa-bars"></i><span>View Categories</span></div>
+        </div>
+        
+        -->
+
+		<div id="maincontent" class="blogg">
+
+			<div class="container">
+                    
+                    {% region id: blog_lists_content2 %}
+                    
+				<br>
+				<br>
+
+				<ul class="stackers" style="padding-left: 0;">
+                    {% models filter:LatestBlogs %}
+					<li data-category-ids="{% for cat in LatestBlogs.category %} {{ cat.id }} {% endfor %}">
+						<a href="{% link id:922, instance:LatestBlogs %}" class="dropanchor"></a>
+						<img src="{{ LatestBlogs.image.url }}" alt="{{ LatestBlogs.title }}">
+						<h2>{{ LatestBlogs.title }}</h2>
+						<p>{{ LatestBlogs.preview  | truncate: 210}}</p>
+						<a href="{% link id:922, instance:LatestBlogs %}" class="button">Continue</a>
+					</li>
+					
+					{% comment %}{% cycle '', '<div class="clear clearblog2"></div>' %}{% endcomment %}
+					
+					{% endmodels %}
+				</ul>
+
+			</div>
+
+		</div>
+
+{% template title:footer %}

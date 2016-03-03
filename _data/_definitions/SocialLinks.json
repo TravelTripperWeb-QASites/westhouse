@@ -1,0 +1,8 @@
+{
+    "name": {
+        "required": true
+    },
+    "url": {
+        "required": true
+    }
+}

@@ -1,0 +1,95 @@
+{% assign template_class = 'page-amenities-single' %}
+{% assign seo_title = Amenities.seo_title %}
+{% assign seo_description = Amenities.seo_description %}
+
+{% template title:header %}
+
+	
+		<div id="featuredcontent" style="background-image: url({{ Amenities.image.url }});">
+
+			<h1 class="contenttitle">{{ Amenities.title }}</h1>
+
+			<div class="reserve"><a class="button1" href="#">Reserve</a></div>
+
+		</div>
+
+		<div id="contentwidget">
+		   <div class="logo"><a href="/"><img src="http://cdn.traveltripper.io/assets/712/original/logo3.png" alt="logo3" /></a></div>
+
+           <!-- include booking form -->
+
+            {% template title:booking_form_interior %}
+
+            <!-- // include booking form -->
+		</div>
+
+		<div class="subnav">
+			<ul>
+			
+			    {% models model:Amenities %}
+
+        		<li><a href="{% link id:1062, instance:Amenities %}">{{ Amenities.title }}</a></li>
+                {% endmodels %}
+				
+			</ul>
+		</div>
+		
+		
+        <div class="subnavmobile">
+          <ul>
+            {% models model:Amenities %}
+			<li><a href="{% link id:1062, instance:Amenities %}"><span>{{ Amenities.title }}</span></a></li>
+            {% endmodels %}
+            <div class="clear"></div>
+          </ul>
+          
+          <div class="subclose"><i class="fa fa-bars"></i><span>View More Amenities</span></div>
+        </div>
+		
+		
+		<div id="maincontent">
+		
+			<div class="container">
+			
+				<h1 style="text-align:center;">{{Amenities.title}}</h1>
+				
+			    {{ Amenities.content }}
+			
+			</div>
+			
+		</div>
+		
+		<!--<div class="partnersmeta">
+		
+			<div class="col2">
+			
+				<div class="pr15">
+		
+					<p><img src="images/partners-detail1.jpg" alt="partner" /></p>
+					
+					<blockquote>{{ Amenities.blockquote }}</blockquote>
+				
+				</div>
+			
+			</div>
+			
+			<div class="col2">
+			
+				<div class="pl15">
+		
+					<p><img src="images/partners-detail2.jpg" alt="partner" /></p>
+				
+				</div>
+			
+			</div>
+			
+			<div class="col1">
+		
+					<p><img src="images/partners-detail3.jpg" alt="partner" /></p>
+				
+			</div>
+			
+		</div>-->
+		
+
+{% template title:footer %}

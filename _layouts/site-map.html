@@ -1,0 +1,37 @@
+{% assign template_class = 'site-map' %}
+
+{% template title:header %}
+
+        <div id="featuredcontent" style="background-image: url('http://cdn.traveltripper.io/assets/4912/original/westhouse-hotel-new-york-entrance.jpg');">
+		
+			<!--<h2 class="contenttitle"></h2>-->
+			
+			<!--<div class="reserve"><a class="button1" href="#">Reserve</a></div>-->
+			
+		</div>
+		
+		<div id="contentwidget">
+		   <div class="logo"><a href="/"><img src="http://cdn.traveltripper.io/assets/712/original/logo3.png" alt="logo3" /></a></div>
+
+           <!-- include booking form -->
+
+            {% template title:booking_form_interior %}
+
+            <!-- // include booking form -->
+		</div>
+		
+		<div class="subnav">
+		</div>
+		
+		<div id="maincontent">
+		
+			<div class="container">
+		
+				{% region id:site_map %}
+			
+			</div>
+		
+		</div>
+		
+
+{% template title:footer %}
