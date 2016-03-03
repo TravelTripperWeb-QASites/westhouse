@@ -102,17 +102,14 @@
 				<div class="fromtheblog">
 					<h3>from the westhouse your house blog</h3>
 					
-          
-                {% for LimitedLastestBlogs in site.data._models.Blogs %}
+                {% assign LatestBlogs = site.data._models.Blog | sort: 'datemeta' | reverse  %}
+                {% for LimitedLastestBlogs in LatestBlogs | limit: 2 %}
         				  
         					<div class="blogitem" data-category-ids="{% for cat in LimitedLastestBlogs.category %} {{ cat.id }} {% endfor %}">
         						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'blog' }}">
-        						<div class="bogpick" style="background-image: url({% if LimitedLastestBlogs.thumbnail.url %}{{ LimitedLastestBlogs.thumbnail.url }}{% else %}{{ LimitedLastestBlogs.image.url }}{% endif %});"></div>
+        						{%comment%}<div class="bogpick" style="background-image: url({% if LimitedLastestBlogs.thumbnail.url %}{{ LimitedLastestBlogs.thumbnail.url }}{% else %}{{ LimitedLastestBlogs.image.url }}{% endif %});"></div>{%endcomment%}
         						<h4>{{ LimitedLastestBlogs.title }}</h4>
         						</a>
-                    {% if forloop.index > 2 %}
-                      {% break %}
-                    {% endif %}
         					</div>
         				
                 {% endfor %}

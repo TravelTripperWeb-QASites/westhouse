@@ -39,7 +39,7 @@
     "required": true,
     "hint": "Write the preview of your article"
   },
-  "content": {
+  "contents": {
     "type": "richtext",
     "required": true,
     "hint": "Write the content of your article"
