@@ -103,7 +103,7 @@
 					<h3>from the westhouse your house blog</h3>
 					
                 {% assign LatestBlogs = site.data._models.Blog | sort: 'datemeta' | reverse  %}
-                {% for LimitedLastestBlogs in LatestBlogs | limit: 2 %}
+                {% for LimitedLastestBlogs in LatestBlogs | limit: 4 %}
         				  
         					<div class="blogitem" data-category-ids="{% for cat in LimitedLastestBlogs.category %} {{ cat.id }} {% endfor %}">
         						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'blog' }}">
