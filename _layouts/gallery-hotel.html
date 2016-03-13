@@ -1,6 +1,6 @@
 {% assign template_class = 'page-galleries-amenities' %}
 
-{% template title:header %}    
+{% include header.html %}    
     
     <div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/4452/original/WestHouse_Room_1901_Livingroom_v3s.jpg);">
 
@@ -15,7 +15,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -23,11 +23,11 @@
 
 		<div class="subnav">
 			<ul>
-				<!--<li><a href="{% link id:1242 %}">Hotel</a></li>-->
-				<li><a href="{% link id:1262 %}">Amenities</a></li>
-				<li><a href="{% link id:1762 %}">Accommodations</a></li>
-				 <li><a href="{% link id:1752 %}">Dining</a></li>
-			<!--	<li><a href="{% link id:3971 %}">Virtual Tours</a></li> -->
+				<!--<li><a href="">Hotel</a></li>-->
+				<li><a href="{{ 'photo-album/nyc-hotel-amenities' | permalink }}">Amenities</a></li>
+				<li><a href="{{ 'photo-album/accommodations' | permalink }}">Accommodations</a></li>
+				 <li><a href="{{ 'photo-album/dining-2' | permalink }}">Dining</a></li>
+			<!--	<li><a href="{{ 'photo-album/virtual-tours' | permalink }}">Virtual Tours</a></li> -->
 			</ul>
 		</div>
 
@@ -35,7 +35,7 @@
 
 			<div class="container">
 
-			       {% region id: amenties_gallery_text %}
+			       {% region amenties_gallery_text %}
 			       
 			</div>
 
@@ -429,4 +429,4 @@
 			</div>
 
 		</div>
-{% template title:footer %}
+{% include footer.html %}

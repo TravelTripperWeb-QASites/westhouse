@@ -5,18 +5,18 @@
     			<div class="container">
     				<div class="areacontent">
     					<div class="col3">
-    						{% comment %}<p>{% region id:area_content %}</p>{% endcomment %}
+    						{% comment %}<p>{% region area_content %}</p>{% endcomment %}
     						<p>Just around the corner from Carnegie Hall, mere blocks from MoMa, Radio City Music Hall, Rockefeller Center, and the Broadway/Times Square Theatre District, WestHouse Hotel New York is tucked away on a side street off one of Midtown Manhattan’s most prominent avenues, making it the perfect home for both leisure and business travelers.</p>
     					</div>
     					<div class="col3">
-    						{% comment %}<p>{% region id:area_content_two %}</p>{% endcomment %}
+    						{% comment %}<p>{% region area_content_two %}</p>{% endcomment %}
     						<p>Lincoln Center is nearby, as are the treasures of Central Park and the boutiques along Fifth Avenue. From here, you can savor Michelin-level dining at world-renowned restaurants, or discover the heart and soul of New York City cuisine at favorite local venues recommended by our Concierge.</p>
     					</div>
     					<div class="col3 htitle">
     						<h3>Area</h3>
     					</div>
     					
-    					<a href="/things-to-do-in-nyc" class="continuebutton">more</a>
+    					<a href="{{ 'things-to-do-in-nyc' | permalink }}" class="continuebutton">more</a>
     				</div>
     			</div>
     		</div>
@@ -26,7 +26,7 @@
 		<div id="signup">
 			<div class="container">
 				<div class="signuptext">
-					{% comment %}<p>{% region id:signup_content %}</p>{% endcomment %}
+					{% comment %}<p>{% region signup_content %}</p>{% endcomment %}
 					<p>To learn more about WestHouse Hotel New York events, news and our latest promotions, please enter your name and email.</p>
 				</div>
 				<div class="signupform">
@@ -102,22 +102,22 @@
 				<div class="fromtheblog">
 					<h3>from the westhouse your house blog</h3>
 					
-                {% assign LatestBlogs = site.data._models.Blog | sort: 'datemeta' | reverse  %}
-                {% for LimitedLastestBlogs in LatestBlogs | limit: 2 %}
-        				  
+        				{% assign LatestBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
+{% for LimitedLastestBlogs in LatestBlogsList | limit: 2 %}
+        				
         					<div class="blogitem" data-category-ids="{% for cat in LimitedLastestBlogs.category %} {{ cat.id }} {% endfor %}">
-        						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'blog' }}">
-        						{%comment%}<div class="bogpick" style="background-image: url({% if LimitedLastestBlogs.thumbnail.url %}{{ LimitedLastestBlogs.thumbnail.url }}{% else %}{{ LimitedLastestBlogs.image.url }}{% endif %});"></div>{%endcomment%}
+        						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'westhouse-blog' }}">
+        						<div class="bogpick" style="background-image: url({% if LimitedLastestBlogs.thumbnail.url %}{{ LimitedLastestBlogs.thumbnail.url }}{% else %}{{ LimitedLastestBlogs.image.url }}{% endif %});"></div>
         						<h4>{{ LimitedLastestBlogs.title }}</h4>
         						</a>
         					</div>
         				
-                {% endfor %}
+                        {% endfor %}
                 
 
 					<div class="clear"></div>
 
-					<div class="moreblog"><a href="/westhouse-blog">View more</a></div>
+					<div class="moreblog"><a href="{{ 'westhouse-blog' | permalink }}">View more</a></div>
 
 				</div>
 				
@@ -147,12 +147,14 @@
                     
 
                    
-					<li><a href="/privacy-policy">Privacy Policy</a></li> 
-					<li><a href="/sitemap">Sitemap</a></li> 
-					<li><a href="/careers">Careers</a></li> 
-					<li><a href="/press">Press</a></li>
-					<li><a href="/contact-us">Contact</a></li>
-					<li><a href="/social-media">Connect</a></li>
+					<!--<li><a href="{{ 'about' | permalink }}">Our House</a></li>-->
+					<li><a href="{{ 'privacy-policy' | permalink }}">Privacy Policy</a></li> 
+					<li><a href="{{ 'sitemap' | permalink }}">Sitemap</a></li> 
+					<li><a href="{{ 'careers' | permalink }}">Careers</a></li> 
+					<li><a href="{{ 'press' | permalink }}">Press</a></li>
+				<!--	<li><a href="{{ 'luxury-hotel-amenities-nyc' | permalink }}">Sitemap</a></li> -->
+					<li><a href="{{ 'contact-us' | permalink }}">Contact</a></li>
+					<li><a href="{{ 'social-media' | permalink }}">Connect</a></li>
 					
 					{% endfor %}
 				</ul>
@@ -168,6 +170,17 @@
         
         <div class="toppernav">
                 
+               <!-- <ul class="footernavigation">
+                    {% for pages in page_tree %}
+                    
+
+                    <li><a href="{{ '' | permalink }}">Home</a></li>
+					<li><a href="{{ 'about' | permalink }}">Our House</a></li>
+					<li><a href="{{ 'events-in-nyc' | permalink }}">Area Events</a></li>
+					<li><a href="{{ 'contact-us' | permalink }}">Contact</a></li>
+					
+					{% endfor %}
+				</ul>-->
             
         </div>
 		<div class="closerlink">X</div>
@@ -189,7 +202,7 @@
 					<li><a href="#tab-1-7">Partners</a></li>
                     <li><a href="#tab-1-8">Blog</a></li>
                     <!--<li><a href="#tab-1-9">Events</a></li> -->
-                    <li><a class="connect" href="/social-media">Connect With Us</a></li>
+                    <li><a class="connect" href="{{ 'social-media' | permalink }}">Connect With Us</a></li>
 
 				</ul>
 				
@@ -234,10 +247,10 @@
 							</div>
 
 							<div class="col3">
-								<!--{% region id:nav_rooms_content %}-->
+								<!--{% region nav_rooms_content %}-->
 								
 								<p>Evoking the glamour of a 1920’s Carnegie Hall dressing room, well-framed luxury comes standard in all bedrooms and suites with beveled mirrors and cultured images of Hollywood and Broadway hanging from Art Deco picture rails.</p>
-								<a href="/luxury-rooms-suites-nyc" class="button1">View All</a>
+								<a href="{{ 'luxury-rooms-suites-nyc' | permalink }}" class="button1">View All</a>
 							</div>
 
 
@@ -248,7 +261,7 @@
 						
 						     <div class="boxcontainer" ng-repeat="room in browser.rooms" ng-if="room.code != 'QUAD' && room.code != 'WHKSA'">
 
-								<a href="/room#[[room.code]]" class="dropanchor click-and-close"></a>
+								<a href="{{ 'luxury-rooms-suites-nyc/room' | permalink }}#[[room.code]]" class="dropanchor click-and-close"></a>
 
 								<div class="lining">
 
@@ -263,6 +276,10 @@
                         	<div class="clear"></div>
 
 						</div>
+
+					<!--	<div class="massivebutton">
+								<a href="{{ '' | permalink }}">View All Rooms</a>
+							</div> -->
 
 					</div>
 					
@@ -284,11 +301,11 @@
 
 							<div class="col3">
 								
-								<!--{% region id:nav_offers_content %}-->
+								<!--{% region nav_offers_content %}-->
 								
 								<p>From special celebrations, private car services and customized shopping experiences to amenities for pets and indulgences for children, your stay at WestHouse Hotel New York is enhanced with one or more of our special offers.</p>
 								
-								<a href="/westhouse-offers" class="button1">View All</a>
+								<a href="{{ 'westhouse-offers' | permalink }}" class="button1">View All</a>
 							</div>
 
 
@@ -301,7 +318,7 @@
                         
 							<div class="boxcontainer">
 
-								<a href="{{ Offers.id | permalink }}" class="dropanchor"></a>
+								<a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -320,6 +337,10 @@
 						
 						
 
+						<!--<div class="massivebutton">
+							<a href="{{ 'westhouse-offers' | permalink }}">View All Offers</a>
+						</div>-->
+						
 					</div>
 
 
@@ -339,10 +360,10 @@
 
 							<div class="col3">
 								
-								<!--{% region id:nav_amenities_content %}-->
+								<!--{% region nav_amenities_content %}-->
 								<p>A boutique hotel in NYC, WestHouse Hotel New York is a true “house away from home” where a curated portfolio of services and hotel amenities transcends the norm to create a purely exclusive yet welcoming experience.</p>
 								
-								<a href="/luxury-hotel-amenities-nyc" class="button1">View All</a>
+								<a href="{{ 'luxury-hotel-amenities-nyc' | permalink }}" class="button1">View All</a>
 							</div>
 
 
@@ -355,7 +376,7 @@
                         
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{Amenities.id | permalink}}" class="dropanchor"></a>
+								<a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -374,6 +395,10 @@
 						
 						
 
+						<!--<div class="massivebutton">
+							<a href="{{ 'luxury-hotel-amenities-nyc' | permalink }}">View All Amenities</a>
+						</div>-->
+
 
 					</div>
                     
@@ -391,11 +416,11 @@
 
 							<div class="col3">
 								
-								<!--{% region id:nav_dining_content %}-->
+								<!--{% region nav_dining_content %}-->
 								
 								<p>Moments of indulgence elevate the everyday; enjoy breakfast on The Terrace with captivating views that rival rooftop restaurants in NYC and afternoon libations at The Den where our modern speak-easy cocktail hour unfolds.</p>
 								
-								<a href="/dining" class="button1">View All</a>
+								<a href="{{ 'dining' | permalink }}" class="button1">View All</a>
 							</div>
 
 
@@ -408,7 +433,7 @@
                         
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{Dining.id | permalink}}" class="dropanchor"></a>
+								<a href="{{ Dining.id | permalink: model_dir: 'dining' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -427,6 +452,9 @@
 						
 						
 
+						<!--<div class="massivebutton">
+							<a href="{{ 'dining' | permalink }}">View All Dining</a>
+						</div>-->
 					    
 					</div>
 					
@@ -449,7 +477,7 @@
 								
 								<p>A visual tour of WestHouse Hotel New York invites you to make WestHouse, Your House.</p>
 								
-								<a href="/photo-album" class="button1">View All</a>
+								<a href="{{ 'photo-album' | permalink }}" class="button1">View All</a>
 							</div>
 
 
@@ -460,7 +488,7 @@
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="/accommodations" class="dropanchor"></a>
+								<a href="{{ 'photo-album/accommodations' | permalink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -474,7 +502,7 @@
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="/dining-2" class="dropanchor"></a>
+								<a href="{{ 'photo-album/dining-2' | permalink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -488,7 +516,7 @@
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="/nyc-hotel-amenities" class="dropanchor"></a>
+								<a href="{{ 'photo-album/nyc-hotel-amenities' | permalink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -500,11 +528,29 @@
 								
 							</div>
 							
+							<!-- <div class="boxcontainer halfsiebox">
+
+								<a href="{{ 'photo-album/virtual-tours' | permalink }}" class="dropanchor"></a>
+
+								<div class="lining">
+
+									<div class="boxpic" style="background-image: url(http://cdn.traveltripper.io/assets/4542/original/westhouse-hotel-new-york-amenities7.jpg);"></div>
+
+								</div>
+
+								<h2>Virtual Tours</h2>
+								
+							</div> -->
 							
 							<div class="clear"></div>
                             
 						</div>
 						
+						
+
+						<!--<div class="massivebutton">
+							<a href="{{ 'photo-album' | permalink }}">View All Galleries</a>
+						</div>-->
 						
 						
 					</div>
@@ -528,11 +574,11 @@
 
 							<div class="col3">
 								
-							<!--	{% region id:nav_neighborhood_content %} -->
+							<!--	{% region nav_neighborhood_content %} -->
 							
 							<p>Surrounded by many of the top things to do in NYC, the hotel offers easy access to several city subway stations. All major airports – JFK International, LaGuardia and Newark – are just 45 minutes away by taxi or private car.</p>
 								
-								<a href="/things-to-do-in-nyc" class="button1">View All</a>
+								<a href="{{ 'things-to-do-in-nyc' | permalink }}" class="button1">View All</a>
 							</div>
 
 
@@ -545,7 +591,7 @@
                         
 							<div class="boxcontainer halfsiebox">
 
-								<a href="/art-culture" class="dropanchor"></a>
+								<a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -559,7 +605,7 @@
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="/shopping" class="dropanchor"></a>
+								<a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -574,7 +620,7 @@
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="/entertainment" class="dropanchor"></a>
+								<a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -588,7 +634,7 @@
                             
                             <div class="boxcontainer halfsiebox">
 
-								<a href="/must-see-nyc" class="dropanchor"></a>
+								<a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -602,7 +648,7 @@
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="/events-in-nyc" class="dropanchor"></a>
+								<a href="{{ 'events-in-nyc' | permalink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -614,12 +660,30 @@
 								
 							</div>
 							
+							<div class="boxcontainer halfsiebox">
+
+								<a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}" class="dropanchor"></a>
+
+								<div class="lining">
+
+									<div class="boxpic" style="background-image: url(http://cdn.traveltripper.io/assets/9507/original/westhouse-hotel-new-york-events.jpg);"></div>
+
+								</div>
+
+								<h2>Culinary Guide</h2>
+								
+							</div>
+							
                             
                             <div class="clear"></div>
                             
 						</div>
 						
 						
+
+					<!--	<div class="massivebutton">
+							<a href="{{ 'things-to-do-in-nyc' | permalink }}">View Neighborhood Guide</a>
+						</div>-->
 
 						
 						
@@ -646,7 +710,7 @@
 								
 								<p>Elevating the air of pampered exclusivity, we have partnered with the very best luxury lifestyle brands to ensure your stay with us is one of sophisticated carefree indulgence.</p>
 								
-								<a href="/partners" class="button1">View All</a>
+								<a href="{{ 'partners' | permalink }}" class="button1">View All</a>
 							</div>
 
 
@@ -659,7 +723,7 @@
                         
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{Partners.id | permalink }}" class="dropanchor"></a>
+								<a href="{{ Partners.id | permalink: model_dir: 'partners' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -677,6 +741,10 @@
 						</div>
 						
 						
+
+						<!--<div class="massivebutton">
+							<a href="{{ 'partners' | permalink }}">View All Partners</a>
+						</div>-->
 
 
 					</div>
@@ -700,7 +768,7 @@
 								
 								<p>Welcome to your “insider’s guide” to all things New York. Check in with our WestHouse Your House blog to discover the cultured nuances that make this city hum with its own unique energy.</p>
 								
-								<a href="/westhouse-blog" class="button1">View All</a>
+								<a href="{{ 'westhouse-blog' | permalink }}" class="button1">View All</a>
 							</div>
 
 
@@ -710,11 +778,12 @@
 						<div class="boxes">
                         
 					
-                            {% for navBlogs in site.data._models.Blogs %}
+                            {% assign navBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
+{% for navBlogs in navBlogsList | limit: 8 %}
                         
 							<div class="boxcontainer" data-category-ids="{% for cat in navBlogs.category %} {{ cat.id }} {% endfor %}">
 
-								<a href="{{ navBlogs.id | permalink }}" class="dropanchor"></a>
+								<a href="{{ navBlogs.id | permalink: model_dir: 'westhouse-blog' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -727,9 +796,6 @@
                             
                             {% cycle '', '<div class="clear clear22"></div>', '<div class="clear clear33"></div>', '<div class="clear clear44"></div>' %}
                             
-                            {% if forloop.index gt 8 %}
-                              {% break %}
-                            {% endif %}
                             {% endfor %}
                             
                             <div class="clear"></div>
@@ -738,11 +804,72 @@
 						
 						
 
+						<!--<div class="massivebutton">
+							<a href="{{ 'westhouse-blog' | permalink }}">View All Posts</a>
+						</div>-->
+						
 						
 						
 					</div>
 					
 					
+					
+					<!-- EVENTS -->
+<!--
+					<div id="tab-1-9" class="tab-content">
+						
+						<div class="maintop">
+
+							<div class="col3 htitle">
+							
+								<h3>Events</h3>
+								
+							</div>
+
+							<div class="col3">
+								
+								{% comment %}{% region nav_blog_content %}{% endcomment %}
+								
+								<a href="{{ 'events-in-nyc' | permalink }}" class="button1">View All</a>
+							</div>
+
+
+							<div class="clear"></div>
+						</div>
+
+						<div class="boxes test">
+                        
+					
+                            {% assign LatestEventsList = site.data._models.Event | sort: 'datemeta' | reverse %}
+{% for LatestEvents in LatestEventsList %}
+                        
+							<div class="boxcontainer">
+
+								<a href="/events-in-nyc/{{ LatestEvents.url_friendly_name }}" class="dropanchor"></a>
+
+								<div class="lining">
+
+									<div class="boxpic" style="background-image: url({{ LatestEvents.image.url }});"></div>
+
+								</div>
+
+								<h2>{{ LatestEvents.title | truncate: 40}}</h2>
+							</div>
+                            
+                            {% endfor %}
+                            
+                            <div class="clear"></div>
+                            
+						</div>
+						
+						
+
+					    <div class="massivebutton">
+							<a href="{{ 'westhouse-blog' | permalink }}">View All Posts</a>
+						</div>
+						
+					</div>
+-->
 
 
 				</div>
@@ -894,46 +1021,7 @@
            }(document, 'script', 'facebook-jssdk'));
         </script>
         
-        <script type="text/javascript">
-
-    adroll_adv_id = "6VXI7MHCR5GHTCMM4J7PBG";
-
-    adroll_pix_id = "CYGNOSJPZZHVFL7W5SGZ6E";
-
-    (function () {
-
-        var _onload = function(){
-
-            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
-
-            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
-
-            var scr = document.createElement("script");
-
-            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-
-            scr.setAttribute('async', 'true');
-
-            scr.type = "text/javascript";
-
-            scr.src = host + "/j/roundtrip.js";
-
-            ((document.getElementsByTagName('head') || [null])[0] ||
-
-                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-
-        };
-
-        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
-
-        else {window.attachEvent('onload', _onload)}
-
-    }());
-
-</script>
-        
-        <script>(function(){ var v = document.createElement('script'); var s = document.getElementsByTagName('script')[0]; v.src = '//io.voyat.com/v.js'; v.async = true; s.parentNode.insertBefore(v, s); })();</script>
-
+    
 {% if template_class == 'single-rooms' %}
 
 <!--
@@ -1009,7 +1097,50 @@ WestHouse Tracking Pixel
 </script>
 <!-- End Sojern Tag -->
 
-{% endif %}
+{% endif %}    
+        
+        
+        
+        <script type="text/javascript">
+
+    adroll_adv_id = "6VXI7MHCR5GHTCMM4J7PBG";
+
+    adroll_pix_id = "CYGNOSJPZZHVFL7W5SGZ6E";
+
+    (function () {
+
+        var _onload = function(){
+
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+
+            var scr = document.createElement("script");
+
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+
+            scr.setAttribute('async', 'true');
+
+            scr.type = "text/javascript";
+
+            scr.src = host + "/j/roundtrip.js";
+
+            ((document.getElementsByTagName('head') || [null])[0] ||
+
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+
+        };
+
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+
+        else {window.attachEvent('onload', _onload)}
+
+    }());
+
+</script>
+        
+        <script>(function(){ var v = document.createElement('script'); var s = document.getElementsByTagName('script')[0]; v.src = '//io.voyat.com/v.js'; v.async = true; s.parentNode.insertBefore(v, s); })();</script>
+
 
 </body>
      

@@ -1,6 +1,6 @@
 {% assign template_class = 'page-partners' %}
 
-{% template title:header %}
+{% include header.html %}
 
 	
 		<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/5922/original/westhouse-hotel-new-york-good-hair-day.jpg);">
@@ -16,7 +16,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -24,10 +24,10 @@
 		<div class="subnav partners">
 			<ul>
 			
-			    {% models model:Partners %}
+			    {% for Partners in site.data._models.Partners %}
 
-        		<li><a href="{% link id:1072, instance:Partners %}">{{ Partners.title }}</a></li>
-                {% endmodels %}
+        		<li><a href="{{ Partners.id | permalink: model_dir: 'partners' }}">{{ Partners.title }}</a></li>
+                {% endfor %}
 				
 			</ul>
 		</div>
@@ -35,9 +35,9 @@
 		
         <div class="subnavmobile">
           <ul>
-            {% models model:Partners %}
-			<li><a href="{% link id:1072, instance:Partners %}"><span>{{ Partners.title }}</span></a></li>
-            {% endmodels %}
+            {% for Partners in site.data._models.Partners %}
+			<li><a href="{{ Partners.id | permalink: model_dir: 'partners' }}"><span>{{ Partners.title }}</span></a></li>
+            {% endfor %}
             <div class="clear"></div>
           </ul>
           
@@ -48,9 +48,9 @@
 
 			<div class="container">
 
-				<h2 style="text-align:center;">{% region id:partners_title %}</h2>
+				<h2 style="text-align:center;">{% region partners_title %}</h2>
 
-			     {% region id:partners_text %}
+			     {% region partners_text %}
 
 			</div>
 
@@ -59,15 +59,15 @@
 		<div id="partnerslist">
 			<ul>
 			
-			    {% models model:Partners %}
+			    {% for Partners in site.data._models.Partners %}
 
         		<li style="background-image: url({{ Partners.image.url }});">
 
-        			<a href="{% link id:1072, instance:Partners %}"><h3 class="roomtitle">{{ Partners.title }}</h3></a>
+        			<a href="{{ Partners.id | permalink: model_dir: 'partners' }}"><h3 class="roomtitle">{{ Partners.title }}</h3></a>
         			
         		</li>
         		
-                {% endmodels %}
+                {% endfor %}
 
 
 			</ul>
@@ -75,4 +75,4 @@
 		</div>
 		
 
-{% template title:footer %}
+{% include footer.html %}

@@ -1,8 +1,10 @@
+{% assign Neighborhood-Locations = page %}
+{% assign model = page %}
 {% assign template_class = 'single-neighborhood' %}
 {% assign seo_title = Neighborhood-Locations.seo_title %}
 {% assign seo_description = Neighborhood-Locations.seo_description %}
 
-{% template title:header %}
+{% include header.html %}
 
 		
 		<script type="text/javascript">
@@ -61,7 +63,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -69,29 +71,29 @@
 		<div class="subnav">
 			<ul>
 			    
-			    <li><a href="{% link id:222 %}">All</a></li>
+			    <li><a href="{{ 'things-to-do-in-nyc' | permalink }}">All</a></li>
 			     
-			    <li><a href="{% link id:1162 %}">Art & Culture</a></li>
+			    <li><a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}">Art & Culture</a></li>
 
-				<li><a href="{% link id:1152 %}">Shopping in NYC</a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}">Shopping in NYC</a></li>
 
-				<li><a href="{% link id:1172 %}">NYC Entertainment Guide</a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}">NYC Entertainment Guide</a></li>
 
-				<li><a href="{% link id:1182 %}">Must See NYC</a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}">Must See NYC</a></li>
 
-				<li><a href="{% link id:1142 %}">NYC Events Calendar</a></li>
+				<li><a href="">NYC Events Calendar</a></li>
 			</ul>
 		</div>
 		
 		
         <div class="subnavmobile">
 			<ul>
-			    <li><a href="{% link id:222 %}"><span>All</span></a></li>
-			    <li><a href="{% link id:1162 %}"><span>Art & Culture</span></a></li>
-				<li><a href="{% link id:1152 %}"><span>Shopping in NYC</span></a></li>
-				<li><a href="{% link id:1172 %}"><span>NYC Entertainment Guide</span></a></li>
-				<li><a href="{% link id:1182 %}"><span>Must See NYC</span></a></li>
-				<li><a href="{% link id:1142 %}"><span>NYC Events Calendar</span></a></li>
+			    <li><a href="{{ 'things-to-do-in-nyc' | permalink }}"><span>All</span></a></li>
+			    <li><a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}"><span>Art & Culture</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}"><span>Shopping in NYC</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}"><span>NYC Entertainment Guide</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}"><span>Must See NYC</span></a></li>
+				<li><a href=""><span>NYC Events Calendar</span></a></li>
 				<div class="clear"></div>
 			</ul>
 			<div class="subclose"><i class="fa fa-bars"></i><span>View More Areas</span></div>
@@ -104,7 +106,7 @@
 		
 				<h1>{{Neighborhood-Locations.title}}</h1>
 		
-			   {{Neighborhood-Locations.content}} 
+			   {{Neighborhood-Locations.contents}} 
 			   
 			   <p style="text-align: left;margin-top: 20px;"><a href="{{ Neighborhood-Locations.Outbound-Link }}" class="button" target="_blank">Visit Website</a></p>
 			
@@ -186,4 +188,4 @@
 		</div>
 		
 
-{% template title:footer %}
+{% include footer.html %}

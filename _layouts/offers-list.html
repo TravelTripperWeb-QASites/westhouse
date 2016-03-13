@@ -1,6 +1,6 @@
 {% assign template_class = 'page-offers' %}
 
-{% template title:header %}
+{% include header.html %}
 
 	
 		<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/3642/original/Spherical-WestHouse-6839.jpg);">
@@ -16,27 +16,27 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
 
 		<div class="subnav">
 			<ul>
-			    {% models model:Offers %}
+			    {% for Offers in site.data._models.Offers %}
 			    
-				<li><a href="{% link id:1092, instance:Offers %}">{{ Offers.title }}</a></li>
+				<li><a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}">{{ Offers.title }}</a></li>
 				
-				{% endmodels %}
+				{% endfor %}
 			</ul>
 		</div>
 		
 		
         <div class="subnavmobile">
           <ul>
-            {% models model:Offers %}
-            <li><a href="{% link id:1092, instance:Offers %}"><span>{{ Offers.title }}</span></a></li>
-            {% endmodels %}
+            {% for Offers in site.data._models.Offers %}
+            <li><a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}"><span>{{ Offers.title }}</span></a></li>
+            {% endfor %}
             <div class="clear"></div>
           </ul>
           
@@ -47,7 +47,7 @@
 
 			<div class="container">
 
-                 {% region id:offers_textarea %}
+                 {% region offers_textarea %}
 
 			</div>
 
@@ -55,7 +55,7 @@
 
 		<div id="offerbox">
 			
-			{% models model:Offers %}
+			{% for Offers in site.data._models.Offers %}
 			
 			<div class="halfoffer {% cycle 'steerleft', 'steerright' %}">
 				
@@ -66,7 +66,7 @@
 					<p>{{ Offers.content }}</p>
 					
 					<div class="offerbook">
-						<a href="{% link id:1092, instance:Offers %}" class="first">Read More</a>
+						<a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}" class="first">Read More</a>
 						<a class="button1" href="{{ Offers.outbound }}">Book Now</a>
 					</div>
 					
@@ -82,10 +82,10 @@
 				
 			</div>
 			
-			{% endmodels %}
+			{% endfor %}
 		
 		</div>
 
 		
 
-{% template title:footer %}
+{% include footer.html %}

@@ -1,6 +1,6 @@
 {% assign template_class = 'page-galleries-virtualtours' %}
 
-{% template title:header %}    
+{% include header.html %}    
     
     <div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/4542/original/westhouse-hotel-new-york-amenities7.jpg);">
 
@@ -13,18 +13,18 @@
 	    <div id="contentwidget">
 		   <div class="logo"><a href="/"><img src="http://cdn.traveltripper.io/assets/712/original/logo3.png" alt="logo3" /></a></div>
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
 		</div>
 
 
 		<div class="subnav">
 			<ul>
-				<!--<li><a href="{% link id:1242 %}">Hotel</a></li>-->
-				<li><a href="{% link id:1262 %}">Amenities</a></li>
-				<li><a href="{% link id:1762 %}">Accommodations</a></li>
-				<li><a href="{% link id:1752 %}">Dining</a></li>
-		<!--	<li><a href="{% link id:3971 %}">Virtual Tours</a></li> -->
+				<!--<li><a href="">Hotel</a></li>-->
+				<li><a href="{{ 'photo-album/nyc-hotel-amenities' | permalink }}">Amenities</a></li>
+				<li><a href="{{ 'photo-album/accommodations' | permalink }}">Accommodations</a></li>
+				<li><a href="{{ 'photo-album/dining-2' | permalink }}">Dining</a></li>
+		<!--	<li><a href="{{ 'photo-album/virtual-tours' | permalink }}">Virtual Tours</a></li> -->
 			</ul>
 		</div>
 
@@ -32,7 +32,7 @@
 
 			<div class="container">
 
-			       {% region id: hotel_gallery_text %}
+			       {% region hotel_gallery_text %}
 			       
 			</div>
 
@@ -59,4 +59,4 @@
 			
 
 		</div>
-{% template title:footer %}
+{% include footer.html %}

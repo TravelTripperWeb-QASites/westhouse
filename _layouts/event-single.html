@@ -1,8 +1,10 @@
+{% assign Event = page %}
+{% assign model = page %}
 {% assign template_class = 'blogsingle' %}
 {% assign seo_title = Event.seo_title %}
 {% assign seo_description = Event.seo_description %}
 
-{% template title:header %}
+{% include header.html %}
 
 		<div id="featuredcontent" style="background-image: url({{model.image.url}});">
 
@@ -15,7 +17,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -50,4 +52,4 @@
 
 		</div>
 
-{% template title:footer %}
+{% include footer.html %}

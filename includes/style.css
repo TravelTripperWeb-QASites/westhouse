@@ -548,7 +548,7 @@ h6 {font-size: 55px;}
   min-height: 600px;
   background-position: center;
   background-size: cover;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
     margin-top: 75px;
   position: relative;
   overflow: hidden;
@@ -783,6 +783,10 @@ h6 {font-size: 55px;}
   padding: 40px 40px 70px;
   overflow: hidden;
   background: #fff;
+}
+
+#award .container {
+    margin: 0 auto;
 }
 
 #award .awardpic {
@@ -7087,13 +7091,13 @@ strong, b {
     width: 30px;
 }
 
-.merch-sec .reserve a.button1 {
+.merch-sec .reserve a.button1, .merch-sec .reserve1 a.button1 {
     display: inline-block;
     text-align: center;
     width: 17%;
 }
 
-.merch-sec .reserve a.button1:last-child {
+.merch-sec .reserve a.button1:last-child, .merch-sec .reserve1 a.button1:last-child {
     margin-top: 10px;
 }
 
@@ -7122,7 +7126,7 @@ strong, b {
     bottom: 0;
 }
 
-.merch-sec .reserve {
+.merch-sec .reserve, .merch-sec .reserve1 {
     padding: 35px 0 0 0;
 }
 

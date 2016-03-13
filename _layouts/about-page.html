@@ -1,6 +1,6 @@
 {% assign template_class = 'about-single' %}
 
-{% template title:header %}
+{% include header.html %}
 
 	
 		<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/1642/original/westhouse-hotel-new-york-about7.jpg);">
@@ -16,25 +16,25 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
 
 		<div class="subnav">
 		<ul>
-			    {% models model:Dining %}
+			    {% for Dining in site.data._models.Dining %}
 
-        		<li><a href="{% link id:1222, instance:Dining %}">{{ Dining.title }}</a></li>
-                {% endmodels %}
+        		<li><a href="{{ Dining.id | permalink: model_dir: 'dining' }}">{{ Dining.title }}</a></li>
+                {% endfor %}
 		</ul>
 	</div>
 	
         <div class="subnavmobile">
           <ul>
-            {% models model:Dining %}
-			<li><a href="{% link id:1222, instance:Dining %}"><span>{{ Dining.title }}</span></a></li>
-            {% endmodels %}
+            {% for Dining in site.data._models.Dining %}
+			<li><a href="{{ Dining.id | permalink: model_dir: 'dining' }}"><span>{{ Dining.title }}</span></a></li>
+            {% endfor %}
             <div class="clear"></div>
           </ul>
           
@@ -91,4 +91,4 @@
             </div>
 
         </div>
-{% template title:footer %}
+{% include footer.html %}

@@ -1,6 +1,6 @@
 {% assign template_class = 'page-culinary-list' %}
 
-{% template title:header %}
+{% include header.html %}
 
 
 
@@ -47,15 +47,18 @@
 		
 		<div id="featuredcontent" class="neighborhoodmap">
 		    <div class="nmapcon"><span>Click to Enable</span></div>
-			{% models filter:LocationsInCategory-Culinary-Guide %}
+			{% for LocationsInCategory-Culinary-Guide in site.data._models.Culinary-Guide %}
+{% assign categoryIds = LocationsInCategory-Culinary-Guide.category | map: 'id' %}
+{% if categoryIds contains '56b0c32277e2f50003f8af60' %}
     			<div id="infocontainerB{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" class="infocontainer">
-    		        <a href="{% link id:1302, instance:LocationsInCategory-Culinary-Guide %}"><img src="{{ LocationsInCategory-Culinary-Guide.image.url }}" alt="{{ LocationsInCategory-Culinary-Guide.title }}" /></a>
+    		        <a href="{{ LocationsInCategory-Culinary-Guide.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationsInCategory-Culinary-Guide.image.url }}" alt="{{ LocationsInCategory-Culinary-Guide.title }}" /></a>
     			    <h2>{{ LocationsInCategory-Culinary-Guide.title }}</h2>
     			  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
     			  	<div class="clear"></div>
     			  	<div class="neighborhood"><h3>{{ LocationsInCategory-Culinary-Guide.category.name }}</h3></div>
     			</div>
-			{% endmodels %}
+			{% endif %}
+{% endfor %}
 			            
 		<div id="map" style="height:600px;"></div>
             <ul id="map-side-bar">
@@ -69,17 +72,20 @@
                     <div class="allothers">
                         <ul>
                             {% assign i = 1 %}
-                            {% models filter:LocationsInCategory-Culinary-Guide %}
+                            {% for LocationsInCategory-Culinary-Guide in site.data._models.Culinary-Guide %}
+{% assign categoryIds = LocationsInCategory-Culinary-Guide.category | map: 'id' %}
+{% if categoryIds contains '56b0c32277e2f50003f8af60' %}
                              
                                 <li class="map-location stater-B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationsInCategory-Culinary-Guide.Latitude }}, lng: {{ LocationsInCategory-Culinary-Guide.Longitude }} }, category: 'place', bounded: false, icon: 'http://cdn.traveltripper.io/assets/3792/original/pin-point.png'}">
-                    		        <a href="{% link id:1302, instance:Neighborhood-Locations %}" class="map-link B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}">{{ LocationsInCategory-Culinary-Guide.title }}</a>
+                    		        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}">{{ LocationsInCategory-Culinary-Guide.title }}</a>
                     			        <div class="info-box">
                     			        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}</span>
-                    				        <h3><a href="{% link id:1302, instance:Neighborhood-Locations %}">{{ LocationsInCategory-Culinary-Guide.title }}</a></h3>
+                    				        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationsInCategory-Culinary-Guide.title }}</a></h3>
                     			       	</div>
                     			</li>
                             {% assign i = i | plus: 1 %}
-                            {% endmodels %}
+                            {% endif %}
+{% endfor %}
             			</ul>
             		</div>
                 </span>
@@ -92,7 +98,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
             
@@ -101,23 +107,23 @@
 		<div class="subnav">
 			<ul>
 			    <li>
-					<a href="{% link id:3993 %}">Culinary Guide</a>
+					<a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}">Culinary Guide</a>
 				</li>
 			    
 				<li>
-					<a href="{% link id:1152 %}">Shopping</a>
+					<a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}">Shopping</a>
 				</li>
 
 				<li>
-					<a href="{% link id:1172 %}">Entertainment Guide</a>
+					<a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}">Entertainment Guide</a>
 				</li>
 
 				<li>
-					<a href="{% link id:1162 %}">Arts & Culture</a>
+					<a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}">Arts & Culture</a>
 				</li>
 				
 				<li>
-					<a href="{% link id:942 %}">NYC Events Calendar</a>
+					<a href="{{ 'events-in-nyc' | permalink }}">NYC Events Calendar</a>
 				</li>
 				
 			</ul>
@@ -125,15 +131,15 @@
 		
         <div class="subnavmobile">
 			<ul>
-				<li><a href="{% link id:3993 %}"><span>Culinary Guide</a></span></li>
+				<li><a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}"><span>Culinary Guide</a></span></li>
 			    
-				<li><a href="{% link id:1152 %}"><span>Shopping</a></span></li>
+				<li><a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}"><span>Shopping</a></span></li>
 
-				<li><a href="{% link id:1172 %}"><span>Entertainment Guide</a></span></li>
+				<li><a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}"><span>Entertainment Guide</a></span></li>
 
-				<li><a href="{% link id:1162 %}"><span>Arts & Culture</a></span></li>
+				<li><a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}"><span>Arts & Culture</a></span></li>
 				
-				<li><a href="{% link id:942 %}"><span>NYC Events Calendar</a></span></li>
+				<li><a href="{{ 'events-in-nyc' | permalink }}"><span>NYC Events Calendar</a></span></li>
 				<div class="clear"></div>
 			</ul>
 			<div class="subclose"><i class="fa fa-bars"></i><span>View More Areas</span></div>
@@ -144,17 +150,17 @@
 		
 			<div class="container culinary-guide-main">
 		
-				{% region id: entertainment_neighborhood_text %}
+				{% region entertainment_neighborhood_text %}
 				
 				<p>Explore Uptown through six of our favorite bites and beverages. Created and curated by creative agency <strong>Trends on Trends</strong>, this Dine Around Guide is designed to be completed in one evening, making sure you don’t miss one delicious thing while in Manhattan. </p>
                 <p>Each item is within walking distance from <strong>WestHouse</strong>, so all you have to do is drop off your luggage and get ready to eat like a local. </p>
 				<p><br></p><p><br></p>
     			<div class="culinary-sub-list">
     			    <ul>
-    			        <li class="coffee-tab"><a href="{% link id:3994 %}"><img src="http://cdn.traveltripper.io/assets/9587/original/BETONY.png"><br />Coffee & Drinks</a></li>
-    			        <li class="lunch-tab"><a href="{% link id:3995 %}"><img src="http://cdn.traveltripper.io/assets/9588/original/POLO-BAR.png"><br />Lunch</a></li>
-    			        <li class="dinner-tab"><a href="{% link id:3996 %}"><img src="http://cdn.traveltripper.io/assets/9589/original/LE-BERNARDIN.png"><br />Dinner</a></li>
-    			        <li class="dessert-tab"><a href="{% link id:3997 %}"><img src="http://cdn.traveltripper.io/assets/9590/original/MOMOFUKU-MILK-BAR.png"><br />Dessert & Snacks</a></li>
+    			        <li class="coffee-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/coffee-and-drinks' | permalink }}"><img src="http://cdn.traveltripper.io/assets/9587/original/BETONY.png"><br />Coffee & Drinks</a></li>
+    			        <li class="lunch-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/lunch' | permalink }}"><img src="http://cdn.traveltripper.io/assets/9588/original/POLO-BAR.png"><br />Lunch</a></li>
+    			        <li class="dinner-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/dinner' | permalink }}"><img src="http://cdn.traveltripper.io/assets/9589/original/LE-BERNARDIN.png"><br />Dinner</a></li>
+    			        <li class="dessert-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/desserts-and-snacks' | permalink }}"><img src="http://cdn.traveltripper.io/assets/9590/original/MOMOFUKU-MILK-BAR.png"><br />Dessert & Snacks</a></li>
     			    </ul>
     	        </div>
     	        
@@ -171,4 +177,4 @@
 		    
 		</div>
 		
-{% template title:footer %}
+{% include footer.html %}

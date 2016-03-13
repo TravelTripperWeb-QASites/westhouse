@@ -1,8 +1,10 @@
+{% assign Offers = page %}
+{% assign model = page %}
 {% assign template_class = 'page-offers-single' %}
 {% assign seo_title = Offers.seo_title %}
 {% assign seo_description = Offers.seo_description %}
 
-{% template title:header %}
+{% include header.html %}
 
 	
 		<div id="featuredcontent" style="background-image: url({{Offers.image.url}});">
@@ -18,27 +20,27 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
 
 		<div class="subnav">
 			<ul>
-			  {% models model:Offers %}
+			  {% for Offers in site.data._models.Offers %}
 
-        		<li><a href="{% link id:1092, instance:Offers %}">{{ Offers.title }}</a></li>
+        		<li><a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}">{{ Offers.title }}</a></li>
             
-            {% endmodels %}
+            {% endfor %}
             
 			</ul>
 		</div>
 		
         <div class="subnavmobile">
           <ul>
-            {% models model:Offers %}
-            <li><a href="{% link id:1092, instance:Offers %}"><span>{{ Offers.title }}</span></a></li>
-            {% endmodels %}
+            {% for Offers in site.data._models.Offers %}
+            <li><a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}"><span>{{ Offers.title }}</span></a></li>
+            {% endfor %}
             <div class="clear"></div>
           </ul>
           
@@ -52,7 +54,7 @@
 				<h3>Share</h3>
 				
 				<script>
-				    var offer_content = stripHTML('{{ Offers.content }}');
+				    var offer_content = stripHTML('{{ Offers.contents }}');
 				</script>
 
 				<div class="socialmedia">
@@ -130,7 +132,7 @@
 
 				<div class="roominfo">
 		            
-		            {{ Offers.content }} 
+		            {{ Offers.contents }} 
 		            
 					<p><strong><a class="offbtn" href="#" onClick="$('.search-now-button').click();">BOOK NOW</a></strong></p>
 
@@ -167,4 +169,4 @@
 
 			</div>
 		</div>-->
-{% template title:footer %}
+{% include footer.html %}

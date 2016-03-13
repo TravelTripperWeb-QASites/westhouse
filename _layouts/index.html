@@ -22,21 +22,29 @@
 			<div class="rightwall"></div>
 		</div>
 
- <div id="award" class="{{ template }} vote">
+ 
+ 
+    <div id="award" class="{{ template }} vote">
 		<div class="container">
 			
-			{% comment %}{% region id:home_award_content %}{% endcomment%}
-			<!--	
+			{% comment %}{% region home_award_content %}{% endcomment%}
+			
+			<!--
+			
 			<div id="tl-container">
 			<a href="http://tlworldsbest.wylei.com/" target="_blank">
 			<img src="http://cdn.traveltripper.io/assets/9510/original/tl-logo.png" style="width:99%; margin-top: -160px;">
 			</a>
 			
 			</div>
-					-->
+			
+			-->
 			
 		    <div style="text-align: center; font-size: 14px; font-weight:500; font-family: 'GothamBold'; text-transform: uppercase; margin-bottom: 21px; letter-spacing: 2px;">WELCOME TO WESTHOUSE HOTEL NEW YORK</div>
-		    <div style="text-align: center; font-size: 14px; font-family: 'GothamLight'; text-transform: uppercase;  margin-bottom: 70px; letter-spacing: 2px;">Your home away from home when you visit New York City.</div>
+		    <div style="text-align: center; font-size: 14px; font-family: 'GothamLight'; text-transform: uppercase;  letter-spacing: 2px;">Your home away from home when you visit New York City.</div>
+		    
+		    <!--
+		    
 		    <hr>
 		    
 			<div class="vote_tolo" style="float:left; width: 30%"><img id="tl_logo" src="http://cdn.traveltripper.io/assets/9527/original/tl_logo.jpg" alt="TRAVEL & LEISURE" /></div> 
@@ -49,11 +57,11 @@
         
 			    
 			</div>
-
-		    
-		    </div>
 			
+			-->
+		</div>
 	</div>
+	
 	
 	<div id="hotel">
 		<div class="container">
@@ -76,28 +84,28 @@
 				</div>
 				<div class="col3">
 				    
-				    {% region id:home_hotel_content %}
+				    {% region home_hotel_content %}
 					
 				</div>
 				<div class="col3">
 					    
-					{% region id:home_hotel_content_two %}
+					{% region home_hotel_content_two %}
 					   
 				</div>
 			</div>
 			
-			<a href="/luxury-hotel-amenities-nyc" class="continuebutton">more</a>
+			<a href="{{ 'luxury-hotel-amenities-nyc' | permalink }}" class="continuebutton">more</a>
 		</div>
 	</div>
 	
 	<div id="offerspartners">
 		<div class="container">
 			<div class="col2 offers" style="background-image: url(http://cdn.traveltripper.io/assets/9534/original/westhouse-hotel-new-york-mercedes-thumb.jpg);">
-			    <a href="/westhouse-offers" class="dropanchor"></a>
+			    <a href="{{ 'westhouse-offers' | permalink }}" class="dropanchor"></a>
 				<div class="optitle">Offers</div>
 			</div>
 			<div class="col2 partners" style="background-image: url(http://cdn.traveltripper.io/assets/9533/original/westhouse-hotel-new-york-good-hair-day-thumb.jpg);">
-		    	<a href="/partners" class="dropanchor"></a>
+		    	<a href="{{ 'partners' | permalink }}" class="dropanchor"></a>
 				<div class="optitle">Partners</div>
 			</div>
 		</div>
@@ -128,14 +136,14 @@
 					<h3 style="text-align: center;">Rooms & Suites</h3>
 				</div>
 				<div class="col3">
-					{% region id:home_rooms_content %}
+					{% region home_rooms_content %}
 				</div>
 				<div class="col3">
-					{% region id:home_rooms_content_two %}
+					{% region home_rooms_content_two %}
 				</div>
 			</div>
 			
-			<a href="/luxury-rooms-suites-nyc" class="continuebutton">more</a>
+			<a href="{{ 'luxury-rooms-suites-nyc' | permalink }}" class="continuebutton">more</a>
 			
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 {% assign template_class = 'connect' %}
 
-{% template title:header %}
+{% include header.html %}
 
 		
 		<div id="featuredcontent" style="background-image: url('http://cdn.traveltripper.io/assets/3642/original/Spherical-WestHouse-6839.jpg');">
@@ -16,7 +16,7 @@
     
                <!-- include booking form -->
     
-                {% template title:booking_form_interior %}
+                {% include booking_form_interior.html %}
     
                 <!-- // include booking form -->
     		</div>
@@ -44,12 +44,12 @@
 				<div class="connectsocial">
 					<div class="socialmedia">
 						<ul>
-							{% models model:SocialLinks %}{% if SocialLinks.name == "Facebook" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-facebook"></i></a></li>{% endif %}{% endmodels %}
-							{% models model:SocialLinks %}{% if SocialLinks.name == "Twitter" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-twitter"></i></a></li>{% endif %}{% endmodels %}
-							{% models model:SocialLinks %}{% if SocialLinks.name == "Instagram" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-instagram"></i></a></li>{% endif %}{% endmodels %}
-							{% models model:SocialLinks %}{% if SocialLinks.name == "GooglePlus" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-google-plus"></i></a></li>{% endif %}{% endmodels %}
-    						{% models model:SocialLinks %}{% if SocialLinks.name == "Youtube" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-youtube-play"></i></a></li>{% endif %}{% endmodels %}
-    						{% models model:SocialLinks %}{% if SocialLinks.name == "TripAdvisor" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>{% endif %}{% endmodels %}
+							{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Facebook" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-facebook"></i></a></li>{% endif %}{% endfor %}
+							{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Twitter" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-twitter"></i></a></li>{% endif %}{% endfor %}
+							{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Instagram" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-instagram"></i></a></li>{% endif %}{% endfor %}
+							{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "GooglePlus" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-google-plus"></i></a></li>{% endif %}{% endfor %}
+    						{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Youtube" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-youtube-play"></i></a></li>{% endif %}{% endfor %}
+    						{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "TripAdvisor" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>{% endif %}{% endfor %}
 						</ul>
 					</div>
 				
@@ -59,7 +59,7 @@
 				
 					<div class="flexslider tripslider">
 						<ul class="slides">
-						    {% models model:Tripadvisor %}
+						    {% for Tripadvisor in site.data._models.Tripadvisor %}
         					
         					    <li>
     								<div class="triplogo"><img src="http://cdn.traveltripper.io/assets/592/original/tripadvisory.png" alt="triplogo" /></div>
@@ -67,7 +67,7 @@
     								<div class="author"><p>{{ Tripadvisor.Credit }}</p></div>
     							</li>
 							
-        					{% endmodels %}
+        					{% endfor %}
 						</ul>
 					</div>
 				
@@ -77,4 +77,4 @@
 		</div>
 		
 		
-{% template title:footer %}
+{% include footer.html %}

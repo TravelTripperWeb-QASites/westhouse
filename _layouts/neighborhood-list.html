@@ -1,6 +1,6 @@
 {% assign template_class = 'page-neighborhood' %}
 
-{% template title:header %}
+{% include header.html %}
 
 		<script type="text/javascript">
 
@@ -56,7 +56,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -64,27 +64,27 @@
 		<div class="subnav">
 			<ul>
 			    <li>
-					<a href="{% link id:3993 %}">Culinary Guide</a>
+					<a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}">Culinary Guide</a>
 				</li>
 				
 			    <li>
-					<a href="{% link id:1162 %}">Arts & Culture</a>
+					<a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}">Arts & Culture</a>
 				</li>
 				
 				<li>
-					<a href="{% link id:1152 %}">Shopping</a>
+					<a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}">Shopping</a>
 				</li>
 
 				<li>
-					<a href="{% link id:1172 %}">Entertainment Guide</a>
+					<a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}">Entertainment Guide</a>
 				</li>
 
 				<li>
-					<a href="{% link id:1182 %}">Must See NYC</a>
+					<a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}">Must See NYC</a>
 				</li>
 				
 				<li>
-					<a href="{% link id:942 %}">Events</a>
+					<a href="{{ 'events-in-nyc' | permalink }}">Events</a>
 				</li>
 				
 			</ul>
@@ -92,11 +92,11 @@
 		
         <div class="subnavmobile">
 			<ul>
-			    <li><a href="{% link id:3993 %}"><span>Culinary Guide</span></a></li>
-			    <li><a href="{% link id:1162 %}"><span>Art & Culture</span></a></li>
-				<li><a href="{% link id:1152 %}"><span>Shopping in NYC</span></a></li>
-				<li><a href="{% link id:1172 %}"><span>NYC Entertainment Guide</span></a></li>
-				<li><a href="{% link id:1182 %}"><span>Must See NYC</span></a></li>
+			    <li><a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}"><span>Culinary Guide</span></a></li>
+			    <li><a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}"><span>Art & Culture</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}"><span>Shopping in NYC</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}"><span>NYC Entertainment Guide</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}"><span>Must See NYC</span></a></li>
 				<div class="clear"></div>
 			</ul>
 			<div class="subclose"><i class="fa fa-bars"></i><span>View More Areas</span></div>
@@ -108,7 +108,7 @@
 		
 			<div class="container">
 		
-				{% region id: neighborhood_text %}
+				{% region neighborhood_text %}
 				
 			</div>
 		
@@ -122,16 +122,16 @@
 		    
 		    <div class="nmapcontent">
 
-		        {% region id: nmapcontent %}
+		        {% region nmapcontent %}
 		        
 		    </div>
 		    
 		    
 		</div>-->
 			 
-			       {% models model:Neighborhood-Locations %}
+			       {% for Neighborhood-Locations in site.data._models.Neighborhood-Locations %}
 			      <div id="infocontainerB{{ Neighborhood-Locations.url_friendly_name }}" class="infocontainer">
-				  	<a href="{% link id:1302, instance:Neighborhood-Locations %}"><img src="{{ Neighborhood-Locations.image.url }}" alt="{{ Neighborhood-Locations.title }}" /></a>
+				  	<a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ Neighborhood-Locations.image.url }}" alt="{{ Neighborhood-Locations.title }}" /></a>
 				  	<h2>{{ Neighborhood-Locations.title }}</h2>
 				  
 				  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
@@ -139,7 +139,7 @@
 				  	
 				  	<div class="neighborhood"><h3>{{ Neighborhood-Locations.category.name }}</h3></div>
 				  </div>
-				  {% endmodels %}
+				  {% endfor %}
 				  
 				
 				  
@@ -165,16 +165,16 @@
 
                                  {% assign i = 1 %}
                                  
-                                 {% models model:Neighborhood-Locations %}
+                                 {% for Neighborhood-Locations in site.data._models.Neighborhood-Locations %}
                             
                                 
   <li class="map-location stater-B{{ Neighborhood-Locations.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ Neighborhood-Locations.Latitude }}, lng: {{ Neighborhood-Locations.Longitude }} }, category: 'place', bounded: false, icon: 'http://cdn.traveltripper.io/assets/3792/original/pin-point.png'}">
 
-						        <a href="{% link id:1302, instance:Neighborhood-Locations %}" class="map-link B{{ Neighborhood-Locations.url_friendly_name }}" rel="B{{ Neighborhood-Locations.url_friendly_name }}">{{ Neighborhood-Locations.title }}</a>
+						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ Neighborhood-Locations.url_friendly_name }}" rel="B{{ Neighborhood-Locations.url_friendly_name }}">{{ Neighborhood-Locations.title }}</a>
 							        <div class="info-box">
 							        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ Neighborhood-Locations.url_friendly_name }}</span>
 
-								        <h3><a href="{% link id:1302, instance:Neighborhood-Locations %}" target="_blank">{{ Neighborhood-Locations.title }}</a></h3>
+								        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" target="_blank">{{ Neighborhood-Locations.title }}</a></h3>
 
 							       	</div>
 
@@ -182,7 +182,7 @@
                                 
                                 {% assign i = i | plus: 1 %}
                         		
-                                {% endmodels %}
+                                {% endfor %}
                                 
                                 
 
@@ -206,23 +206,23 @@
 		<div id="neighborhoodlist">
 			<ul>
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1742/original/neighborhood1.jpg);">
-					<a href="{% link id:1162 %}"><h3>Arts & Culture</h3></a>
+					<a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}"><h3>Arts & Culture</h3></a>
 				</li>
 
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1822/original/neighborhood9.jpg);">
-					<a href="{% link id:1152 %}"><h3>Shopping</h3></a>
+					<a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}"><h3>Shopping</h3></a>
 				</li>
 
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1862/original/neighborhood13.jpg);">
-					<a href="{% link id:1172 %}"><h3>Entertainment Guide</h3></a>
+					<a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}"><h3>Entertainment Guide</h3></a>
 				</li>
 
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1902/original/neighborhood17.jpg);">
-					<a href="{% link id:1182 %}"><h3>Must See NYC</h3></a>
+					<a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}"><h3>Must See NYC</h3></a>
 				</li>
 
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1832/original/neighborhood10.jpg);">
-					<a href="{% link id:942 %}"><h3>NYC Events Calendar</h3></a>
+					<a href="{{ 'events-in-nyc' | permalink }}"><h3>NYC Events Calendar</h3></a>
 				</li>
 
 			</ul>
@@ -236,4 +236,4 @@
 		</div>
 
 		
-{% template title:footer %}
+{% include footer.html %}

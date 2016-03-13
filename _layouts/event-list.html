@@ -1,6 +1,6 @@
 {% assign template_class = 'eventlist' %}
 
-{% template title:header %}
+{% include header.html %}
 
 		<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/6372/original/westhouse-hotel-new-york-events.jpg);">
 
@@ -15,7 +15,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
             
@@ -36,21 +36,22 @@
 
 				<h1>Upcoming Events</h1>
                 
-                {% region id:events_welcome_content %}
+                {% region events_welcome_content %}
 
 				<br>
 				<br>
 
 				<ul class="stackers">
-                    {% models filter:LatestEvents %}
+                    {% assign LatestEventsList = site.data._models.Event | sort: 'datemeta' | reverse %}
+{% for LatestEvents in LatestEventsList %}
 					<li>
-						<a href="{% link id:952, instance:LatestEvents %}" class="dropanchor"></a>
+						<a href="{{ LatestEvents.id | permalink: model_dir: 'events-in-nyc' }}" class="dropanchor"></a>
 						<img src="{{ LatestEvents.image.url }}" alt="{{ LatestEvents.title }}">
 						<h2>{{ LatestEvents.title }}<span>{{ LatestEvents.date }}</span></h2>
 						<p>{{ LatestEvents.preview  | truncate: 210 }}</p>
-						<a href="{% link id:952, instance:LatestEvents %}" class="button">Continue</a>
+						<a href="{{ LatestEvents.id | permalink: model_dir: 'events-in-nyc' }}" class="button">Continue</a>
 					</li>
-					{% endmodels %}
+					{% endfor %}
 				</ul>
 
 			</div>
@@ -60,13 +61,13 @@
 <script type="text/javascript">
     console.log('start define events')
     var allEvents = [
-        {% models model:Event %}
+        {% for Event in site.data._models.Event %}
             {
                 title: "{{Event.title | json}}",
                 date: "{{Event.datemeta}}",
                 content: "{{Event.content | escape | newline_to_br }}"
             },
-        {% endmodels %}
+        {% endfor %}
     ];
     
     console.log("defined all events!")
@@ -76,4 +77,4 @@
 
 
 		
-{% template title:footer %}
+{% include footer.html %}

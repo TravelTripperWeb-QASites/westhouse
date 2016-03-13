@@ -1,6 +1,6 @@
 {% assign template_class = 'page-neighborhood-list' %}
 
-{% template title:header %}
+{% include header.html %}
 
 
 
@@ -59,7 +59,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -68,23 +68,23 @@
 			<ul>
 			    
 			    <li>
-					<a href="{% link id:3993 %}">Culinary Guide</a>
+					<a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}">Culinary Guide</a>
 				</li>
 				
 				<li>
-					<a href="{% link id:1162 %}">Arts & Culture</a>
+					<a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}">Arts & Culture</a>
 				</li>
 
 				<li>
-					<a href="{% link id:1172 %}">Entertainment Guide</a>
+					<a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}">Entertainment Guide</a>
 				</li>
 
 				<li>
-					<a href="{% link id:1182 %}">Must See NYC</a>
+					<a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}">Must See NYC</a>
 				</li>
 				
 				<li>
-					<a href="{% link id:942 %}">NYC Events Calendar</a>
+					<a href="{{ 'events-in-nyc' | permalink }}">NYC Events Calendar</a>
 				</li>
 			</ul>
 		</div>
@@ -92,10 +92,10 @@
 		
         <div class="subnavmobile">
 			<ul>
-			    <li><a href="{% link id:3993 %}"><span>Culinary Guide</span></a></li>
-				<li><a href="{% link id:1162 %}"><span>Art & Culture</span></a></li>
-				<li><a href="{% link id:1172 %}"><span>NYC Entertainment Guide</span></a></li>
-				<li><a href="{% link id:1182 %}"><span>Must See NYC</span></a></li>
+			    <li><a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}"><span>Culinary Guide</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}"><span>Art & Culture</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}"><span>NYC Entertainment Guide</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}"><span>Must See NYC</span></a></li>
 				<div class="clear"></div>
 			</ul>
 			<div class="subclose"><i class="fa fa-bars"></i><span>View More Areas</span></div>
@@ -106,7 +106,7 @@
 		
 			<div class="container">
 		
-				{% region id: entertainment_neighborhood_text %}
+				{% region entertainment_neighborhood_text %}
 				
 			</div>
 		
@@ -114,9 +114,11 @@
 		
 		<div class="neighborhoodmap">
 			            <div class="nmapcon"><span>Click to Enable</span></div>
-			            {% models filter:LocationInCategory-Shopping-in-NYC %}
+			            {% for LocationInCategory-Shopping-in-NYC in site.data._models.Culinary-Guide %}
+{% assign categoryIds = LocationInCategory-Shopping-in-NYC.category | map: 'id' %}
+{% if categoryIds contains '55a7af15226e50e91600001a' %}
 			      <div id="infocontainerB{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" class="infocontainer">
-				  	<a href="{% link id:1302, instance:LocationInCategory-Shopping-in-NYC %}"><img src="{{ LocationInCategory-Shopping-in-NYC.image.url }}" alt="{{ LocationInCategory-Shopping-in-NYC.title }}" /></a>
+				  	<a href="{{ LocationInCategory-Shopping-in-NYC.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationInCategory-Shopping-in-NYC.image.url }}" alt="{{ LocationInCategory-Shopping-in-NYC.title }}" /></a>
 				  	<h2>{{ LocationInCategory-Shopping-in-NYC.title }}</h2>
 				  
 				  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
@@ -124,7 +126,8 @@
 				  	
 				  	<div class="neighborhood"><h3>{{ LocationInCategory-Shopping-in-NYC.category.name }}</h3></div>
 				  </div>
-				  {% endmodels %}
+				  {% endif %}
+{% endfor %}
 			            
 			            <div id="map"></div>
 
@@ -147,17 +150,19 @@
 
                                  {% assign i = 1 %}
                                  
-                                 {% models filter:LocationInCategory-Shopping-in-NYC %}
+                                 {% for LocationInCategory-Shopping-in-NYC in site.data._models.Culinary-Guide %}
+{% assign categoryIds = LocationInCategory-Shopping-in-NYC.category | map: 'id' %}
+{% if categoryIds contains '55a7af15226e50e91600001a' %}
                                  
                                 
                                 
   <li class="map-location stater-B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationInCategory-Shopping-in-NYC.Latitude }}, lng: {{ LocationInCategory-Shopping-in-NYC.Longitude }} }, category: 'place', bounded: false, icon: 'http://cdn.traveltripper.io/assets/3792/original/pin-point.png'}">
 
-						        <a href="{% link id:1302, instance:Neighborhood-Locations %}" class="map-link B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" rel="B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}">{{ LocationInCategory-Shopping-in-NYC.title }}</a>
+						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" rel="B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}">{{ LocationInCategory-Shopping-in-NYC.title }}</a>
 							        <div class="info-box">
 							        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}</span>
 
-								        <h3><a href="{% link id:1302, instance:Neighborhood-Locations %}">{{ LocationInCategory-Shopping-in-NYC.title }}</a></h3>
+								        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationInCategory-Shopping-in-NYC.title }}</a></h3>
 
 							       	</div>
 
@@ -167,7 +172,8 @@
                           
                                 {% assign i = i | plus: 1 %}
                         		
-                                {% endmodels %}
+                                {% endif %}
+{% endfor %}
 
 						  </ul>
 					    </div>
@@ -191,19 +197,19 @@
 
 
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1742/original/neighborhood1.jpg);">
-					<a href="{% link id:1162 %}"><h3>Arts & Culture</h3></a>
+					<a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}"><h3>Arts & Culture</h3></a>
 				</li>
 
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1862/original/neighborhood13.jpg);">
-					<a href="{% link id:1172 %}"><h3>Entertainment Guide</h3></a>
+					<a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}"><h3>Entertainment Guide</h3></a>
 				</li>
 
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1902/original/neighborhood17.jpg);">
-					<a href="{% link id:1182 %}"><h3>Must See NYC</h3></a>
+					<a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}"><h3>Must See NYC</h3></a>
 				</li>
 				
 				<li style="background-image: url(http://cdn.traveltripper.io/assets/1832/original/neighborhood10.jpg);">
-					<a href="{% link id:942 %}"><h3>NYC Events Calendar</h3></a>
+					<a href="{{ 'events-in-nyc' | permalink }}"><h3>NYC Events Calendar</h3></a>
 				</li>
 
 
@@ -218,4 +224,4 @@
 		</div>
 
 		
-{% template title:footer %}
+{% include footer.html %}

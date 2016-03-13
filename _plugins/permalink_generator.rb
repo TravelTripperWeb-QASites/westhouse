@@ -10,7 +10,11 @@ module Jekyll
       else
         site = Jekyll.sites.last # each regeneration adds new site (if using watch or serve)
         page = detect_page(site, path_or_page, model_dir)
-        page.url(locale || site.active_lang)
+        if page
+          page.url(locale || site.active_lang)
+        else
+          model_dir
+        end
       end
     end
 
@@ -39,7 +43,7 @@ module Jekyll
       if page.nil? && !token.end_with?('/') && File.exists?(File.join(site.config['source'], "#{token}.html"))
         raise "Do not use permalink filter for static files (#{token})"
       elsif page.nil?
-        raise "permalink for '#{token}' not found"
+        puts "permalink for '#{token}' not found"
       end
 
       page

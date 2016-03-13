@@ -1,8 +1,10 @@
+{% assign Dining = page %}
+{% assign model = page %}
 {% assign template_class = 'dining-single' %}
 {% assign seo_title = Dining.seo_title %}
 {% assign seo_description = Dining.seo_description %}
 
-{% template title:header %}
+{% include header.html %}
 
 	
 		<div id="featuredcontent" style="background-image: url({{Dining.image}});">
@@ -16,23 +18,23 @@
 		<div id="contentwidget">
 		   <div class="logo"><a href="/"><img src="http://cdn.traveltripper.io/assets/712/original/logo3.png" alt="logo3" /></a></div>
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
 		</div>
 
 		<div class="subnav">
     		<ul>
-			    {% models model:Dining %}
-        	    	<li><a href="{% link id:1222, instance:Dining %}">{{ Dining.title }}</a></li>
-                {% endmodels %}
+			    {% for Dining in site.data._models.Dining %}
+        	    	<li><a href="{{ Dining.id | permalink: model_dir: 'dining' }}">{{ Dining.title }}</a></li>
+                {% endfor %}
     		</ul>
     	</div>
     	
         <div class="subnavmobile">
           <ul>
-            {% models model:Dining %}
-			<li><a href="{% link id:1222, instance:Dining %}"><span>{{ Dining.title }}</span></a></li>
-            {% endmodels %}
+            {% for Dining in site.data._models.Dining %}
+			<li><a href="{{ Dining.id | permalink: model_dir: 'dining' }}"><span>{{ Dining.title }}</span></a></li>
+            {% endfor %}
             <div class="clear"></div>
           </ul>
           
@@ -44,7 +46,7 @@
 		    
 		    <div class="dining-container">
 			
-			    {{ Dining.content }} 
+			    {{ Dining.contents }} 
 
 				<!--<p>From breakfast on The Terrace, with its captivating city views rivaling rooftop restaurants in New York, to afternoon libations in The Den, where our modern speakeasy-style cocktail hour unfolds, it is little moments of sophisticated indulgence that elevate the everyday at WestHouse. Hotel Residents enjoy these complimentary culinary privileges throughout their stay, a rare and exceptional offering among luxury hotels in New York. And with an enviable location in the very heart of the world’s most food-centric city, WestHouse Residents can gain coveted reservations at famed Manhattan restaurants.</p>
 
@@ -88,4 +90,4 @@
             </div>
 
         </div>
-{% template title:footer %}
+{% include footer.html %}

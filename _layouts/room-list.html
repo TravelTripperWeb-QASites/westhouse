@@ -1,6 +1,6 @@
 {% assign template_class = 'page-rooms' %}
 
-{% template title:header %}
+{% include header.html %}
 
 		
 		<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/6142/original/westhouse-hotel-new-york-hotel-room.jpg);">
@@ -16,7 +16,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -74,10 +74,10 @@
 					
 					
 					<div class="col3">
-						{% region id:content %}
+						{% region content %}
 					</div>
 					<div class="col3">
-						{% region id:content_two %}
+						{% region content_two %}
 				</div>
 			</div>
 		</div>
@@ -90,10 +90,10 @@
 
 			<ul rt3-rooms-browser="browser">
 				<li ng-repeat="room in browser.rooms" style='background-image: url([[room.photos[0].yankee_large]]);'>
-					<a href="{% link id:292%}#[[room.code]]"><h3 class="roomtitle">[[room.name]]</h3></a>
+					<a href="{{ 'luxury-rooms-suites-nyc/room' | permalink }}#[[room.code]]"><h3 class="roomtitle">[[room.name]]</h3></a>
 				</li>
 			</ul>
 		</div>
 		
 
-{% template title:footer %}
+{% include footer.html %}

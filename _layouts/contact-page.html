@@ -1,6 +1,6 @@
 {% assign template_class = 'contact' %}
 
-{% template title:header %}
+{% include header.html %}
 		
 	<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/1642/original/westhouse-hotel-new-york-about7.jpg);">
 
@@ -15,7 +15,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -34,7 +34,7 @@
 
                  <div style="max-width: 80%; text-align: center; margin: 0 auto 30px;">
 
-                {% region id:contact_content %}
+                {% region contact_content %}
                     
                     
                 </div>
@@ -47,7 +47,7 @@
 
                 <aside style="width: 45%" class="contt">
                     
-                    {% region id:contact_content_info %}
+                    {% region contact_content_info %}
                     
                     <div id="contact-signup">
                             
@@ -85,4 +85,4 @@
 		</div>
 		
 
-{% template title:footer %}
+{% include footer.html %}

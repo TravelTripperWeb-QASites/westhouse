@@ -1,6 +1,6 @@
 {% assign template_class = 'page-culinary-lunch' %}
 
-{% template title:header %}
+{% include header.html %}
 
 
 
@@ -47,15 +47,18 @@
 		
 		<div id="featuredcontent" class="neighborhoodmap">
 		    <div class="nmapcon"><span>Click to Enable</span></div>
-			{% models filter:LocationsInCategory-Culinary-Lunch %}
+			{% for LocationsInCategory-Culinary-Lunch in site.data._models.Culinary-Guide %}
+{% assign categoryIds = LocationsInCategory-Culinary-Lunch.category | map: 'id' %}
+{% if categoryIds contains '56b0c34577e2f50003f8af64' %}
     			<div id="infocontainerB{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}" class="infocontainer">
-    		        <a href="{% link id:1302, instance:LocationsInCategory-Culinary-Lunch %}"><img src="{{ LocationsInCategory-Culinary-Lunch.image.url }}" alt="{{ LocationsInCategory-Culinary-Lunch.title }}" /></a>
+    		        <a href="{{ LocationsInCategory-Culinary-Lunch.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationsInCategory-Culinary-Lunch.image.url }}" alt="{{ LocationsInCategory-Culinary-Lunch.title }}" /></a>
     			    <h2>{{ LocationsInCategory-Culinary-Lunch.title }}</h2>
     			  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
     			  	<div class="clear"></div>
     			  	<div class="neighborhood"><h3>{{ LocationsInCategory-Culinary-Lunch.category.name }}</h3></div>
     			</div>
-			{% endmodels %}
+			{% endif %}
+{% endfor %}
 			            
 		<div id="map" style="height:600px;"></div>
             <ul id="map-side-bar">
@@ -69,17 +72,20 @@
                     <div class="allothers">
                         <ul>
                             {% assign i = 1 %}
-                            {% models filter:LocationsInCategory-Culinary-Lunch %}
+                            {% for LocationsInCategory-Culinary-Lunch in site.data._models.Culinary-Guide %}
+{% assign categoryIds = LocationsInCategory-Culinary-Lunch.category | map: 'id' %}
+{% if categoryIds contains '56b0c34577e2f50003f8af64' %}
                              
                                 <li class="map-location stater-B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationsInCategory-Culinary-Lunch.Latitude }}, lng: {{ LocationsInCategory-Culinary-Lunch.Longitude }} }, category: 'place', bounded: false, icon: 'http://cdn.traveltripper.io/assets/3792/original/pin-point.png'}">
-                    		        <a href="{% link id:1302, instance:Neighborhood-Locations %}" class="map-link B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}">{{ LocationsInCategory-Culinary-Lunch.title }}</a>
+                    		        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}">{{ LocationsInCategory-Culinary-Lunch.title }}</a>
                     			        <div class="info-box">
                     			        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}</span>
-                    				        <h3><a href="{% link id:1302, instance:Neighborhood-Locations %}">{{ LocationsInCategory-Culinary-Lunch.title }}</a></h3>
+                    				        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationsInCategory-Culinary-Lunch.title }}</a></h3>
                     			       	</div>
                     			</li>
                             {% assign i = i | plus: 1 %}
-                            {% endmodels %}
+                            {% endif %}
+{% endfor %}
             			</ul>
             		</div>
                 </span>
@@ -92,7 +98,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -100,19 +106,19 @@
 		<div class="subnav">
 			<ul>
 			    <li>
-					<a href="{% link id:3994 %}">Coffee & Drinks</a>
+					<a href="{{ 'things-to-do-in-nyc/culinary-guide/coffee-and-drinks' | permalink }}">Coffee & Drinks</a>
 				</li>
 				
 				<li>
-					<a href="{% link id:3995 %}">Lunch</a>
+					<a href="{{ 'things-to-do-in-nyc/culinary-guide/lunch' | permalink }}">Lunch</a>
 				</li>
 				
 				<li>
-					<a href="{% link id:3996 %}">Dinner</a>
+					<a href="{{ 'things-to-do-in-nyc/culinary-guide/dinner' | permalink }}">Dinner</a>
 				</li>
 				
 				<li>
-					<a href="{% link id:3997 %}">Desserts & Snacks</a>
+					<a href="{{ 'things-to-do-in-nyc/culinary-guide/desserts-and-snacks' | permalink }}">Desserts & Snacks</a>
 				</li>
 				
 			</ul>
@@ -120,13 +126,13 @@
 		
         <div class="subnavmobile">
 			<ul>
-				<li><a href="{% link id:3994 %}"><span>Coffee & Drinks</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/culinary-guide/coffee-and-drinks' | permalink }}"><span>Coffee & Drinks</span></a></li>
 				
-				<li><a href="{% link id:3995 %}"><span>Lunch</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/culinary-guide/lunch' | permalink }}"><span>Lunch</span></a></li>
 				
-				<li><a href="{% link id:3996 %}"><span>Dinner</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/culinary-guide/dinner' | permalink }}"><span>Dinner</span></a></li>
 				
-				<li><a href="{% link id:3997 %}"><span>Desserts & Snacks</span></a></li>
+				<li><a href="{{ 'things-to-do-in-nyc/culinary-guide/desserts-and-snacks' | permalink }}"><span>Desserts & Snacks</span></a></li>
 				<div class="clear"></div>
 			</ul>
 			<div class="subclose"><i class="fa fa-bars"></i><span>View More Areas</span></div>
@@ -137,26 +143,29 @@
 		
 			<div class="container culinary-guide-list">
 		
-				{% region id: entertainment_neighborhood_text %}
+				{% region entertainment_neighborhood_text %}
 				
 		    </div>
 		    
 		    <div class="culinary-outer">
-			{% models filter:LocationsInCategory-Culinary-Lunch %}
+			{% for LocationsInCategory-Culinary-Lunch in site.data._models.Culinary-Guide %}
+{% assign categoryIds = LocationsInCategory-Culinary-Lunch.category | map: 'id' %}
+{% if categoryIds contains '56b0c34577e2f50003f8af64' %}
 			
-				<div class="hvr-sweep-to-left {% cycle 'cg-post-image', 'cg-post-noimage' %}">
+				<div class="hvr-sweep-to-left cg-post-image{% comment %} // Saved %comment% for future use. // Delete it if you want {% cycle 'cg-post-image', 'cg-post-noimage' %} {% endcomment %}">
 				
 				<div class="culinary-post">
 				    <div class="cg-image"><img src="{{LocationsInCategory-Culinary-Lunch.image.url }}" align="left"></div>
 					<div class="cg-details">
 					    <h3><a target="_blank" href="{{ LocationsInCategory-Culinary-Lunch.Outbound_Link }}">{{ LocationsInCategory-Culinary-Lunch.title }}</a></h3>
-					    <p>{{ LocationsInCategory-Culinary-Lunch.content }}</p>
+					    <p>{{ LocationsInCategory-Culinary-Lunch.contents }}</p>
 				    </div>
 				</div>
 				
 				</div>
 			
-			{% endmodels %}
+			{% endif %}
+{% endfor %}
 			
 			<div class="clear"></div>
 			
@@ -174,4 +183,4 @@
 		    
 		</div>
 		
-{% template title:footer %}
+{% include footer.html %}

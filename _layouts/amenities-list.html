@@ -1,6 +1,6 @@
 {% assign template_class = 'page-amenities' %}
 
-{% template title:header %}
+{% include header.html %}
 
 	
 		<div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/3692/original/Spherical-WestHouse-7070.jpg);">
@@ -16,7 +16,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -24,19 +24,19 @@
 		<div class="subnav">
 			<ul>
 			
-			    {% models model:Amenities %}
+			    {% for Amenities in site.data._models.Amenities %}
 
-        		<li><a href="{% link id:1062, instance:Amenities %}">{{ Amenities.title }}</a></li>
-                {% endmodels %}
+        		<li><a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}">{{ Amenities.title }}</a></li>
+                {% endfor %}
 				
 			</ul>
 		</div>
 		
         <div class="subnavmobile">
 			<ul>
-				{% models model:Amenities %}
-				<li><a href="{% link id:1062, instance:Amenities %}"><span>{{ Amenities.title }}</span></a></li>
-				{% endmodels %}
+				{% for Amenities in site.data._models.Amenities %}
+				<li><a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}"><span>{{ Amenities.title }}</span></a></li>
+				{% endfor %}
 				<div class="clear"></div>
 			</ul>
 			<div class="subclose"><i class="fa fa-bars"></i><span>View More Amenities</span></div>
@@ -46,9 +46,9 @@
 
 			<div class="container">
 
-				<h2 style="text-align:center;">{% region id:amenities_page_title %}</h2>
+				<h2 style="text-align:center;">{% region amenities_page_title %}</h2>
 
-			     {% region id:amenities_page_text %}
+			     {% region amenities_page_text %}
 
 			</div>
 
@@ -63,7 +63,7 @@
 				<div class="partners">
 					
 					
-					{% region id:amenities_partners_page_text %}
+					{% region amenities_partners_page_text %}
 					
 					
 					<div class="the-partners">
@@ -72,17 +72,17 @@
 
 						<ul>
 						
-							 {% models model:Partners %}
+							 {% for Partners in site.data._models.Partners %}
 
         		                <li style="background-image: url({{ Partners.image.url }});">
                 
-                        			<a href="{% link id:1072, instance:Partners %}"></a>
+                        			<a href="{{ Partners.id | permalink: model_dir: 'partners' }}"></a>
                         			
                         			<h3>{{ Partners.title }}</h3>
         			
         		              </li>
         		
-                            {% endmodels %}
+                            {% endfor %}
 
 						</ul>				
 
@@ -93,7 +93,7 @@
 				<div class="amenities">
 				
 				
-				{% region id:amenities_primarytext %}
+				{% region amenities_primarytext %}
 
 					<!--<p>Guests, referred to as Hotel Residents, enjoy a curated selection of culinary delicacies, libations and amenities throughout their stay for $35 per adult, per night, offering unprecedented value.</p>
 
@@ -127,15 +127,15 @@
 			<div class="container">
 				
 				<ul>
-				    {% models model:Amenities %}
+				    {% for Amenities in site.data._models.Amenities %}
 
         		<li style="background-image: url({{ Amenities.image.url }});">
 
-        			<a href="{% link id:1062, instance:Amenities %}"><span>{{ Amenities.title }}</span></a>
+        			<a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}"><span>{{ Amenities.title }}</span></a>
         			
         		</li>
         		
-                {% endmodels %}
+                {% endfor %}
 				    
 				</ul>
 			
@@ -143,4 +143,4 @@
 
 		</div> -->
 
-{% template title:footer %}
+{% include footer.html %}

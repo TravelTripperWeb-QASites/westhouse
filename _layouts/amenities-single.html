@@ -1,8 +1,10 @@
+{% assign Amenities = page %}
+{% assign model = page %}
 {% assign template_class = 'page-amenities-single' %}
 {% assign seo_title = Amenities.seo_title %}
 {% assign seo_description = Amenities.seo_description %}
 
-{% template title:header %}
+{% include header.html %}
 
 	
 		<div id="featuredcontent" style="background-image: url({{ Amenities.image.url }});">
@@ -18,7 +20,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 		</div>
@@ -26,10 +28,10 @@
 		<div class="subnav">
 			<ul>
 			
-			    {% models model:Amenities %}
+			    {% for Amenities in site.data._models.Amenities %}
 
-        		<li><a href="{% link id:1062, instance:Amenities %}">{{ Amenities.title }}</a></li>
-                {% endmodels %}
+        		<li><a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}">{{ Amenities.title }}</a></li>
+                {% endfor %}
 				
 			</ul>
 		</div>
@@ -37,9 +39,9 @@
 		
         <div class="subnavmobile">
           <ul>
-            {% models model:Amenities %}
-			<li><a href="{% link id:1062, instance:Amenities %}"><span>{{ Amenities.title }}</span></a></li>
-            {% endmodels %}
+            {% for Amenities in site.data._models.Amenities %}
+			<li><a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}"><span>{{ Amenities.title }}</span></a></li>
+            {% endfor %}
             <div class="clear"></div>
           </ul>
           
@@ -53,7 +55,7 @@
 			
 				<h1 style="text-align:center;">{{Amenities.title}}</h1>
 				
-			    {{ Amenities.content }}
+			    {{ Amenities.contents }}
 			
 			</div>
 			
@@ -92,4 +94,4 @@
 		</div>-->
 		
 
-{% template title:footer %}
+{% include footer.html %}

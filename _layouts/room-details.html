@@ -2,7 +2,7 @@
 {% assign seo_title = Room.seo_title %}
 {% assign seo_description = Room.seo_description %}
 
-{% template title:header %}
+{% include header.html %}
 <div class="room-detailss" rt3-rooms-browser="browser" rt3-room-details="details" rt3-search-form="search">
 
 
@@ -19,7 +19,7 @@
 		
 		    <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
             
@@ -29,7 +29,7 @@
 		<div class="subnav">
 			<ul>
 				<li ng-repeat="room in browser.rooms" ng-if="room.code != 'QUAD' && room.code != 'WHKSA'">
-				    <a href="{% link id:292 %}#[[room.code]]">[[room.name]]</a>
+				    <a href="{{ 'luxury-rooms-suites-nyc/room' | permalink }}#[[room.code]]">[[room.name]]</a>
 				</li>		    
 			</ul>
 		</div>
@@ -299,4 +299,4 @@
 		</div> -->
 </div>
 		
-{% template title:footer %}
+{% include footer.html %}

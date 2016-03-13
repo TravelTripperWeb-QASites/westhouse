@@ -1,6 +1,6 @@
 {% assign template_class = 'content' %}
 
-{% template title:header %}
+{% include header.html %}
 
         <!--<div id="featuredcontent" style="background-image: url('');">-->
 		
@@ -10,7 +10,7 @@
 			
 		<!--</div>-->
 		
-		<div class="featured-wrapper">{% region id: content_image %}</div>
+		<div class="featured-wrapper">{% region content_image %}</div>
 		
 		<div id="contentwidget">
 			<div class="logo"><img src="http://cdn.traveltripper.io/assets/712/original/logo3.png" alt="logo3" /></div>
@@ -46,11 +46,11 @@
 		
 			<div class="container">
 		
-				{% region id: the_content %}
+				{% region the_content %}
 			
 			</div>
 		
 		</div>
 		
 
-{% template title:footer %}
+{% include footer.html %}

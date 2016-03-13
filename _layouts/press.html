@@ -1,6 +1,6 @@
 {% assign template_class = 'page-press' %}
 
-{% template title:header %}
+{% include header.html %}
 
 		
   <div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/3752/original/press-header-image.jpg);">
@@ -16,7 +16,7 @@
 
            <!-- include booking form -->
 
-            {% template title:booking_form_interior %}
+            {% include booking_form_interior.html %}
 
             <!-- // include booking form -->
 
@@ -50,7 +50,7 @@
 				<strong><a href="mailto:bronson@3aworldwide.com">bronson@3aworldwide.com</a></strong></p>-->
 				
 				
-				{% region id:press_primarytext %}
+				{% region press_primarytext %}
 				
 				<br>
 				<br>
@@ -76,4 +76,4 @@
 		
 		</div>
 		
-{% template title:footer %}
+{% include footer.html %}
