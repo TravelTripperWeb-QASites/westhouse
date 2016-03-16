@@ -1,1 +1,4 @@
-{"name":{"required":true},"url":{"required":true}}
+{"name":
+	{"required":true},
+"url":
+	{"required":true}}
