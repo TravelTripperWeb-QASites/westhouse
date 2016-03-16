@@ -50,7 +50,7 @@
         #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
 
 #cboxPrevious {
-  background: url(http://cdn.traveltripper.io/assets/5722/original/prev2.png) no-repeat center;
+  background: url(/images/assets/5722/original/prev2.png) no-repeat center;
   width: 21px;
   height: 34px;
   position: absolute;
@@ -58,7 +58,7 @@
   right: 38%;
 }
 #cboxNext {
-  background: url(http://cdn.traveltripper.io/assets/5732/original/next2.png) no-repeat center;
+  background: url(/images/assets/5732/original/next2.png) no-repeat center;
   width: 21px;
   height: 34px;
   position: absolute;
@@ -67,7 +67,7 @@
 }
 		
 #cboxClose {
-  background: url(http://cdn.traveltripper.io/assets/5762/original/close.png) no-repeat center;
+  background: url(/images/assets/5762/original/close.png) no-repeat center;
   width: 30px;
   height: 30px;
   position: absolute;
