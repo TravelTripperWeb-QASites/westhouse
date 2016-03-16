@@ -3,7 +3,7 @@
 {% template title:header %}
 		
 
-    <div id="featuredcontent" style="background-image: url(http://cdn.traveltripper.io/assets/6082/original/westhouse-hotel-new-york-dining.jpg);">
+    <div id="featuredcontent" style="background-image: url(/images/assets/6082/original/westhouse-hotel-new-york-dining.jpg);">
 
             <h1 class="contenttitle">Culinary Guide</h1>
 
@@ -12,7 +12,7 @@
         </div>
 
         <div id="contentwidget">
-            <div class="logo"><a href="/"><img src="http://cdn.traveltripper.io/assets/712/original/logo3.png" alt="logo3" /></a></div>
+            <div class="logo"><a href="/"><img src="/images/assets/712/original/logo3.png" alt="logo3" /></a></div>
 
            <!-- include booking form -->
 

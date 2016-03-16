@@ -312,7 +312,7 @@ h6 {font-size: 55px;}
   position: absolute;
   left: 50%;
   top: 50%;
-  background-image: url(http://cdn.traveltripper.io/assets/702/original/logo2.png);
+  background-image: url(/images/assets/702/original/logo2.png);
   background-repeat: no-repeat;
   background-position: center;
   margin: -65px 0 0 -197px;
@@ -564,7 +564,7 @@ h6 {font-size: 55px;}
   bottom: 0px;
   height: 100%;
   width: 100%;
-  background: url(http://cdn.traveltripper.io/assets/9488/original/texture.png);
+  background: url(/images/assets/9488/original/texture.png);
     z-index: 1;
   opacity: 0.5;
 }
@@ -888,7 +888,7 @@ font-family: GothamLight;
   bottom: 0px;
   height: 100%;
   width: 100%;
-  background: url(http://cdn.traveltripper.io/assets/9488/original/texture.png) rgba(0,0,0, 0.5);
+  background: url(/images/assets/9488/original/texture.png) rgba(0,0,0, 0.5);
     z-index: 1;
   opacity: 0.5;
 }
@@ -1435,7 +1435,7 @@ a.hasher {
   bottom: 0px;
   height: 100%;
   width: 100%;
-  background: url(http://cdn.traveltripper.io/assets/9488/original/texture.png);
+  background: url(/images/assets/9488/original/texture.png);
   z-index: 1;
   opacity: 0.5;
 }
@@ -1837,12 +1837,12 @@ a.hasher {
 }
 
 .roomdate .ui-icon-circle-triangle-e {
-  background: url(http://cdn.traveltripper.io/assets/622/original/calnext.png) no-repeat;
+  background: url(/images/assets/622/original/calnext.png) no-repeat;
   cursor: pointer;
 }
 
 .roomdate .ui-icon-circle-triangle-w{
-  background: url(http://cdn.traveltripper.io/assets/632/original/calprev.png) no-repeat;
+  background: url(/images/assets/632/original/calprev.png) no-repeat;
   cursor: pointer;
 }
 

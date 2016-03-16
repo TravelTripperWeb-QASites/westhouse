@@ -14,8 +14,8 @@
  * ====================================================================================================================*/
 @font-face {
   font-family: 'flexslider-icon';
-  src: url('http://cdn.traveltripper.io/assets/482/original/flexslider-icon.eot');
-  src: url('http://cdn.traveltripper.io/assets/482/original/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('http://cdn.traveltripper.io/assets/62/original/flexslider-icon.woff') format('woff'), url('http://cdn.traveltripper.io/assets/52/original/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  src: url('/images/assets/482/original/flexslider-icon.eot');
+  src: url('/images/assets/482/original/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('/images/assets/62/original/flexslider-icon.woff') format('woff'), url('/images/assets/52/original/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -297,14 +297,14 @@ html[xmlns] .flexslider .slides {
 
 .flex-direction-nav a:before {
   content: "";
-  background: url(http://cdn.traveltripper.io/assets/9491/original/prev.png) no-repeat;
+  background: url(/images/assets/9491/original/prev.png) no-repeat;
   display: block;
   width: 22px;
   height: 46px;
 }
 .flex-direction-nav a.flex-next:before {
   content: "";
-  background: url(http://cdn.traveltripper.io/assets/9492/original/next.png) no-repeat;
+  background: url(/images/assets/9492/original/next.png) no-repeat;
 }
 
 .flexslider:hover .flex-direction-nav .flex-prev {
