@@ -1,0 +1,93 @@
+{% assign Dining = page %}
+{% assign model = page %}
+{% assign template_class = 'dining-single' %}
+{% assign seo_title = Dining.seo_title %}
+{% assign seo_description = Dining.seo_description %}
+
+{% include header.html %}
+
+	
+		<div id="featuredcontent" style="background-image: url({{Dining.image}});">
+
+			<h1 class="contenttitle">{{ Dining.title }}</h1>
+
+			<div class="reserve"><a class="button1" href="{{Dining.outbound}}">Reserve</a></div>
+
+		</div>
+
+		<div id="contentwidget">
+		   <div class="logo"><a href="/"><img src="/images/assets/712/original/logo3.png" alt="logo3" /></a></div>
+
+            {% include booking_form_interior.html %}
+
+		</div>
+
+		<div class="subnav">
+    		<ul>
+			    {% for Dining in site.data._models.Dining %}
+        	    	<li><a href="{{ Dining.id | permalink: model_dir: 'dining' }}">{{ Dining.title }}</a></li>
+                {% endfor %}
+    		</ul>
+    	</div>
+    	
+        <div class="subnavmobile">
+          <ul>
+            {% for Dining in site.data._models.Dining %}
+			<li><a href="{{ Dining.id | permalink: model_dir: 'dining' }}"><span>{{ Dining.title }}</span></a></li>
+            {% endfor %}
+            <div class="clear"></div>
+          </ul>
+          
+          <div class="subclose"><i class="fa fa-bars"></i><span>View Dining</span></div>
+        </div>
+
+	<div id="dining">
+		<div class="container">
+		    
+		    <div class="dining-container">
+			
+			    {{ Dining.contents }} 
+
+				<!--<p>From breakfast on The Terrace, with its captivating city views rivaling rooftop restaurants in New York, to afternoon libations in The Den, where our modern speakeasy-style cocktail hour unfolds, it is little moments of sophisticated indulgence that elevate the everyday at WestHouse. Hotel Residents enjoy these complimentary culinary privileges throughout their stay, a rare and exceptional offering among luxury hotels in New York. And with an enviable location in the very heart of the world’s most food-centric city, WestHouse Residents can gain coveted reservations at famed Manhattan restaurants.</p>
+
+				<p>Resident dining privileges include:</p>
+
+				<ul class="dining-lists">
+					<li>Savory breakfast presentations and barista coffees in The Terrace Weekdays between 6.30am and 10.30am. Weekends between 7.00am and 11.00am</li>
+					<li>Afternoon treats in The Terrace Daily between 2.00pm and 4.00pm</li>
+					<li>Light fare served during Hours of Indulgence in The Den Daily between 5.00pm and 8.00pm</li>
+					<li>Curated selection of alcoholic* beverages in The Den Daily between 5.00pm and 11.00pm</li>
+					<li>Self-service non-alcoholic beverages in The Terrace Daily until 11.00pm</li>
+				</ul>
+
+				 <p>Savory breakfast presentations and barista coffees:</p>
+
+				<ul class="dining-lists">
+					<li>Weekdays between 6:30 AM and 10:30 AM</li>
+					<li>Weekends between 7:00 AM and 11:00 AM</li>
+				</ul>	 
+
+				<p>WestHouse pours the finest quality spirits such as Hudson Whiskey, Manhattan Rye, Louis the 13th Cognac, Johnny Walker Blue, McAllen 18, Roca Patron, and more. Featured Champagnes include Perrier Jouet, Dom Perignon or Roederer Cristal.</p>
+                -->
+
+            </div>
+				
+			{% if Dining.image %}
+			
+    			<div class="flexslider diningslider">
+    				<ul class="slides">
+    					{% if Dining.image != '' %}<li style="background-image: url({{Dining.image}});"></li>{% endif %}
+    					{% if Dining.image1 != '' %}<li style="background-image: url({{Dining.image1}});"></li>{% endif %}
+    					{% if Dining.image2 != '' %}<li style="background-image: url({{Dining.image2}});"></li>{% endif %}
+    					{% if Dining.image3 != '' %}<li style="background-image: url({{Dining.image3}});"></li>{% endif %}
+    					{% if Dining.image4 != '' %}<li style="background-image: url({{Dining.image4}});"></li>{% endif %}
+    					{% if Dining.image5 != '' %}<li style="background-image: url({{Dining.image5}});"></li>{% endif %}    					
+    				</ul>
+    			</div>
+			
+			{% endif %}
+
+            </div>
+
+        </div>
+{% include footer.html %}

@@ -1,0 +1,24 @@
+{"title":
+	{"required":true},
+"seo_title":
+	{"required":true},
+"seo_description":
+	{"type":"text","required":true},
+"url_friendly_name":
+	{"type":"url_slug"},
+"author":
+	{"required":true,"type":"model","model_name":"Author","multiple":false,"display_field":"name"},
+"category":
+	{"type":"model","model_name":"BlogCategory","multiple":true,"default_text":"Select Blog Post Categories","display_field":"name"},
+"date":
+	{"required":true,"hint":"Publishing date (MM/DD/YY)"},
+"datemeta":
+	{"required":true,"hint":"Used to sort blogs by date (YYYY/MM/DD)"},
+"preview":
+	{"type":"richtext","required":true,"hint":"Write the preview of your article"},
+"content":
+	{"type":"richtext","required":true,"hint":"Write the content of your article"},
+"image":
+	{"type":"image"},
+"thumbnail":
+	{"type":"image"}}
