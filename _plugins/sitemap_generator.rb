@@ -40,6 +40,14 @@ class SitemapGenerator
 
     sitemap['__REGIONS__'] = site.data['regions']
 
+    if Dir.exists?('tmp/src')
+      Dir.chdir('tmp/src') {
+        sitemap['__SHA__'] = sha
+      }
+    else
+      sitemap['__SHA__'] = sha
+    end
+
     save sitemap
   end
 
@@ -54,5 +62,9 @@ class SitemapGenerator
       File.open('sitemap.json', 'w') do |f|
         f.write(sitemap.to_json)
       end
+    end
+
+    def sha
+      `git rev-parse HEAD`.chomp
     end
 end

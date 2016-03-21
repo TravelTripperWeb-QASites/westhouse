@@ -10,8 +10,8 @@ module Jekyll
       @site = site
       @base = base
       @dir = dir
+      @data_source = source_dir + '/' + (data['__INSTANCE__'] || "#{name}.json")
       @name = sanitize_filename(name) + ".html"
-      @data_source = source_dir + '/' + sanitize_filename(name) + '.json'
       @source_path = '_layouts/' + template + '.html'
 
       self.process(@name)
