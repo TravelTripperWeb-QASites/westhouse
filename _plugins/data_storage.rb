@@ -11,13 +11,15 @@ class Array
 end
 
 class DataStorage
-  attr_reader :collection
+  attr_reader :collection, :locale, :default_locale
 
-  def initialize(models, definitions)
+  def initialize(models, definitions, locale, default_locale)
     @collection = {}
+    @locale = locale
+    @default_locale = default_locale
 
     models_path = File.expand_path("../../_data/_models", __FILE__)
-    models.each do |model_name, model_data|
+    (models || []).each do |model_name, model_data|
       if Dir.exists?("#{models_path}/#{model_name}")
         Dir.chdir("#{models_path}/#{model_name}") do
           raise "_data/_models/#{model_name} contains subdirectories" if Dir.glob('*').any?{|f| File.directory? f }
