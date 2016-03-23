@@ -6,6 +6,7 @@ languages: ['en']
 
 exclude: ['sitemap.json']
 keep_files: ['images']
+rsync_copy: ['_images']
 
 page_gen:
   - data: 'Blog'
