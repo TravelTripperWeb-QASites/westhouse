@@ -50,7 +50,6 @@ module Jekyll
             records.each do |record|
               page = DataPage.new(site, site.source, dir, record.data, record.id, template, data_spec['data'])
               site.pages << page
-              site.store_page_permalink!(page)
             end
           else
             puts "error. could not find template #{template}"
