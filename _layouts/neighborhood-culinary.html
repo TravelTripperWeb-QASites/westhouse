@@ -45,13 +45,13 @@
 
 		</script>
 		
-		<div id="featuredcontent" class="neighborhoodmap">
+		<div id="featuredcontent" class="culinary neighborhoodmap">
 		    <div class="nmapcon"><span>Click to Enable</span></div>
 			{% for LocationsInCategory-Culinary-Guide in site.data._models.Culinary-Guide %}
 {% assign categoryIds = LocationsInCategory-Culinary-Guide.category | map: 'id' %}
 {% if categoryIds contains '56b0c32277e2f50003f8af60' %}
     			<div id="infocontainerB{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" class="infocontainer">
-    		        <a href="{{ LocationsInCategory-Culinary-Guide.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationsInCategory-Culinary-Guide.image.url }}" alt="{{ LocationsInCategory-Culinary-Guide.title }}" /></a>
+    		        <img src="{{ LocationsInCategory-Culinary-Guide.image.url }}" alt="{{ LocationsInCategory-Culinary-Guide.title }}" />
     			    <h2>{{ LocationsInCategory-Culinary-Guide.title }}</h2>
     			  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
     			  	<div class="clear"></div>
@@ -63,7 +63,7 @@
 		<div id="map" style="height:600px;"></div>
             <ul id="map-side-bar">
                 <span class="usvisits">
-                    <li style="" class="map-location" data-icon="/images/assets/3782/original/mapicon.jpg" data-jmapping="{id: 200, point: {lat: 40.7646719, lng: -73.9814936 }, category: 'amen', bounded: true, icon: '/images/assets/3782/original/mapicon.jpg'}">
+                    <li style="" class="map-location" data-icon="/assets/images/3782/original/mapicon.jpg" data-jmapping="{id: 200, point: {lat: 40.7646719, lng: -73.9814936 }, category: 'amen', bounded: true, icon: '/assets/images/3782/original/mapicon.jpg'}">
                         <a href="#" class="map-link us" rel="us">US</a>
                         <div class="info-box">
                             <h3>Westhouse Hotel New York</h3>
@@ -76,11 +76,11 @@
 {% assign categoryIds = LocationsInCategory-Culinary-Guide.category | map: 'id' %}
 {% if categoryIds contains '56b0c32277e2f50003f8af60' %}
                              
-                                <li class="map-location stater-B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationsInCategory-Culinary-Guide.Latitude }}, lng: {{ LocationsInCategory-Culinary-Guide.Longitude }} }, category: 'place', bounded: false, icon: '/images/assets/3792/original/pin-point.png'}">
-                    		        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}">{{ LocationsInCategory-Culinary-Guide.title }}</a>
+                                <li class="map-location stater-B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationsInCategory-Culinary-Guide.Latitude }}, lng: {{ LocationsInCategory-Culinary-Guide.Longitude }} }, category: 'place', bounded: false, icon: '/assets/images/3792/original/pin-point.png'}">
+                    		        {{ LocationsInCategory-Culinary-Guide.title }}
                     			        <div class="info-box">
                     			        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}</span>
-                    				        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationsInCategory-Culinary-Guide.title }}</a></h3>
+                    				        <h3>{{ LocationsInCategory-Culinary-Guide.title }}</a>
                     			       	</div>
                     			</li>
                             {% assign i = i | plus: 1 %}
@@ -94,7 +94,7 @@
 	    </div>
 
 		<div id="contentwidget">
-		   <div class="logo"><a href="/"><img src="/images/assets/712/original/logo3.png" alt="logo3" /></a></div>
+		   <div class="logo"><a href="/"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></a></div>
 
            <!-- include booking form -->
 
@@ -157,10 +157,10 @@
 				<p><br></p><p><br></p>
     			<div class="culinary-sub-list">
     			    <ul>
-    			        <li class="coffee-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/coffee-and-drinks' | permalink }}"><img src="/images/assets/9587/original/BETONY.png"><br />Coffee & Drinks</a></li>
-    			        <li class="lunch-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/lunch' | permalink }}"><img src="/images/assets/9588/original/POLO-BAR.png"><br />Lunch</a></li>
-    			        <li class="dinner-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/dinner' | permalink }}"><img src="/images/assets/9589/original/LE-BERNARDIN.png"><br />Dinner</a></li>
-    			        <li class="dessert-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/desserts-and-snacks' | permalink }}"><img src="/images/assets/9590/original/MOMOFUKU-MILK-BAR.png"><br />Dessert & Snacks</a></li>
+    			        <li class="coffee-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/coffee-and-drinks' | permalink }}"><img src="/assets/images/9587/original/BETONY.png"><br />Coffee & Drinks</a></li>
+    			        <li class="lunch-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/lunch' | permalink }}"><img src="/assets/images/9588/original/POLO-BAR.png"><br />Lunch</a></li>
+    			        <li class="dinner-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/dinner' | permalink }}"><img src="/assets/images/9589/original/LE-BERNARDIN.png"><br />Dinner</a></li>
+    			        <li class="dessert-tab"><a href="{{ 'things-to-do-in-nyc/culinary-guide/desserts-and-snacks' | permalink }}"><img src="/assets/images/9590/original/MOMOFUKU-MILK-BAR.png"><br />Dessert & Snacks</a></li>
     			    </ul>
     	        </div>
     	        

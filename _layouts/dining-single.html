@@ -16,7 +16,7 @@
 		</div>
 
 		<div id="contentwidget">
-		   <div class="logo"><a href="/"><img src="/images/assets/712/original/logo3.png" alt="logo3" /></a></div>
+		   <div class="logo"><a href="/"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></a></div>
 
             {% include booking_form_interior.html %}
 
@@ -70,6 +70,29 @@
 				<p>WestHouse pours the finest quality spirits such as Hudson Whiskey, Manhattan Rye, Louis the 13th Cognac, Johnny Walker Blue, McAllen 18, Roca Patron, and more. Featured Champagnes include Perrier Jouet, Dom Perignon or Roederer Cristal.</p>
                 -->
 
+            </div>
+            
+            <div style="background:#4C4C4C;" class="merch-sec" rt3-rate-shopping="rateShopping">
+                <div class="container">
+                    <div class="littleimage" style="background-image: url({{ Dining.image }});"></div>
+                    <div class="merch-copy">
+                        <h1 style="text-transform:none;">
+                            Interactive 360° View
+                            <span>
+                                TAKE A WALK THROUGH OF {{ Dining.title }} <br />
+                                USING OUR VIRTUAL TOUR TECHNOLOGY.
+                            </span>
+                        </h1>
+                        <br/>
+                    </div>
+                    <div class="reserve1">
+                        <a target="_blank" href="{{ Dining.vr_btn_link }}" class="button1">TAKE VIRTUAL TOUR</a>
+                        <!--<a href="" class="button1">Reserve Now</a>-->
+                    </div> 
+                    
+                    <a href="#" class="closethiswindow">X</a>
+                    
+                </div>
             </div>
 				
 			{% if Dining.image %}
