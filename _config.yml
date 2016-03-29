@@ -5,7 +5,8 @@ default_lang: 'en'
 languages: ['en']
 
 exclude: ['sitemap.json']
-keep_files: ['images']
+keep_files: ['assets']
+rsync_copy: ['_assets']
 
 page_gen:
   - data: 'Blog'
@@ -40,4 +41,7 @@ page_gen:
     dir: 'virtual-tours-2'
   - data: 'Neighborhood-Locations'
     template: 'neighborhood-single'
+    dir: 'things-to-do-in-nyc'
+  - data: 'Culinary-Guide'
+    template: 'neighborhood-culinary-single'
     dir: 'things-to-do-in-nyc'

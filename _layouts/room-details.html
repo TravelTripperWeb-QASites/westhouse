@@ -15,7 +15,7 @@
 		</div>
 		
 		<div id="contentwidget" style="margin-bottom: 0; border-bottom: 0">
-			<div class="logo"><img src="/images/assets/712/original/logo3.png" alt="logo3" /></div>
+			<div class="logo"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></div>
 		
 		    <!-- include booking form -->
 
@@ -203,6 +203,69 @@
 		<div id="roommoredetail">
 			<div class="container">
 				<div class="hamburger"><i class="fa fa-bars"></i></div>
+		<div ng-if="details.params.room_id != 'WHPS' && details.params.room_id != 'WHPRS'">		
+			<div style="background:#4C4C4C;" class="merch-sec" rt3-rate-shopping="rateShopping">
+                <div class="container">
+                    <div ng-if="details.params.room_id == 'WHQL'">
+						   <div class="littleimage" style="background-image: url(/assets/images/9644/original/luxury-queen.jpg);"></div>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHK'">
+						  <div class="littleimage" style="background-image: url(/assets/images/9641/original/king.jpg);"></div>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHKL'">
+						    <div class="littleimage" style="background-image: url(/assets/images/9643/original/luxury-king.jpg);"></div>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHQQ'">
+						   <div class="littleimage" style="background-image: url(/assets/images/9648/original/two-queen.jpg);"></div>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHKTS'">
+						   <div class="littleimage" style="background-image: url(/assets/images/9647/original/times-square-view-king.jpg);"></div>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHKS'">
+						   <div class="littleimage" style="background-image: url(/assets/images/9645/original/one-bedroom-suite.jpg);"></div>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHKST'">
+						  <div class="littleimage" style="background-image: url(/assets/images/9646/original/terrace-suite.jpg);"></div>
+			        </div>
+                    <div class="merch-copy">
+                        <h1 style="text-transform:none;">
+                                Interactive 360° View
+                                <span>
+                                    BEFORE YOU BOOK, TAKE A WALK THROUGH OF YOUR <br />
+                                    ROOM USING OUR VIRTUAL TOUUR TECHNOLOGY.
+                                </span>
+                            </h1>
+                        <br/>
+                    </div>
+                    <div class="reserve1">
+                        <div ng-if="details.params.room_id == 'WHQL'">
+						   <a target="_blank" href="http://viewer.vrglobal.com/oTR6FfqW" class="button1">TAKE VIRTUAL TOUR</a>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHK'">
+						   <a target="_blank" href="http://viewer.vrglobal.com/d7jiAWyW" class="button1">TAKE VIRTUAL TOUR</a>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHKL'">
+						   <a target="_blank" href="http://viewer.vrglobal.com/bI4wwp6J" class="button1">TAKE VIRTUAL TOUR</a>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHQQ'">
+						   <a target="_blank" href="http://viewer.vrglobal.com/6jvNwfVD" class="button1">TAKE VIRTUAL TOUR</a>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHKTS'">
+						   <a target="_blank" href="http://viewer.vrglobal.com/YCWYXsel" class="button1">TAKE VIRTUAL TOUR</a>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHKS'">
+						   <a target="_blank" href="http://viewer.vrglobal.com/SMDi7vqd" class="button1">TAKE VIRTUAL TOUR</a>
+				        </div>
+				        <div ng-if="details.params.room_id == 'WHKST'">
+						   <a target="_blank" href="http://viewer.vrglobal.com/X3EZAOZ9" class="button1">TAKE VIRTUAL TOUR</a>
+				        </div>
+                        
+                    </div> 
+                    
+                    <span class="closethiswindow">X</span>
+                    
+                </div>
+            </div>
 				
 				<div class="roomamenities">
 					<ul>

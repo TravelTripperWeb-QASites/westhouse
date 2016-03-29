@@ -1,0 +1,74 @@
+{% assign template_class = 'page-galleries-vrtours' %}
+
+{% include header.html %}    
+    
+    <div id="featuredcontent" style="background-image: url(/assets/images/9649/original/WestHouse_Room_2108_Livingroom_v3s.jpg);">
+
+			<h1 class="contenttitle">Virtual Tours</h1>
+
+			<div class="reserve"><a class="button1" href="#">Reserve</a></div>
+
+		</div>
+
+	    <div id="contentwidget">
+		   <div class="logo"><a href="/"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></a></div>
+            {% include booking_form_interior.html %}
+		</div>
+
+
+		<div class="subnav">
+			<ul>
+				<!--<li><a href="">Hotel</a></li>-->
+				<li><a href="{{ 'photo-album/nyc-hotel-amenities' | permalink }}">Amenities</a></li>
+				<li><a href="{{ 'photo-album/accommodations' | permalink }}">Accommodations</a></li>
+				<li><a href="{{ 'photo-album/dining-2' | permalink }}">Dining</a></li>
+		        <li><a href="{{ 'photo-album/virtual-tours' | permalink }}">Virtual Tours</a></li>
+			</ul>
+		</div>
+
+		<div id="maincontent">
+
+			<div class="container">
+
+		       {% region accommodations_gallery_text %}
+			       
+			</div>
+
+		</div>
+
+		<div id="gallerylist">
+			<ul>
+			
+				<li style="background-image: url(/assets/images/9644/original/luxury-queen.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/oTR6FfqW"><h3>Luxury Queen</h3></a>
+				</li>
+				<li style="background-image: url(/assets/images/9641/original/king.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/d7jiAWyW"><h3>King</h3></a>
+				</li>
+				<li style="background-image: url(/assets/images/9645/original/one-bedroom-suite.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/bI4wwp6J"><h3>Luxury King</h3></a>
+				</li>
+				<li style="background-image: url(/assets/images/9648/original/two-queen.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/6jvNwfVD"><h3>Two Queen</h3></a>
+				</li>
+				<li style="background-image: url(/assets/images/9647/original/times-square-view-king.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/YCWYXsel"><h3>Times Square View King</h3></a>
+				</li>
+			    <li style="background-image: url(/assets/images/9643/original/luxury-king.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/SMDi7vqd"><h3>One Bedroom Suite</h3></a>
+				</li>
+				<li style="background-image: url(/assets/images/9642/original/concierge.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/6sGCQsCOe"><h3>Lobby / Concierge</h3></a>
+				</li>
+				<li style="background-image: url(/assets/images/9499/original/westhouse-hotel-new-york-the-den.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/7baFuUKp"><h3>Den / Bar</h3></a>
+				</li>	
+				<li style="background-image: url(/assets/images/9646/original/terrace-suite.jpg);">
+					<a target="_blank" href="http://viewer.vrglobal.com/X3EZAOZ9"><h3>Terrace</h3></a>
+				</li>			
+			</ul>
+				
+			</div>
+
+		</div>
+{% include footer.html %}
