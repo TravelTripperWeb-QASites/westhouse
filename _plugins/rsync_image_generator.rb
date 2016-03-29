@@ -1,12 +1,19 @@
+Jekyll::Hooks.register :site, :after_reset do |site|
+  site.config['keep_files'] ||= []
+  site.config['keep_files'] << 'assets' unless site.config['keep_files'].include?('assets')
+
+  p site.config['keep_files']
+end
+
 module Jekyll
   class RsyncImageGenerator < Generator
     def generate(site)
       system("mkdir -p #{site.config['destination']}");
 
       root = site.config['source']
-      site.config['rsync_copy'].each do |path|
-        full_path = File.join(root,path)
+      (site.config['rsync_copy'] || '_assets').each do |path|
         new_path = path[1..-1]
+        full_path = File.join(root, path)
         system("rsync --archive --delete #{full_path}/ #{site.config['destination']}/#{new_path}/")
       end
     end
