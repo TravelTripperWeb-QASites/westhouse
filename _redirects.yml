@@ -1,202 +1,203 @@
-'/example': '/careers'
-'/the-neighborhood': '/things-to-do-in-nyc'
-'/?ver=1.6.2': '/home-page'
-'/location': '/home-page'
-'/location/': '/home-page'
-'/subscribe': '/home-page'
-'/?post_type=offers&p=365': '/home-page'
-'/blog/': '/westhouse-blog'
-'/dining/the-terrace': '/the-terrace-nyc-rooftop-bar'
-'/dining/westroom-nyc-event-venue': '/events-in-nyc'
-'/luxury-rooms-suites-nyc/luxury-hotel-suites-in-midtown': '/luxury-rooms-suites-nyc'
-'/attraction-type/shopping': '/shopping'
-'/luxury-rooms-suites-nyc/luxury-hotel-rooms-in-midtown': '/luxury-rooms-suites-nyc'
-'/attraction-type/must-see-nyc/': '/must-see-nyc'
-'/attraction-type/entertainment': '/entertainment'
-'/luxury-hotel-amenities-nyc/hotel-fitness-center': '/luxury-hotel-amenities-nyc'
-'/bedrooms-suites': '/luxury-rooms-suites-nyc'
-'/attraction-type/must-see-nyc': '/must-see-nyc'
-'/dining/speakeasy-lounge-nyc': '/dining'
-'/attraction-type/art-culture': '/art-culture'
-'/press-releases': '/press'
-'/rooms/prestige-suite': '/luxury-rooms-suites-nyc'
-'/dining/the-terrace-nyc-rooftop-bar': '/the-terrace-nyc-rooftop-bar'
-'/attraction-type/events': '/events-in-nyc'
-'/the-neighborhood/': '/things-to-do-in-nyc'
-'/dining/the-den': '/speakeasy-lounge-nyc'
-'/luxury-hotel-amenities-nyc/concierge': '/luxury-hotel-amenities-nyc'
-'/amenities/concierge': '/luxury-hotel-amenities-nyc'
-'/pt-pt': '/home-page'
-'/pt-pt/bedrooms-suites': '/home-page'
-'/rooms/terrace-suites': '/luxury-rooms-suites-nyc'
-'/rooms/luxury-king': '/luxury-rooms-suites-nyc'
-'/rooms/times-square-view-king': '/luxury-rooms-suites-nyc'
-'/rooms/one-bedroom-suites': '/luxury-rooms-suites-nyc'
-'/rooms/presidential-suite': '/luxury-rooms-suites-nyc'
-'/rooms/two-queens': '/luxury-rooms-suites-nyc'
-'/pt-pt/amenities-2': '/home-page'
-'/br/RESTAURANTES/The-Den': '/home-page'
-'/pt-pt/the-neighborhood': '/home-page'
-'/pt-pt/the-neighborhood/': '/home-page'
-'/fr/dining/the-den/': '/home-page'
-'/it/amenities-2': '/home-page'
-'/br/var/westhousehotelnewyork/storage/images/media/images/thumbnail-images/map/37913-1-eng-US/map.jpg': '/home-page'
-'/it': '/home-page'
-'/es/dining/the-den': '/home-page'
-'/it/the-neighborhood': '/home-page'
-'/fr/press': '/home-page'
-'/pt-pt/location': '/home-page'
-'/pt-pt/dining/the-den': '/home-page'
-'/de': '/home-page'
-'/fr/the-neighborhood/': '/home-page'
-'/it/RISTORANTI/The-Terrace': '/home-page'
-'/de/dining/the-den': '/home-page'
-'/it/amenities-2/concierge': '/home-page'
-'/pt-pt/press': '/home-page'
-'/de/amenities-2': '/home-page'
-'/it/press-releases': '/home-page'
-'/de/press': '/home-page'
-'/it/the-neighborhood/': '/home-page'
-'/it/var/westhousehotelnewyork/storage/images/media/images/thumbnail-images/map/37913-1-eng-US/map.jpg': '/home-page'
-'/br/RESTAURANTES/The-Terrace': '/home-page'
-'/es/amenities-2/concierge': '/home-page'
-'/br/COMODIDADES/SALA-DE-GINASTICA': '/home-page'
-'/it/SERVIZI/SERVIZIO-CONCIERGE': '/home-page'
-'/pt-pt/bedrooms-suites/': '/home-page'
-'/es/dining/the-terrace': '/home-page'
-'/wp-content/uploads/2015/04/Examiner.com_.jpg': '/home-page'
-'/it/dining/the-terrace': '/home-page'
-'/fr/bedrooms-suites/': '/home-page'
-'/es/about': '/home-page'
-'/de/press-releases': '/home-page'
-'/de/the-neighborhood': '/home-page'
-'/fr/about': '/home-page'
-'/de/about': '/home-page'
-'/fr': '/home-page'
-'/pt-pt/amenities-2/workout-room': '/home-page'
-'/fr/location': '/home-page'
-'/de/SPEISEN/The-Terrace': '/home-page'
-'/it/sitemap': '/home-page'
-'/es': '/home-page'
-'/fr/dining/the-den': '/home-page'
-'/fr/amenities-2/workout-room': '/home-page'
-'/es/amenities-2/workout-room': '/home-page'
-'/es/dining': '/home-page'
-'/es/RESTAURANTES/The-Terrace': '/home-page'
-'/es/sitemap': '/home-page'
-'/es/press-releases': '/home-page'
-'/es/HABITACIONES-Y-SUITES/HABITACIONES': '/home-page'
-'/fr/amenities-2/concierge': '/home-page'
-'/es/EL-VECINDARIO/VISITAS-OBLIGADAS-EN-NYC': '/home-page'
-'/es/PRENSA': '/home-page'
-'/es/Mappa-del-sito': '/home-page'
-'/es/ALBUM-DE-FOTOS/The-Den': '/home-page'
-'/es/ACERCA-DE-NOSOTROS': '/home-page'
-'/es/OFERTAS': '/home-page'
-'/es/CONTACTO': '/home-page'
-'/es/REGISTRARSE': '/home-page'
-'/es/SERVICIOS/ASISTENTE-PERSONAL': '/home-page'
-'/es/ALBUM-DE-FOTOS/Videos': '/home-page'
-'/fr/the-neighborhood': '/home-page'
-'/pt-pt/location/': '/home-page'
-'/es/press': '/home-page'
-'/es/ALBUM-DE-FOTOS': '/home-page'
-'/es/ALBUM-DE-FOTOS/THE-TERRACE': '/home-page'
-'/de/SPEISEN/The-Den': '/home-page'
-'/pt-pt/about': '/home-page'
-'/it/subscribe': '/home-page'
-'/pt-pt/contact-us': '/home-page'
-'/es/the-neighborhood': '/home-page'
-'/it/press': '/home-page'
-'/es/EL-VECINDARIO/ARTE-Y-CULTURA': '/home-page'
-'/fr/dining': '/home-page'
-'/de/wilkommen-im-westhouse-ihrem-zweiten-zuhause-new-york': '/home-page'
-'/pt-pt/dining/the-den/': '/home-page'
-'/es/EL-VECINDARIO/Events': '/home-page'
-'/it/contact-us': '/home-page'
-'/es/ALBUM-DE-FOTOS/THE-TERRACE2': '/home-page'
-'/fr/sitemap': '/home-page'
-'/es/POLITICA-DE-PRIVACIDAD': '/home-page'
-'/it/bedrooms-suites/': '/home-page'
-'/es/bedrooms-suites': '/home-page'
-'/es/OFERTAS/ARTE-Y-ESPECTACULOS': '/home-page'
-'/de/amenities': '/home-page'
-'/it/amenities': '/home-page'
-'/fr/attraction-type/must-see-nyc': '/home-page'
-'/es/privacy-policy': '/home-page'
-'/de/the-neighborhood/': '/home-page'
-'/fr/press-releases': '/home-page'
-'/pt-pt/dining': '/home-page'
-'/it/dining/the-den': '/home-page'
-'/es/HABITACIONES-Y-SUITES': '/home-page'
-'/fr/privacy-policy': '/home-page'
-'/de/sitemap': '/home-page'
-'/pt-pt/subscribe': '/home-page'
-'/es/SITUACION': '/home-page'
-'/es/SERVICIOS/SALA-DE-ENTRENAMIENTO': '/home-page'
-'/it/dining/the-terrace/': '/home-page'
-'/es/amenities-2': '/home-page'
-'/pt-pt/attraction-type/must-see-nyc': '/home-page'
-'/pt-pt/sitemap': '/home-page'
-'/fr/QUIPEMENTS/SERVICE-DE-CONCIERGERIE': '/home-page'
-'/es/RESTAURANTES/The-Den': '/home-page'
-'/pt-pt/privacy-policy': '/home-page'
-'/it/location': '/home-page'
-'/it/attraction-type/must-see-nyc': '/home-page'
-'/es/HABITACIONES-Y-SUITES/SUITES': '/home-page'
-'/de/dining/the-den/': '/home-page'
-'/it/bedrooms-suites': '/home-page'
-'/pt-pt/dining/the-terrace': '/home-page'
-'/de/amenities-2/concierge': '/home-page'
-'/pt-pt/dining/the-terrace/': '/home-page'
-'/fr/photo-album': '/home-page'
-'/de/bedrooms-suites/': '/home-page'
-'/es/EL-VECINDARIO/COMPRAS': '/home-page'
-'/it/about': '/home-page'
-'/fr/location/': '/home-page'
-'/it/dining/the-den/': '/home-page'
-'/it/photo-album': '/home-page'
-'/fr/about-2': '/home-page'
-'/fr/subscribe': '/home-page'
-'/es/EL-VECINDARIO': '/home-page'
-'/pt-pt/amenities': '/home-page'
-'/pt-pt/amenities-2/concierge': '/home-page'
-'/de/dining': '/home-page'
-'/pt-pt/press-releases': '/home-page'
-'/fr/dining/the-terrace/': '/home-page'
-'/fr/amenities': '/home-page'
-'/it/dining/': '/home-page'
-'/it/privacy-policy/': '/home-page'
-'/de/privacy-policy/': '/home-page'
-'/fr/dining/the-terrace': '/home-page'
-'/es/RESTAURANTES': '/home-page'
-'/de/bedrooms-suites': '/home-page'
-'/de/subscribe': '/home-page'
-'/br/COMODIDADES/CONCIERGE': '/home-page'
-'/it/RISTORANTI/The-Den': '/home-page'
-'/de/ANNEHMLICHKEITEN/CONCIERGE': '/home-page'
-'/es/EL-VECINDARIO/ESPECTACULOS': '/home-page'
-'/fr/bedrooms-suites': '/home-page'
-'/es/subscribe': '/home-page'
-'/es/ALBUM-DE-FOTOS/HABITACIONES-SUITES': '/home-page'
-'/es/location': '/home-page'
-'/es/offers': '/home-page'
-'/de/attraction-type/must-see-nyc': '/home-page'
-'/de/ANNEHMLICHKEITEN/FITNESSRAUM': '/home-page'
-'/it/location/': '/home-page'
-'/de/location/': '/home-page'
-'/de/dining/the-terrace/': '/home-page'
-'/es/contact-us': '/home-page'
-'/de/amenities-2/workout-room': '/home-page'
-'/it/SERVIZI/SALA-FITNESS': '/home-page'
-'/fr/amenities-2': '/home-page'
-'/it/amenities-2/workout-room': '/home-page'
-'/de/dining/the-terrace': '/home-page'
-'/de/location': '/home-page'
-'/wp-content/uploads/2015/01/darryl-carter-interior-designer-westhouse-hotel.png': '/home-page'
-'/wp-content/uploads/2015/05/14184792813_c48c4924c4_z.jpg': '/home-page'
-'/amenities/': '/luxury-hotel-amenities-nyc'
-'/offers/': '/westhouse-offers'
-'/offers': '/westhouse-offers'
-'/blog': '/westhouse-blog'
-'/amenities': '/hotels-near-central-park-nyc'
+---
+- "/example": "/careers"
+- "/the-neighborhood": "/things-to-do-in-nyc"
+- "/?ver=1.6.2": "/home-page"
+- "/location": "/home-page"
+- "/location/": "/home-page"
+- "/subscribe": "/home-page"
+- "/?post_type=offers&p=365": "/home-page"
+- "/blog/": "/westhouse-blog"
+- "/dining/the-terrace": "/the-terrace-nyc-rooftop-bar"
+- "/dining/westroom-nyc-event-venue": "/events-in-nyc"
+- "/luxury-rooms-suites-nyc/luxury-hotel-suites-in-midtown": "/luxury-rooms-suites-nyc"
+- "/attraction-type/shopping": "/shopping"
+- "/luxury-rooms-suites-nyc/luxury-hotel-rooms-in-midtown": "/luxury-rooms-suites-nyc"
+- "/attraction-type/must-see-nyc/": "/must-see-nyc"
+- "/attraction-type/entertainment": "/entertainment"
+- "/luxury-hotel-amenities-nyc/hotel-fitness-center": "/luxury-hotel-amenities-nyc"
+- "/bedrooms-suites": "/luxury-rooms-suites-nyc"
+- "/attraction-type/must-see-nyc": "/must-see-nyc"
+- "/dining/speakeasy-lounge-nyc": "/dining"
+- "/attraction-type/art-culture": "/art-culture"
+- "/press-releases": "/press"
+- "/rooms/prestige-suite": "/luxury-rooms-suites-nyc"
+- "/dining/the-terrace-nyc-rooftop-bar": "/the-terrace-nyc-rooftop-bar"
+- "/attraction-type/events": "/events-in-nyc"
+- "/the-neighborhood/": "/things-to-do-in-nyc"
+- "/dining/the-den": "/speakeasy-lounge-nyc"
+- "/luxury-hotel-amenities-nyc/concierge": "/luxury-hotel-amenities-nyc"
+- "/amenities/concierge": "/luxury-hotel-amenities-nyc"
+- "/pt-pt": "/home-page"
+- "/pt-pt/bedrooms-suites": "/home-page"
+- "/rooms/terrace-suites": "/luxury-rooms-suites-nyc"
+- "/rooms/luxury-king": "/luxury-rooms-suites-nyc"
+- "/rooms/times-square-view-king": "/luxury-rooms-suites-nyc"
+- "/rooms/one-bedroom-suites": "/luxury-rooms-suites-nyc"
+- "/rooms/presidential-suite": "/luxury-rooms-suites-nyc"
+- "/rooms/two-queens": "/luxury-rooms-suites-nyc"
+- "/pt-pt/amenities-2": "/home-page"
+- "/br/RESTAURANTES/The-Den": "/home-page"
+- "/pt-pt/the-neighborhood": "/home-page"
+- "/pt-pt/the-neighborhood/": "/home-page"
+- "/fr/dining/the-den/": "/home-page"
+- "/it/amenities-2": "/home-page"
+- "/br/var/westhousehotelnewyork/storage/images/media/images/thumbnail-images/map/37913-1-eng-US/map.jpg": "/home-page"
+- "/it": "/home-page"
+- "/es/dining/the-den": "/home-page"
+- "/it/the-neighborhood": "/home-page"
+- "/fr/press": "/home-page"
+- "/pt-pt/location": "/home-page"
+- "/pt-pt/dining/the-den": "/home-page"
+- "/de": "/home-page"
+- "/fr/the-neighborhood/": "/home-page"
+- "/it/RISTORANTI/The-Terrace": "/home-page"
+- "/de/dining/the-den": "/home-page"
+- "/it/amenities-2/concierge": "/home-page"
+- "/pt-pt/press": "/home-page"
+- "/de/amenities-2": "/home-page"
+- "/it/press-releases": "/home-page"
+- "/de/press": "/home-page"
+- "/it/the-neighborhood/": "/home-page"
+- "/it/var/westhousehotelnewyork/storage/images/media/images/thumbnail-images/map/37913-1-eng-US/map.jpg": "/home-page"
+- "/br/RESTAURANTES/The-Terrace": "/home-page"
+- "/es/amenities-2/concierge": "/home-page"
+- "/br/COMODIDADES/SALA-DE-GINASTICA": "/home-page"
+- "/it/SERVIZI/SERVIZIO-CONCIERGE": "/home-page"
+- "/pt-pt/bedrooms-suites/": "/home-page"
+- "/es/dining/the-terrace": "/home-page"
+- "/wp-content/uploads/2015/04/Examiner.com_.jpg": "/home-page"
+- "/it/dining/the-terrace": "/home-page"
+- "/fr/bedrooms-suites/": "/home-page"
+- "/es/about": "/home-page"
+- "/de/press-releases": "/home-page"
+- "/de/the-neighborhood": "/home-page"
+- "/fr/about": "/home-page"
+- "/de/about": "/home-page"
+- "/fr": "/home-page"
+- "/pt-pt/amenities-2/workout-room": "/home-page"
+- "/fr/location": "/home-page"
+- "/de/SPEISEN/The-Terrace": "/home-page"
+- "/it/sitemap": "/home-page"
+- "/es": "/home-page"
+- "/fr/dining/the-den": "/home-page"
+- "/fr/amenities-2/workout-room": "/home-page"
+- "/es/amenities-2/workout-room": "/home-page"
+- "/es/dining": "/home-page"
+- "/es/RESTAURANTES/The-Terrace": "/home-page"
+- "/es/sitemap": "/home-page"
+- "/es/press-releases": "/home-page"
+- "/es/HABITACIONES-Y-SUITES/HABITACIONES": "/home-page"
+- "/fr/amenities-2/concierge": "/home-page"
+- "/es/EL-VECINDARIO/VISITAS-OBLIGADAS-EN-NYC": "/home-page"
+- "/es/PRENSA": "/home-page"
+- "/es/Mappa-del-sito": "/home-page"
+- "/es/ALBUM-DE-FOTOS/The-Den": "/home-page"
+- "/es/ACERCA-DE-NOSOTROS": "/home-page"
+- "/es/OFERTAS": "/home-page"
+- "/es/CONTACTO": "/home-page"
+- "/es/REGISTRARSE": "/home-page"
+- "/es/SERVICIOS/ASISTENTE-PERSONAL": "/home-page"
+- "/es/ALBUM-DE-FOTOS/Videos": "/home-page"
+- "/fr/the-neighborhood": "/home-page"
+- "/pt-pt/location/": "/home-page"
+- "/es/press": "/home-page"
+- "/es/ALBUM-DE-FOTOS": "/home-page"
+- "/es/ALBUM-DE-FOTOS/THE-TERRACE": "/home-page"
+- "/de/SPEISEN/The-Den": "/home-page"
+- "/pt-pt/about": "/home-page"
+- "/it/subscribe": "/home-page"
+- "/pt-pt/contact-us": "/home-page"
+- "/es/the-neighborhood": "/home-page"
+- "/it/press": "/home-page"
+- "/es/EL-VECINDARIO/ARTE-Y-CULTURA": "/home-page"
+- "/fr/dining": "/home-page"
+- "/de/wilkommen-im-westhouse-ihrem-zweiten-zuhause-new-york": "/home-page"
+- "/pt-pt/dining/the-den/": "/home-page"
+- "/es/EL-VECINDARIO/Events": "/home-page"
+- "/it/contact-us": "/home-page"
+- "/es/ALBUM-DE-FOTOS/THE-TERRACE2": "/home-page"
+- "/fr/sitemap": "/home-page"
+- "/es/POLITICA-DE-PRIVACIDAD": "/home-page"
+- "/it/bedrooms-suites/": "/home-page"
+- "/es/bedrooms-suites": "/home-page"
+- "/es/OFERTAS/ARTE-Y-ESPECTACULOS": "/home-page"
+- "/de/amenities": "/home-page"
+- "/it/amenities": "/home-page"
+- "/fr/attraction-type/must-see-nyc": "/home-page"
+- "/es/privacy-policy": "/home-page"
+- "/de/the-neighborhood/": "/home-page"
+- "/fr/press-releases": "/home-page"
+- "/pt-pt/dining": "/home-page"
+- "/it/dining/the-den": "/home-page"
+- "/es/HABITACIONES-Y-SUITES": "/home-page"
+- "/fr/privacy-policy": "/home-page"
+- "/de/sitemap": "/home-page"
+- "/pt-pt/subscribe": "/home-page"
+- "/es/SITUACION": "/home-page"
+- "/es/SERVICIOS/SALA-DE-ENTRENAMIENTO": "/home-page"
+- "/it/dining/the-terrace/": "/home-page"
+- "/es/amenities-2": "/home-page"
+- "/pt-pt/attraction-type/must-see-nyc": "/home-page"
+- "/pt-pt/sitemap": "/home-page"
+- "/fr/QUIPEMENTS/SERVICE-DE-CONCIERGERIE": "/home-page"
+- "/es/RESTAURANTES/The-Den": "/home-page"
+- "/pt-pt/privacy-policy": "/home-page"
+- "/it/location": "/home-page"
+- "/it/attraction-type/must-see-nyc": "/home-page"
+- "/es/HABITACIONES-Y-SUITES/SUITES": "/home-page"
+- "/de/dining/the-den/": "/home-page"
+- "/it/bedrooms-suites": "/home-page"
+- "/pt-pt/dining/the-terrace": "/home-page"
+- "/de/amenities-2/concierge": "/home-page"
+- "/pt-pt/dining/the-terrace/": "/home-page"
+- "/fr/photo-album": "/home-page"
+- "/de/bedrooms-suites/": "/home-page"
+- "/es/EL-VECINDARIO/COMPRAS": "/home-page"
+- "/it/about": "/home-page"
+- "/fr/location/": "/home-page"
+- "/it/dining/the-den/": "/home-page"
+- "/it/photo-album": "/home-page"
+- "/fr/about-2": "/home-page"
+- "/fr/subscribe": "/home-page"
+- "/es/EL-VECINDARIO": "/home-page"
+- "/pt-pt/amenities": "/home-page"
+- "/pt-pt/amenities-2/concierge": "/home-page"
+- "/de/dining": "/home-page"
+- "/pt-pt/press-releases": "/home-page"
+- "/fr/dining/the-terrace/": "/home-page"
+- "/fr/amenities": "/home-page"
+- "/it/dining/": "/home-page"
+- "/it/privacy-policy/": "/home-page"
+- "/de/privacy-policy/": "/home-page"
+- "/fr/dining/the-terrace": "/home-page"
+- "/es/RESTAURANTES": "/home-page"
+- "/de/bedrooms-suites": "/home-page"
+- "/de/subscribe": "/home-page"
+- "/br/COMODIDADES/CONCIERGE": "/home-page"
+- "/it/RISTORANTI/The-Den": "/home-page"
+- "/de/ANNEHMLICHKEITEN/CONCIERGE": "/home-page"
+- "/es/EL-VECINDARIO/ESPECTACULOS": "/home-page"
+- "/fr/bedrooms-suites": "/home-page"
+- "/es/subscribe": "/home-page"
+- "/es/ALBUM-DE-FOTOS/HABITACIONES-SUITES": "/home-page"
+- "/es/location": "/home-page"
+- "/es/offers": "/home-page"
+- "/de/attraction-type/must-see-nyc": "/home-page"
+- "/de/ANNEHMLICHKEITEN/FITNESSRAUM": "/home-page"
+- "/it/location/": "/home-page"
+- "/de/location/": "/home-page"
+- "/de/dining/the-terrace/": "/home-page"
+- "/es/contact-us": "/home-page"
+- "/de/amenities-2/workout-room": "/home-page"
+- "/it/SERVIZI/SALA-FITNESS": "/home-page"
+- "/fr/amenities-2": "/home-page"
+- "/it/amenities-2/workout-room": "/home-page"
+- "/de/dining/the-terrace": "/home-page"
+- "/de/location": "/home-page"
+- "/wp-content/uploads/2015/01/darryl-carter-interior-designer-westhouse-hotel.png": "/home-page"
+- "/wp-content/uploads/2015/05/14184792813_c48c4924c4_z.jpg": "/home-page"
+- "/amenities/": "/luxury-hotel-amenities-nyc"
+- "/offers/": "/westhouse-offers"
+- "/offers": "/westhouse-offers"
+- "/blog": "/westhouse-blog"
+- "/amenities": "/hotels-near-central-park-nyc"
