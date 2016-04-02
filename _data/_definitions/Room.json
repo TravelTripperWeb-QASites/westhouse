@@ -16,4 +16,6 @@
 	{"hint":"List of all Amenities in a comma separated list."},
 "image":
 	{"photo":
-	{"type":"image","required":true,"hint":"Link to the image URLs. Use a comma separated list for a gallery."}}}
+	{"type":"image","required":true,"hint":"Link to the image URLs. Use a comma separated list for a gallery."}},
+"vr_btn_link":
+	{}}
