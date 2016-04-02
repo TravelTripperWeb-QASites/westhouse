@@ -16,9 +16,9 @@
 	{"required":true,"hint":"Used to sort blogs by date (YYYY/MM/DD)"},
 "preview":
 	{"type":"richtext","required":true,"hint":"Write the preview of your article"},
-"content":
-	{"type":"richtext","required":true,"hint":"Write the content of your article"},
 "image":
 	{"type":"image"},
 "thumbnail":
-	{"type":"image"}}
+	{"type":"image"},
+"contents":
+	{"type":"richtext","required":true,"hint":"Write the content of your article"}}

@@ -6,8 +6,6 @@
 	{"type":"text","required":true},
 "url_friendly_name":
 	{"type":"url_slug"},
-"content":
-	{"type":"text","required":true,"hint":"Write the content of your room."},
 "Room_ID":
 	{"hint":"Travel Tripper Room ID"},
 "Square_Footage":
@@ -18,4 +16,6 @@
 	{"photo":
 	{"type":"image","required":true,"hint":"Link to the image URLs. Use a comma separated list for a gallery."}},
 "vr_btn_link":
-	{}}
+	{},
+"contents":
+	{"type":"text","required":true,"hint":"Write the content of your room."}}

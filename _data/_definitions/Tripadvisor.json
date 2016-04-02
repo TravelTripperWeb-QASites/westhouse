@@ -2,7 +2,7 @@
 	{"required":true},
 "url_friendly_name":
 	{"type":"url_slug"},
-"content":
-	{"type":"text","required":true,"hint":"Write the quote here."},
 "Credit":
-	{"type":"text","hint":"Who Said it?"}}
+	{"type":"text","hint":"Who Said it?"},
+"contents":
+	{"type":"text","required":true,"hint":"Write the quote here."}}

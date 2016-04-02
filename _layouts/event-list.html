@@ -65,7 +65,7 @@
             {
                 title: "{{Event.title | json}}",
                 date: "{{Event.datemeta}}",
-                content: "{{Event.content | escape | newline_to_br }}"
+                content: "{{Event.contents | escape | newline_to_br }}"
             },
         {% endfor %}
     ];
