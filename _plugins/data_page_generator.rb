@@ -11,7 +11,7 @@ module Jekyll
       @base = base
       @dir = dir
       @data_source = source_dir + '/' + (data['__INSTANCE__'] || "#{name}.json")
-      @name = sanitize_filename(name) + ".html"
+      @name = sanitize_filename(name) + "/"
       @source_path = '_layouts/' + template + '.html'
 
       self.process(@name)
@@ -22,7 +22,7 @@ module Jekyll
 
       if permalink && !(permalink.end_with?('/') || permalink.end_with?('.html'))
         p "Permalink #{permalink} is invalid. Must ends with '/' or html extension"
-        #self.data['permalink'] += '.html'
+        self.data['permalink'] += '/'
       end
     end
 
