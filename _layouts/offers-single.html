@@ -29,7 +29,7 @@
 			<ul>
 			  {% for Offers in site.data._models.Offers %}
 
-        		<li><a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}">{{ Offers.title }}</a></li>
+        		<li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}">{{ Offers.title }}</a></li>
             
             {% endfor %}
             
@@ -39,7 +39,7 @@
         <div class="subnavmobile">
           <ul>
             {% for Offers in site.data._models.Offers %}
-            <li><a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}"><span>{{ Offers.title }}</span></a></li>
+            <li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}"><span>{{ Offers.title }}</span></a></li>
             {% endfor %}
             <div class="clear"></div>
           </ul>

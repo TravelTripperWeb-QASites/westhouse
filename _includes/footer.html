@@ -106,7 +106,7 @@
 {% for LimitedLastestBlogs in LatestBlogsList | limit: 2 %}
         				
         					<div class="blogitem" data-category-ids="{% for cat in LimitedLastestBlogs.category %} {{ cat.id }} {% endfor %}">
-        						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'westhouse-blog' }}">
+        						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'blog' }}">
         						<div class="bogpick" style="background-image: url({% if LimitedLastestBlogs.thumbnail.url %}{{ LimitedLastestBlogs.thumbnail.url }}{% else %}{{ LimitedLastestBlogs.image.url }}{% endif %});"></div>
         						<h4>{{ LimitedLastestBlogs.title }}</h4>
         						</a>
@@ -315,7 +315,7 @@
                         
 							<div class="boxcontainer">
 
-								<a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}" class="dropanchor"></a>
+								<a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -373,7 +373,7 @@
                         
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}" class="dropanchor"></a>
+								<a href="{{ Amenities.id | permalink: model_dir: 'westhouse-hotel-amenities-nyc' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -430,7 +430,7 @@
                         
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ Dining.id | permalink: model_dir: 'dining' }}" class="dropanchor"></a>
+								<a href="{{ Dining.id | permalink: model_dir: 'westhouse-hotel-new-york-dining' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -720,7 +720,7 @@
                         
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ Partners.id | permalink: model_dir: 'partners' }}" class="dropanchor"></a>
+								<a href="{{ Partners.id | permalink: model_dir: 'westhouse-hotel-new-york-partners' }}" class="dropanchor"></a>
 
 								<div class="lining">
 
@@ -780,7 +780,7 @@
                         
 							<div class="boxcontainer" data-category-ids="{% for cat in navBlogs.category %} {{ cat.id }} {% endfor %}">
 
-								<a href="{{ navBlogs.id | permalink: model_dir: 'westhouse-blog' }}" class="dropanchor"></a>
+								<a href="{{ navBlogs.id | permalink: model_dir: 'blog' }}" class="dropanchor"></a>
 
 								<div class="lining">
 

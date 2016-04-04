@@ -119,7 +119,7 @@
 {% assign categoryIds = LocationsInCategory-NYC-Entertainment-Guide.category | map: 'id' %}
 {% if categoryIds contains '55a7af28226e50448e00001c' %}
 			      <div id="infocontainerB{{ LocationsInCategory-NYC-Entertainment-Guide.url_friendly_name }}" class="infocontainer">
-				  	<a href="{{ LocationsInCategory-NYC-Entertainment-Guide.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationsInCategory-NYC-Entertainment-Guide.image.url }}" alt="{{ LocationsInCategory-NYC-Entertainment-Guide.title }}" /></a>
+				  	<a href="{{ LocationsInCategory-NYC-Entertainment-Guide.id | permalink: model_dir: 'neighborhood-single' }}"><img src="{{ LocationsInCategory-NYC-Entertainment-Guide.image.url }}" alt="{{ LocationsInCategory-NYC-Entertainment-Guide.title }}" /></a>
 				  	<h2>{{ LocationsInCategory-NYC-Entertainment-Guide.title }}</h2>
 				  
 				  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
@@ -159,11 +159,11 @@
                                 
   <li class="map-location stater-B{{ LocationsInCategory-NYC-Entertainment-Guide.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationsInCategory-NYC-Entertainment-Guide.Latitude }}, lng: {{ LocationsInCategory-NYC-Entertainment-Guide.Longitude }} }, category: 'place', bounded: false, icon: '/assets/images/3792/original/pin-point.png'}">
 
-						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationsInCategory-NYC-Entertainment-Guide.url_friendly_name }}" rel="B{{ LocationsInCategory-NYC-Entertainment-Guide.url_friendly_name }}">{{ LocationsInCategory-NYC-Entertainment-Guide.title }}</a>
+						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}" class="map-link B{{ LocationsInCategory-NYC-Entertainment-Guide.url_friendly_name }}" rel="B{{ LocationsInCategory-NYC-Entertainment-Guide.url_friendly_name }}">{{ LocationsInCategory-NYC-Entertainment-Guide.title }}</a>
 							        <div class="info-box">
 							        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationsInCategory-NYC-Entertainment-Guide.url_friendly_name }}</span>
 
-								        <h3><a href="{{ LocationsInCategory-NYC-Entertainment-Guide.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationsInCategory-NYC-Entertainment-Guide.title }}</a></h3>
+								        <h3><a href="{{ LocationsInCategory-NYC-Entertainment-Guide.id | permalink: model_dir: 'neighborhood-single' }}">{{ LocationsInCategory-NYC-Entertainment-Guide.title }}</a></h3>
 
 							       	</div>
 

@@ -118,7 +118,7 @@
 {% assign categoryIds = LocationInCategory-Shopping-in-NYC.category | map: 'id' %}
 {% if categoryIds contains '55a7af15226e50e91600001a' %}
 			      <div id="infocontainerB{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" class="infocontainer">
-				  	<a href="{{ LocationInCategory-Shopping-in-NYC.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationInCategory-Shopping-in-NYC.image.url }}" alt="{{ LocationInCategory-Shopping-in-NYC.title }}" /></a>
+				  	<a href="{{ LocationInCategory-Shopping-in-NYC.id | permalink: model_dir: 'neighborhood-single' }}"><img src="{{ LocationInCategory-Shopping-in-NYC.image.url }}" alt="{{ LocationInCategory-Shopping-in-NYC.title }}" /></a>
 				  	<h2>{{ LocationInCategory-Shopping-in-NYC.title }}</h2>
 				  
 				  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
@@ -158,11 +158,11 @@
                                 
   <li class="map-location stater-B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationInCategory-Shopping-in-NYC.Latitude }}, lng: {{ LocationInCategory-Shopping-in-NYC.Longitude }} }, category: 'place', bounded: false, icon: '/assets/images/3792/original/pin-point.png'}">
 
-						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" rel="B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}">{{ LocationInCategory-Shopping-in-NYC.title }}</a>
+						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}" class="map-link B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" rel="B{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}">{{ LocationInCategory-Shopping-in-NYC.title }}</a>
 							        <div class="info-box">
 							        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}</span>
 
-								        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationInCategory-Shopping-in-NYC.title }}</a></h3>
+								        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}">{{ LocationInCategory-Shopping-in-NYC.title }}</a></h3>
 
 							       	</div>
 

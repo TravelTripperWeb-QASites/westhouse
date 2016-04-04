@@ -22,7 +22,7 @@ module Jekyll
 
       if permalink && !(permalink.end_with?('/') || permalink.end_with?('.html'))
         p "Permalink #{permalink} is invalid. Must ends with '/' or html extension"
-        self.data['permalink'] += '.html'
+        #self.data['permalink'] += '.html'
       end
     end
 
