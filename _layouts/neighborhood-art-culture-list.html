@@ -114,7 +114,7 @@
 		
 		<div class="neighborhoodmap">
 			            <div class="nmapcon"><span>Click to Enable</span></div>
-			            {% for LocationsInCategory-Arts-and-Culture in site.data._models.Culinary-Guide %}
+			            {% for LocationsInCategory-Arts-and-Culture in site.data._models.Neighborhood-Locations %}
 {% assign categoryIds = LocationsInCategory-Arts-and-Culture.category | map: 'id' %}
 {% if categoryIds contains '55a7aeff226e50b963000018' %}
 			      <div id="infocontainerB{{ LocationsInCategory-Arts-and-Culture.url_friendly_name }}" class="infocontainer">
@@ -150,7 +150,7 @@
 
                                  {% assign i = 1 %}
                                  
-                                 {% for LocationsInCategory-Arts-and-Culture in site.data._models.Culinary-Guide %}
+                                 {% for LocationsInCategory-Arts-and-Culture in site.data._models.Neighborhood-Locations %}
 {% assign categoryIds = LocationsInCategory-Arts-and-Culture.category | map: 'id' %}
 {% if categoryIds contains '55a7aeff226e50b963000018' %}
                                  

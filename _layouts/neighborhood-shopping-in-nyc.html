@@ -114,7 +114,7 @@
 		
 		<div class="neighborhoodmap">
 			            <div class="nmapcon"><span>Click to Enable</span></div>
-			            {% for LocationInCategory-Shopping-in-NYC in site.data._models.Culinary-Guide %}
+			            {% for LocationInCategory-Shopping-in-NYC in site.data._models.Neighborhood-Locations %}
 {% assign categoryIds = LocationInCategory-Shopping-in-NYC.category | map: 'id' %}
 {% if categoryIds contains '55a7af15226e50e91600001a' %}
 			      <div id="infocontainerB{{ LocationInCategory-Shopping-in-NYC.url_friendly_name }}" class="infocontainer">
@@ -150,7 +150,7 @@
 
                                  {% assign i = 1 %}
                                  
-                                 {% for LocationInCategory-Shopping-in-NYC in site.data._models.Culinary-Guide %}
+                                 {% for LocationInCategory-Shopping-in-NYC in site.data._models.Neighborhood-Locations %}
 {% assign categoryIds = LocationInCategory-Shopping-in-NYC.category | map: 'id' %}
 {% if categoryIds contains '55a7af15226e50e91600001a' %}
                                  
