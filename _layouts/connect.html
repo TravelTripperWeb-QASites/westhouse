@@ -1,0 +1,80 @@
+{% assign template_class = 'connect' %}
+
+{% include header.html %}
+
+		
+		<div id="featuredcontent" style="background-image: url('/assets/images/3642/original/Spherical-WestHouse-6839.jpg');">
+		
+			<h2 class="contenttitle">Connect</h2>
+			
+			<div class="reserve"><a class="button1" href="#">Reserve</a></div>
+			
+		</div>
+		
+		<div id="contentwidget">
+			<div class="logo"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></div>
+    
+               <!-- include booking form -->
+    
+                {% include booking_form_interior.html %}
+    
+                <!-- // include booking form -->
+    		</div>
+
+		</div>
+		
+		<div class="subnav">
+			<ul>
+				<li><a href="#"></a></li>
+			</ul>
+		</div>
+		
+		<div id="connect">
+			<div class="container">
+			
+				<div class="connectinstagram">
+					<div class="instagramicon"><i class="fa fa-instagram"></i></div>
+					<div class="instagramlink"><a target="_blank" href="https://instagram.com/westhouseny/">@westhouseny</a></div>
+					
+					<div class="instagrampics">
+						<div id="instafeed"></div>
+					</div>
+				</div>
+				
+				<div class="connectsocial">
+					<div class="socialmedia">
+						<ul>
+							{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Facebook" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-facebook"></i></a></li>{% endif %}{% endfor %}
+							{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Twitter" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-twitter"></i></a></li>{% endif %}{% endfor %}
+							{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Instagram" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-instagram"></i></a></li>{% endif %}{% endfor %}
+							{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "GooglePlus" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-google-plus"></i></a></li>{% endif %}{% endfor %}
+    						{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Youtube" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-youtube-play"></i></a></li>{% endif %}{% endfor %}
+    						{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "TripAdvisor" %}<li><a href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>{% endif %}{% endfor %}
+						</ul>
+					</div>
+				
+				</div>
+				
+				<div class="connecttestimonials">
+				
+					<div class="flexslider tripslider">
+						<ul class="slides">
+						    {% for Tripadvisor in site.data._models.Tripadvisor %}
+        					
+        					    <li>
+    								<div class="triplogo"><img src="/assets/images/592/original/tripadvisory.png" alt="triplogo" /></div>
+    								<div class="testimonials"><p>"{{ Tripadvisor.contents }}"</p></div>
+    								<div class="author"><p>{{ Tripadvisor.Credit }}</p></div>
+    							</li>
+							
+        					{% endfor %}
+						</ul>
+					</div>
+				
+				</div>
+			
+			</div>
+		</div>
+		
+		
+{% include footer.html %}

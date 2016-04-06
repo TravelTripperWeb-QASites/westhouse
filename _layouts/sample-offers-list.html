@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>{{page.title}}</title>
+{% if page.meta_description %}<meta name='description' content='{{page.meta_description}}'>{% endif %}
+{% if page.meta_keywords %}<meta name='keywords' content='{{page.meta_keywords}}'>{% endif %}
+<link rel='canonical' href='{{ page.permalink}}' />
+    </head>
+    <body>
+        <ul>
+            {% for Offers in site.data._models.Offers %}
+                <li>
+                    {{ Offers }}<br/>
+                    <a href="{{ Offers.id | permalink: model_dir: 'sample-offer-details' }}"> {{ Offers.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

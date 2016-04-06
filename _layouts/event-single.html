@@ -1,0 +1,55 @@
+{% assign Event = page %}
+{% assign model = page %}
+{% assign template_class = 'blogsingle' %}
+{% assign seo_title = Event.seo_title %}
+{% assign seo_description = Event.seo_description %}
+
+{% include header.html %}
+
+		<div id="featuredcontent" style="background-image: url({{model.image.url}});">
+
+			<div class="reserve"><a class="button1" href="#">Reserve</a></div>
+
+		</div>
+
+		<div id="contentwidget">
+		   <div class="logo"><a href="/"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></a></div>
+
+           <!-- include booking form -->
+
+            {% include booking_form_interior.html %}
+
+            <!-- // include booking form -->
+		</div>
+		
+		<div class="subnav">
+			<ul>
+
+			</ul>
+		</div>
+
+		<div id="maincontent" class="{{ template_class }}">
+
+			<div class="container">
+
+				<h1 style="text-align:center;">{{ model.title }}<span>{{ model.date }}</span></h1>
+
+				{{ model.contents }}
+			</div>
+
+		</div>
+
+		<div class="partnersmeta">
+
+
+			<div class="col1">
+			
+		         <div class="nmapcon"><span>Click to Enable</span></div>
+        
+				<iframe src="{{ model.map }}"  frameborder="0" style="border:0" allowfullscreen></iframe>
+
+			</div>
+
+		</div>
+
+{% include footer.html %}

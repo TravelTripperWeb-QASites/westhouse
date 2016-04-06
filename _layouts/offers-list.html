@@ -1,0 +1,91 @@
+{% assign template_class = 'page-offers' %}
+
+{% include header.html %}
+
+	
+		<div id="featuredcontent" style="background-image: url(/assets/images/3642/original/Spherical-WestHouse-6839.jpg);">
+
+			<h1 class="contenttitle">Offers</h1>
+
+			<div class="reserve"><a class="button1" href="#">Reserve</a></div>
+
+		</div>
+
+		<div id="contentwidget">
+		   <div class="logo"><a href="/"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></a></div>
+
+           <!-- include booking form -->
+
+            {% include booking_form_interior.html %}
+
+            <!-- // include booking form -->
+		</div>
+
+		<div class="subnav">
+			<ul>
+			    {% for Offers in site.data._models.Offers %}
+			    
+				<li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}">{{ Offers.title }}</a></li>
+				
+				{% endfor %}
+			</ul>
+		</div>
+		
+		
+        <div class="subnavmobile">
+          <ul>
+            {% for Offers in site.data._models.Offers %}
+            <li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}"><span>{{ Offers.title }}</span></a></li>
+            {% endfor %}
+            <div class="clear"></div>
+          </ul>
+          
+          <div class="subclose"><i class="fa fa-bars"></i><span>View More Offers</span></div>
+        </div>
+
+		<div id="maincontent">
+
+			<div class="container">
+
+                 {% region offers_textarea %}
+
+			</div>
+
+		</div>
+
+		<div id="offerbox">
+			
+			{% for Offers in site.data._models.Offers %}
+			
+			<div class="halfoffer {% cycle 'steerleft', 'steerright' %}">
+				
+				<div class="hoffer-one" style="background-image: url({{ Offers.image.url }});">{% if Offer.partner_name %}<p>{{ Offers.partner_name }}</p>{% endif %}</div>
+				
+				<div class="hoffer-two">
+					<h3>{{ Offers.title }}</h3>
+					<p>{{ Offers.contents }}</p>
+					
+					<div class="offerbook">
+						<a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="first">Read More</a>
+						<a class="button1" href="{{ Offers.outbound }}">Book Now</a>
+					</div>
+					
+					<ul class="offermedia">
+						<li><a href="http://facebook.com/<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://twitter.com/<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li><a class="last" href="http://instagram.com/<?php echo $instagram; ?>" target="_blank"><i class="fa fa-envelope"></i></a></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>
+			
+			{% endfor %}
+		
+		</div>
+
+		
+
+{% include footer.html %}

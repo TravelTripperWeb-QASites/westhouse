@@ -1,0 +1,20 @@
+{"title":
+	{"required":true},
+"seo_title":
+	{"required":true},
+"seo_description":
+	{"type":"text","required":true},
+"url_friendly_name":
+	{"type":"url_slug"},
+"date":
+	{"required":true,"hint":"Event date and time"},
+"datemeta":
+	{"required":true,"hint":"Used to sort Events by date (YYYY/MM/DD)"},
+"preview":
+	{"type":"richtext","required":true,"hint":"Write event's short description"},
+"image":
+	{"type":"image"},
+"map":
+	{"hint":"URL to show event's location/map"},
+"contents":
+	{"type":"richtext","required":true,"hint":"Write the detailed description"}}
