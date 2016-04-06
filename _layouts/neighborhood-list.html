@@ -131,7 +131,7 @@
 			 
 			       {% for Neighborhood-Locations in site.data._models.Neighborhood-Locations %}
 			      <div id="infocontainerB{{ Neighborhood-Locations.url_friendly_name }}" class="infocontainer">
-				  	<a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ Neighborhood-Locations.image.url }}" alt="{{ Neighborhood-Locations.title }}" /></a>
+				  	<a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}"><img src="{{ Neighborhood-Locations.image.url }}" alt="{{ Neighborhood-Locations.title }}" /></a>
 				  	<h2>{{ Neighborhood-Locations.title }}</h2>
 				  
 				  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
@@ -170,11 +170,11 @@
                                 
   <li class="map-location stater-B{{ Neighborhood-Locations.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ Neighborhood-Locations.Latitude }}, lng: {{ Neighborhood-Locations.Longitude }} }, category: 'place', bounded: false, icon: '/assets/images/3792/original/pin-point.png'}">
 
-						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ Neighborhood-Locations.url_friendly_name }}" rel="B{{ Neighborhood-Locations.url_friendly_name }}">{{ Neighborhood-Locations.title }}</a>
+						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}" class="map-link B{{ Neighborhood-Locations.url_friendly_name }}" rel="B{{ Neighborhood-Locations.url_friendly_name }}">{{ Neighborhood-Locations.title }}</a>
 							        <div class="info-box">
 							        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ Neighborhood-Locations.url_friendly_name }}</span>
 
-								        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" target="_blank">{{ Neighborhood-Locations.title }}</a></h3>
+								        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}" target="_blank">{{ Neighborhood-Locations.title }}</a></h3>
 
 							       	</div>
 

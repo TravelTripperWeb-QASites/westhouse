@@ -6,8 +6,6 @@
 	{"type":"text","required":true},
 "url_friendly_name":
 	{"type":"url_slug"},
-"content":
-	{"type":"richtext","required":true,"hint":"Write the content of your dining spot"},
 "outbound":
 	{"hint":"PDF link for Menu"},
 "image":
@@ -23,4 +21,6 @@
 "image5":
 	{},
 "vr_btn_link":
-	{}}
+	{},
+"contents":
+	{"type":"richtext","required":true,"hint":"Write the content of your dining spot"}}

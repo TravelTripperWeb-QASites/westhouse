@@ -6,7 +6,7 @@
 	{"type":"text","required":true},
 "url_friendly_name":
 	{"type":"url_slug"},
-"content":
-	{"type":"richtext","required":true,"hint":"Write the content of your dining spot."},
 "image":
-	{"type":"image"}}
+	{"type":"image"},
+"contents":
+	{"type":"richtext","required":true,"hint":"Write the content of your dining spot."}}
