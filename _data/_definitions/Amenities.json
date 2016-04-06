@@ -6,8 +6,6 @@
 	{"type":"text","required":true},
 "url_friendly_name":
 	{"type":"url_slug"},
-"content":
-	{"type":"richtext","required":true,"hint":"Write the content of your amenity."},
 "blockquote":
 	{"hint":"Paste big blockquote on page"},
 "image":
@@ -15,4 +13,6 @@
 "vr_btn_link":
 	{},
 "vrtitle":
-	{}}
+	{},
+"contents":
+	{"type":"richtext","required":true,"hint":"Write the content of your amenity."}}

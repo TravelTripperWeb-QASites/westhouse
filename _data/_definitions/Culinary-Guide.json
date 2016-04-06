@@ -6,8 +6,6 @@
 	{"type":"text","required":true},
 "url_friendly_name":
 	{"type":"url_slug"},
-"content":
-	{"type":"richtext","required":true,"hint":"Write the content of your location."},
 "category":
 	{"type":"model","model_name":"BlogCategory","multiple":true,"default_text":"Select Blog Post Categories","display_field":"name"},
 "Outbound_Link":
@@ -17,4 +15,6 @@
 "Longitude":
 	{"hint":"location longitude."},
 "image":
-	{"type":"image"}}
+	{"type":"image"},
+"contents":
+	{"type":"richtext","required":true,"hint":"Write the content of your location."}}

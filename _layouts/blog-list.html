@@ -57,11 +57,11 @@
                     {% assign LatestBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
 {% for LatestBlogs in LatestBlogsList %}
 					<li data-category-ids="{% for cat in LatestBlogs.category %} {{ cat.id }} {% endfor %}">
-						<a href="{{ LatestBlogs.id | permalink: model_dir: 'westhouse-blog' }}" class="dropanchor"></a>
+						<a href="{{ LatestBlogs.id | permalink: model_dir: 'blog' }}" class="dropanchor"></a>
 						<img src="{{ LatestBlogs.image.url }}" alt="{{ LatestBlogs.title }}">
 						<h2>{{ LatestBlogs.title }}</h2>
 						<p>{{ LatestBlogs.preview  | truncate: 210}}</p>
-						<a href="{{ LatestBlogs.id | permalink: model_dir: 'westhouse-blog' }}" class="button">Continue</a>
+						<a href="{{ LatestBlogs.id | permalink: model_dir: 'blog' }}" class="button">Continue</a>
 					</li>
 					
 					{% comment %}{% cycle '', '<div class="clear clearblog2"></div>' %}{% endcomment %}

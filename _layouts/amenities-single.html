@@ -30,7 +30,7 @@
 			
 			    {% for Amenities in site.data._models.Amenities %}
 
-        		<li><a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}">{{ Amenities.title }}</a></li>
+        		<li><a href="{{ Amenities.id | permalink: model_dir: 'westhouse-hotel-amenities-nyc' }}">{{ Amenities.title }}</a></li>
                 {% endfor %}
 				
 			</ul>
@@ -40,7 +40,7 @@
         <div class="subnavmobile">
           <ul>
             {% for Amenities in site.data._models.Amenities %}
-			<li><a href="{{ Amenities.id | permalink: model_dir: 'luxury-hotel-amenities-nyc' }}"><span>{{ Amenities.title }}</span></a></li>
+			<li><a href="{{ Amenities.id | permalink: model_dir: 'westhouse-hotel-amenities-nyc' }}"><span>{{ Amenities.title }}</span></a></li>
             {% endfor %}
             <div class="clear"></div>
           </ul>

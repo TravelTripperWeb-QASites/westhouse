@@ -51,7 +51,7 @@
 {% assign categoryIds = LocationsInCategory-Culinary-Lunch.category | map: 'id' %}
 {% if categoryIds contains '56b0c34577e2f50003f8af64' %}
     			<div id="infocontainerB{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}" class="infocontainer">
-    		        <a href="{{ LocationsInCategory-Culinary-Lunch.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationsInCategory-Culinary-Lunch.image.url }}" alt="{{ LocationsInCategory-Culinary-Lunch.title }}" /></a>
+    		        <a href="{{ LocationsInCategory-Culinary-Lunch.id | permalink: model_dir: 'neighborhood-single' }}"><img src="{{ LocationsInCategory-Culinary-Lunch.image.url }}" alt="{{ LocationsInCategory-Culinary-Lunch.title }}" /></a>
     			    <h2>{{ LocationsInCategory-Culinary-Lunch.title }}</h2>
     			  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
     			  	<div class="clear"></div>
@@ -77,10 +77,10 @@
 {% if categoryIds contains '56b0c34577e2f50003f8af64' %}
                              
                                 <li class="map-location stater-B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationsInCategory-Culinary-Lunch.Latitude }}, lng: {{ LocationsInCategory-Culinary-Lunch.Longitude }} }, category: 'place', bounded: false, icon: '/assets/images/3792/original/pin-point.png'}">
-                    		        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}">{{ LocationsInCategory-Culinary-Lunch.title }}</a>
+                    		        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}" class="map-link B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}">{{ LocationsInCategory-Culinary-Lunch.title }}</a>
                     			        <div class="info-box">
                     			        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationsInCategory-Culinary-Lunch.url_friendly_name }}</span>
-                    				        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationsInCategory-Culinary-Lunch.title }}</a></h3>
+                    				        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}">{{ LocationsInCategory-Culinary-Lunch.title }}</a></h3>
                     			       	</div>
                     			</li>
                             {% assign i = i | plus: 1 %}

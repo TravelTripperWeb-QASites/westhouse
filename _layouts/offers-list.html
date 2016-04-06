@@ -25,7 +25,7 @@
 			<ul>
 			    {% for Offers in site.data._models.Offers %}
 			    
-				<li><a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}">{{ Offers.title }}</a></li>
+				<li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}">{{ Offers.title }}</a></li>
 				
 				{% endfor %}
 			</ul>
@@ -35,7 +35,7 @@
         <div class="subnavmobile">
           <ul>
             {% for Offers in site.data._models.Offers %}
-            <li><a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}"><span>{{ Offers.title }}</span></a></li>
+            <li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}"><span>{{ Offers.title }}</span></a></li>
             {% endfor %}
             <div class="clear"></div>
           </ul>
@@ -63,10 +63,10 @@
 				
 				<div class="hoffer-two">
 					<h3>{{ Offers.title }}</h3>
-					<p>{{ Offers.content }}</p>
+					<p>{{ Offers.contents }}</p>
 					
 					<div class="offerbook">
-						<a href="{{ Offers.id | permalink: model_dir: 'westhouse-offers' }}" class="first">Read More</a>
+						<a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="first">Read More</a>
 						<a class="button1" href="{{ Offers.outbound }}">Book Now</a>
 					</div>
 					

@@ -53,7 +53,7 @@
 {% assign categoryIds = LocationsInCategory-Culinary-Guide.category | map: 'id' %}
 {% if categoryIds contains '56b0c32277e2f50003f8af60' %}
     			<div id="infocontainerB{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" class="infocontainer">
-    		        <a href="{{ LocationsInCategory-Culinary-Guide.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationsInCategory-Culinary-Guide.image.url }}" alt="{{ LocationsInCategory-Culinary-Guide.title }}" /></a>
+    		        <a href="{{ LocationsInCategory-Culinary-Guide.id | permalink: model_dir: 'culinary-single' }}"><img src="{{ LocationsInCategory-Culinary-Guide.image.url }}" alt="{{ LocationsInCategory-Culinary-Guide.title }}" /></a>
     			    <h2>{{ LocationsInCategory-Culinary-Guide.title }}</h2>
     			  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
     			  	<div class="clear"></div>
@@ -79,10 +79,10 @@
 {% if categoryIds contains '56b0c32277e2f50003f8af60' %}
                              
                                 <li class="map-location stater-B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationsInCategory-Culinary-Guide.Latitude }}, lng: {{ LocationsInCategory-Culinary-Guide.Longitude }} }, category: 'place', bounded: false, icon: '/assets/images/3792/original/pin-point.png'}">
-                    		        <a href="{{ Culinary-Guide.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}">{{ LocationsInCategory-Culinary-Guide.title }}</a>
+                    		        <a href="{{ Culinary-Guide.id | permalink: model_dir: 'culinary-single' }}" class="map-link B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}" rel="B{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}">{{ LocationsInCategory-Culinary-Guide.title }}</a>
                     			        <div class="info-box">
                     			        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationsInCategory-Culinary-Guide.url_friendly_name }}</span>
-                    				        <h3><a href="{{ Culinary-Guide.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationsInCategory-Culinary-Guide.title }}</a></h3>
+                    				        <h3><a href="{{ Culinary-Guide.id | permalink: model_dir: 'culinary-single' }}">{{ LocationsInCategory-Culinary-Guide.title }}</a></h3>
                     			       	</div>
                     			</li>
                             {% assign i = i | plus: 1 %}
