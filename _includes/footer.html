@@ -310,8 +310,8 @@
 						</div>
 
 						<div class="boxes">
-                
-                        {% for Offers in site.data._models.Offers %}    
+                        {% assign OffersSorted = site.data._models.Offers | sort: 'menu_order' %}
+                        {% for Offers in OffersSorted %}    
                         
 							<div class="boxcontainer">
 
@@ -368,8 +368,9 @@
 						</div>
 
 						<div class="boxes">
-                
-                        {% for Amenities in site.data._models.Amenities %}    
+                    
+                    {% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
+                        {% for Amenities in AmenitiesSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
 
@@ -425,8 +426,9 @@
 						</div>
 
 						<div class="boxes">
+                      {% assign DiningSorted = site.data._models.Dining | sort: 'menu_order' %}
                 
-                        {% for Dining in site.data._models.Dining %}    
+                        {% for Dining in DiningSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
 
@@ -715,8 +717,9 @@
 						</div>
 
 						<div class="boxes">
+                {% assign PartnersSorted = site.data._models.Partners | sort: 'menu_order' %}
                 
-                        {% for Partners in site.data._models.Partners %}    
+                        {% for Partners in PartnersSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
 
