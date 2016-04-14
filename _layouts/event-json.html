@@ -3,7 +3,7 @@
             {
                 title: "{{Event.title | json}}",
                 date: "{{Event.datemeta}}",
-                content: "{{Event.content | strip_html | replace : '&nbsp;', ' ' | replace : "’", "'" | replace : "”", "'" | replace : "–", "&ndash;"}}"
+                content: "{{Event.contents | strip_html | replace : '&nbsp;', ' ' | replace : "’", "'" | replace : "”", "'" | replace : "–", "&ndash;"}}"
             },
         {% endfor %}
     ];

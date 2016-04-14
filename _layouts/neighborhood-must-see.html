@@ -114,11 +114,11 @@
 		
 		<div class="neighborhoodmap">
 			            <div class="nmapcon"><span>Click to Enable</span></div>
-			            {% for LocationsInCategory-Must-See-NYC in site.data._models.Culinary-Guide %}
+			            {% for LocationsInCategory-Must-See-NYC in site.data._models.Neighborhood-Locations %}
 {% assign categoryIds = LocationsInCategory-Must-See-NYC.category | map: 'id' %}
 {% if categoryIds contains '55a7af34226e50787b00001e' %}
 			      <div id="infocontainerB{{ LocationsInCategory-Must-See-NYC.url_friendly_name }}" class="infocontainer">
-				  	<a href="{{ LocationsInCategory-Must-See-NYC.id | permalink: model_dir: 'things-to-do-in-nyc' }}"><img src="{{ LocationsInCategory-Must-See-NYC.image.url }}" alt="{{ LocationsInCategory-Must-See-NYC.title }}" /></a>
+				  	<a href="{{ LocationsInCategory-Must-See-NYC.id | permalink: model_dir: 'neighborhood-single' }}"><img src="{{ LocationsInCategory-Must-See-NYC.image.url }}" alt="{{ LocationsInCategory-Must-See-NYC.title }}" /></a>
 				  	<h2>{{ LocationsInCategory-Must-See-NYC.title }}</h2>
 				  
 				  	<a href="#" class="closer"><i class="fa fa-times"></i></a>
@@ -150,7 +150,7 @@
 
                                  {% assign i = 1 %}
                                  
-                                 {% for LocationsInCategory-Must-See-NYC in site.data._models.Culinary-Guide %}
+                                 {% for LocationsInCategory-Must-See-NYC in site.data._models.Neighborhood-Locations %}
 {% assign categoryIds = LocationsInCategory-Must-See-NYC.category | map: 'id' %}
 {% if categoryIds contains '55a7af34226e50787b00001e' %}
                                  
@@ -158,11 +158,11 @@
                                 
   <li class="map-location stater-B{{ LocationsInCategory-Must-See-NYC.url_friendly_name }}" data-jmapping="{id: {{ i }}, point: {lat: {{ LocationsInCategory-Must-See-NYC.Latitude }}, lng: {{ LocationsInCategory-Must-See-NYC.Longitude }} }, category: 'place', bounded: false, icon: '/assets/images/3792/original/pin-point.png'}">
 
-						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}" class="map-link B{{ LocationsInCategory-Must-See-NYC.url_friendly_name }}" rel="B{{ LocationsInCategory-Must-See-NYC.url_friendly_name }}">{{ LocationsInCategory-Must-See-NYC.title }}</a>
+						        <a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}" class="map-link B{{ LocationsInCategory-Must-See-NYC.url_friendly_name }}" rel="B{{ LocationsInCategory-Must-See-NYC.url_friendly_name }}">{{ LocationsInCategory-Must-See-NYC.title }}</a>
 							        <div class="info-box">
 							        	<span style="height: 0; visibility: hidden; display: block;" class="specialid">infocontainerB{{ LocationsInCategory-Must-See-NYC.url_friendly_name }}</span>
 
-								        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'things-to-do-in-nyc' }}">{{ LocationsInCategory-Must-See-NYC.title }}</a></h3>
+								        <h3><a href="{{ Neighborhood-Locations.id | permalink: model_dir: 'neighborhood-single' }}">{{ LocationsInCategory-Must-See-NYC.title }}</a></h3>
 
 							       	</div>
 
