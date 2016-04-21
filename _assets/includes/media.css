@@ -1276,7 +1276,7 @@ and (max-width: 799px) {
         bottom: auto;
         padding-bottom: 0;
         top: -100%;
-        z-index: 99999999;
+        z-index: 999999;
         height: auto;
     }
     
