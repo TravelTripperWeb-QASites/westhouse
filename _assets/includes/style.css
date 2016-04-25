@@ -7500,3 +7500,9 @@ div.blogsingle img {
 {
 float:right;
 }
+
+/*Test Edit*/
+
+.v__wd {
+	z-index: 999999 !important;
+}

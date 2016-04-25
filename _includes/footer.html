@@ -207,13 +207,13 @@
 
 					<li><a class="connect" href="http://www.westhousehotelnewyork.com/"><img src="/assets/images/9495/original/logo3.png"></a></li>
 					<li><a class="diss connect" href="https://westhousehotelnewyork.reztrip.com/search?arrival_date=&departure_date=&_ga=1.207643158.566400102.1453370934">Book</a></li>
-					<li style="margin-top: 20px;"><a class="connect" href="/luxury-rooms-suites-nyc">Rooms & Suites</a></li>
-					<li><a class="connect" href="/westhouse-offers">Offers</a></li>
-					<li><a class="connect" href="/luxury-hotel-amenities-nyc">Amenities</a></li>
-					<li><a class="connect" href="/dining">Dining</a></li>
-					<li><a class="connect" href="/photo-album">Gallery</a></li>
-					<li><a class="connect" href="/things-to-do-in-nyc">Area</a></li>
-					<li><a class="connect" href="/partners">Partners</a></li>
+					<li style="margin-top: 20px;"><a class="connect" href="{{ 'luxury-rooms-suites-nyc' | permalink }}">Rooms & Suites</a></li>
+					<li><a class="connect" href="{{ 'westhouse-offers' | permalink }}">Offers</a></li>
+					<li><a class="connect" href="{{ 'luxury-hotel-amenities-nyc' | permalink }}">Amenities</a></li>
+					<li><a class="connect" href="{{ 'dining' | permalink }}">Dining</a></li>
+					<li><a class="connect" href="{{ 'photo-album' | permalink }}">Gallery</a></li>
+					<li><a class="connect" href="{{ 'things-to-do-in-nyc' | permalink }}">Area</a></li>
+					<li><a class="connect" href="{{ 'partners' | permalink }}">Partners</a></li>
                     <li><a class="connect" href="/westhouse-blog">Blog</a></li>
                     <li><a class="connect" href="/social-media">Connect With Us</a></li>
                     <li class="socialmedia">
@@ -310,8 +310,8 @@
 						</div>
 
 						<div class="boxes">
-                
-                        {% for Offers in site.data._models.Offers %}    
+                        {% assign OffersSorted = site.data._models.Offers | sort: 'menu_order' %}
+                        {% for Offers in OffersSorted %}    
                         
 							<div class="boxcontainer">
 
@@ -368,8 +368,9 @@
 						</div>
 
 						<div class="boxes">
-                
-                        {% for Amenities in site.data._models.Amenities %}    
+                    
+                    {% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
+                        {% for Amenities in AmenitiesSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
 
@@ -425,8 +426,9 @@
 						</div>
 
 						<div class="boxes">
+                      {% assign DiningSorted = site.data._models.Dining | sort: 'menu_order' %}
                 
-                        {% for Dining in site.data._models.Dining %}    
+                        {% for Dining in DiningSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
 
@@ -715,8 +717,9 @@
 						</div>
 
 						<div class="boxes">
+                {% assign PartnersSorted = site.data._models.Partners | sort: 'menu_order' %}
                 
-                        {% for Partners in site.data._models.Partners %}    
+                        {% for Partners in PartnersSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
 
