@@ -1278,6 +1278,7 @@ and (max-width: 799px) {
         top: -100%;
         z-index: 999999;
         height: auto;
+        display: none;
     }
     
     .merch-sec .littleimage {
