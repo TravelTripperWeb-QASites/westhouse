@@ -214,8 +214,8 @@
 					<li><a class="connect" href="{{ 'photo-album' | permalink }}">Gallery</a></li>
 					<li><a class="connect" href="{{ 'things-to-do-in-nyc' | permalink }}">Area</a></li>
 					<li><a class="connect" href="{{ 'partners' | permalink }}">Partners</a></li>
-                    <li><a class="connect" href="/westhouse-blog">Blog</a></li>
-                    <li><a class="connect" href="/social-media">Connect With Us</a></li>
+                    <li><a class="connect" href="{{ 'westhouse-blog' | permalink }}">Blog</a></li>
+                    <li><a class="connect" href="{{ 'social-media' | permalink }}">Connect With Us</a></li>
                     <li class="socialmedia">
     					<ul>
     						{% for SocialLinks in site.data._models.SocialLinks %}{% if SocialLinks.name == "Facebook" %}<li><a class="connect" href="{{ SocialLinks.url }}" target="_blank"><i class="fa fa-facebook"></i></a> {% endif %}{% endfor %}
