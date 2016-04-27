@@ -7507,3 +7507,20 @@ float:right;
 .v__wd {
 	z-index: 999999 !important;
 }
+
+/* CNT Voter */
+.conde_holder{
+      width: auto;
+      margin-top: 15px;
+}
+.conde_desc{
+  float:right;
+}
+p.first_linec{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 12px;
+}
+p.second_linec a {
+    font-size: 12px;
+}
