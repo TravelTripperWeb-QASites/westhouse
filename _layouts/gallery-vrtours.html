@@ -40,8 +40,10 @@
 			<ul>
 				{% for LatestVRTours in site.data._models.VRTour %}
 					
-					<li style="background-image: url({{LocationsInCategory-Culinary-Coffee.image_banner }});">
-						<a target="_blank" href="http://viewer.vrglobal.com/{{LocationsInCategory-Culinary-Coffee.vr_url_key }}"><h3>{{LocationsInCategory-Culinary-Coffee.title }}</h3></a>
+					<li style="background-image: url({{LatestVRTours.image_banner }});">
+						<a target="_blank" href="http://viewer.vrglobal.com/{{LatestVRTours.vr_url_key }}">
+							<h3>{{LatestVRTours.title }}</h3>
+						</a>
 					</li>
 				
 				{% endfor %}
