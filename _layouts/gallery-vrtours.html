@@ -38,14 +38,13 @@
 
 		<div id="gallerylist">
 			<ul>
-
-				{% assign LatestVRTOURList = site.data._models.VRTour | sort: 'datemeta' | reverse %}
-{% for LatestVRTours in LatestVRTOURList %}
-					<li data-category-ids="{% for cat in LatestVRTours.category %} {{ cat.id }} {% endfor %}" style="background-image: url({{ LatestBlogs.image_banner }});">
-						<a target="_blank" href="http://viewer.vrglobal.com/{{ LatestBlogs.vr_url_key }}"><h3>{{ LatestBlogs.title }}</h3></a>
-					</li>
+				{% for LatestVRTours in site.data._models.VRTour %}
 					
-					{% endfor %}
+					<li style="background-image: url({{LocationsInCategory-Culinary-Coffee.image_banner }});">
+						<a target="_blank" href="http://viewer.vrglobal.com/{{LocationsInCategory-Culinary-Coffee.vr_url_key }}"><h3>{{LocationsInCategory-Culinary-Coffee.title }}</h3></a>
+					</li>
+				
+				{% endfor %}
 			
 				<!--<li style="background-image: url(/assets/images/9644/original/luxury-queen.jpg);">
 					<a target="_blank" href="http://viewer.vrglobal.com/oTR6FfqW"><h3>Luxury Queen</h3></a>
