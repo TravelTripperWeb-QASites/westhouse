@@ -41,7 +41,7 @@
 
 				{% assign LatestVRTOURList = site.data._models.VRTour | sort: 'datemeta' | reverse %}
 {% for LatestVRTours in LatestVRTOURList %}
-					<li style="background-image: url({{ LatestBlogs.image_banner }});">
+					<li data-category-ids="{% for cat in LatestVRTours.category %} {{ cat.id }} {% endfor %}" style="background-image: url({{ LatestBlogs.image_banner }});">
 						<a target="_blank" href="http://viewer.vrglobal.com/{{ LatestBlogs.vr_url_key }}"><h3>{{ LatestBlogs.title }}</h3></a>
 					</li>
 					
