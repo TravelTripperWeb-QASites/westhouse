@@ -38,8 +38,17 @@
 
 		<div id="gallerylist">
 			<ul>
+				{% for LatestVRTours in site.data._models.VRTour %}
+					
+					<li style="background-image: url({{LatestVRTours.image_banner }});">
+						<a target="_blank" href="http://viewer.vrglobal.com/{{LatestVRTours.vr_url_key }}">
+							<h3>{{LatestVRTours.title }}</h3>
+						</a>
+					</li>
+				
+				{% endfor %}
 			
-				<li style="background-image: url(/assets/images/9644/original/luxury-queen.jpg);">
+				<!--<li style="background-image: url(/assets/images/9644/original/luxury-queen.jpg);">
 					<a target="_blank" href="http://viewer.vrglobal.com/oTR6FfqW"><h3>Luxury Queen</h3></a>
 				</li>
 				<li style="background-image: url(/assets/images/9641/original/king.jpg);">
@@ -71,7 +80,7 @@
 				</li>
 				<li style="background-image: url(/assets/images/9641/original/king.jpg);">
 					<a target="_blank" href="http://viewer.vrglobal.com/3r2GL3Qh"><h3>King ADA Accessible Bedroom</h3></a>
-				</li>
+				</li>-->
 			</ul>
 				
 			</div>
