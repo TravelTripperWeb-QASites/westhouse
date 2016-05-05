@@ -41,7 +41,7 @@
 				{% for LatestVRTours in site.data._models.VRTour %}
 					
 					<li style="background-image: url({{LatestVRTours.image_banner }});">
-						<a target="_blank" href="http://viewer.vrglobal.com/{{LatestVRTours.vr_url_key }}">
+						<a  vr-embed   popup="true" rel="import" target="_blank" href="http://viewer.vrglobal.com/{{LatestVRTours.vr_url_key }}">
 							<h3>{{LatestVRTours.title }}</h3>
 						</a>
 					</li>
