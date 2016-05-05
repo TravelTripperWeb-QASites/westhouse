@@ -490,7 +490,7 @@
 
 						<div class="boxes">
 
-						{% for MenuGalleryList in site.data._models.MenuItems | sort: 'datemeta' %}
+						{% for MenuGalleryList in site.data._models.MenuItems %}
 						{% assign categoryIds = MenuGalleryList.category %}
 						{% if categoryIds contains 'MenuCategory5' %}
 							
