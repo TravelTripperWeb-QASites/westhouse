@@ -1,0 +1,7 @@
+{
+    "definition_names": ["MenuItems"],
+    "find": {
+        "category_id": "MenuCategory5"
+    },
+	"sort": { "datemeta": -1 }
+}

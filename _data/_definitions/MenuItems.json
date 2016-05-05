@@ -1,0 +1,10 @@
+{"title":
+	{"required":true},
+"datemeta":
+	{"required":true,"hint":"Used to sort by date (YYYY/MM/DD)"},
+"category":
+	{"type":"model","model_name":"MenuCategory","multiple":true,"default_text":"Select Menu Categories","display_field":"name"},
+"menulink":
+	{"hint":"menu link"},
+"image":
+	{"required":true}}
