@@ -489,9 +489,10 @@
 						</div>
 
 						<div class="boxes">
-						{% assign navGalleryList = site.data._models.MenuItems | sort: 'datemeta' | reverse %}
-						{% for MenuGalleryList in navGalleryList %}
-						{% if navGalleryList contains 'MenuCategory5' %}
+
+						{% for MenuGalleryList in site.data._models.MenuItems | sort: 'datemeta' %}
+						{% assign categoryIds = MenuGalleryList.category %}
+						{% if categoryIds contains 'MenuCategory5' %}
 							
 							<div class="boxcontainer halfsiebox">
 
