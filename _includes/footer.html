@@ -491,6 +491,7 @@
 						<div class="boxes">
 						{% assign navGalleryList = site.data._models.MenuItems | sort: 'datemeta' | reverse %}
 						{% for MenuGalleryList in navGalleryList %}
+						{% if navGalleryList contains 'MenuCategory5' %}
 							
 							<div class="boxcontainer halfsiebox">
 
@@ -506,7 +507,7 @@
 								
 							</div>
 
-						{% endfor %}
+						{% endif %}{% endfor %}
 							
 							<div class="clear"></div>
                             
