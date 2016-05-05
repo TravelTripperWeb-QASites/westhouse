@@ -491,8 +491,8 @@
 						<div class="boxes">
 
 						{% for MenuGalleryList in site.data._models.MenuItems %}
-						{% assign categoryIds = MenuGalleryList.category %}
-						{% if categoryIds contains 'MenuCategory5' %}
+						{% assign categoryIds = MenuGalleryList.category | map: 'id' %}
+						{% if categoryIds contains 'MenuCategory5' | sort: 'datemeta' %}
 							
 							<div class="boxcontainer halfsiebox">
 
