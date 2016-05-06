@@ -7531,9 +7531,9 @@ p.second_linec a {
     font-size: 80px;
 }
 .cnt-text{
-  font-size: 16px;
-   line-height: 5px;
+  font-size: 16px !important;
+   line-height: 5px !important;
 }
 .fr-50.right.maxcont div {
-    max-width: 100%;
+    max-width: 100% !important;
 }
