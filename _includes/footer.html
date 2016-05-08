@@ -489,62 +489,26 @@
 						</div>
 
 						<div class="boxes">
+
+						{% for MenuGalleryList in site.data._models.MenuItems %}
+						{% assign categoryIds = MenuGalleryList.category | map: 'id' %}
+						{% if categoryIds contains 'MenuCategory5' | sort: 'datemeta' %}
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ 'photo-album/accommodations' | permalink }}" class="dropanchor"></a>
+								<a href="{{ MenuGalleryList.menulink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
-									<div class="boxpic" style="background-image: url(/assets/images/4372/original/WestHouse_Room_2504_Livingroom_v3s.jpg);"></div>
+									<div class="boxpic" style="background-image: url({{ MenuGalleryList.image }});"></div>
 
 								</div>
 
-								<h2>Accommodations</h2>
+								<h2>{{ MenuGalleryList.title }}</h2>
 								
 							</div>
-							
-							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ 'photo-album/dining-2' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9508/original/westhouse-hotel-new-york-the-terrace-food2.jpg);"></div>
-
-								</div>
-
-								<h2>Dining</h2>
-								
-							</div>
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'photo-album/nyc-hotel-amenities' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/6162/original/westhouse-hotel-new-york-amenities-gallery.jpg);"></div>
-
-								</div>
-
-								<h2>Amenities</h2>
-								
-							</div>
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'photo-album/virtual-tours' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9649/original/WestHouse_Room_2108_Livingroom_v3s.jpg);"></div>
-
-								</div>
-
-								<h2>Virtual Tours</h2>
-								
-							</div>
+						{% endif %}{% endfor %}
 							
 							<div class="clear"></div>
                             

@@ -7,4 +7,4 @@
 "menulink":
 	{"hint":"menu link"},
 "image":
-	{"type":"image"}}
+	{"required":true}}
