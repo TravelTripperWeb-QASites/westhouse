@@ -490,9 +490,8 @@
 
 						<div class="boxes">
 
-						{% for MenuGalleryList in site.data._models.MenuItems %}
-						{% assign categoryIds = MenuGalleryList.category | map: 'id' %}
-						{% if categoryIds contains 'MenuCategory5' | sort: 'datemeta' %}
+						{% assign MenuGallery = site.data._models.MenuItems | sort: 'datemeta' | reverse %}
+						{% for MenuGalleryList in MenuGallery %}
 							
 							<div class="boxcontainer halfsiebox">
 
@@ -508,7 +507,7 @@
 								
 							</div>
 
-						{% endif %}{% endfor %}
+						{% endfor %}
 							
 							<div class="clear"></div>
                             
