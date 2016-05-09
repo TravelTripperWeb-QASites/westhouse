@@ -7534,6 +7534,14 @@ p.second_linec a {
   font-size: 16px !important;
    line-height: 5px !important;
 }
-.fr-50.right.maxcont div {
+.fr-50.right.maxcont div.desc {
     max-width: 100% !important;
+    float:left;
+}
+
+.fr-50.left div.conde {
+    max-width: 340px;
+    float: right;
+    margin-right: 100px;
+    margin-top: 45px;
 }
