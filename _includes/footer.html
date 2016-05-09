@@ -490,20 +490,20 @@
 
 						<div class="boxes">
 
-						{% assign MenuGallery = site.data._models.MenuItems | sort: 'datemeta' | reverse %}
-						{% for MenuGalleryList in MenuGallery %}
+						{% assign GallerySorted = site.data._models.Gallery | sort: 'menu_order' %}
+                        {% for Gallery in GallerySorted %}  
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ MenuGalleryList.menulink }}" class="dropanchor"></a>
+								<a href="{{ Gallery.menulink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
-									<div class="boxpic" style="background-image: url({{ MenuGalleryList.image }});"></div>
+									<div class="boxpic" style="background-image: url({{ Gallery.image }});"></div>
 
 								</div>
 
-								<h2>{{ MenuGalleryList.title }}</h2>
+								<h2>{{ Gallery.title }}</h2>
 								
 							</div>
 
