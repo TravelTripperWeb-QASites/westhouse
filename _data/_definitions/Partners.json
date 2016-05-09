@@ -6,6 +6,8 @@
 	{"type":"text","required":true},
 "url_friendly_name":
 	{"type":"url_slug"},
+"datemeta":
+	{"required":true,"hint":"Used to sort by date (YYYY/MM/DD)"},
 "image":
 	{"type":"image"},
 "contents":
