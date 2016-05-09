@@ -108,7 +108,7 @@
 					<h3>from the westhouse your house blog</h3>
 					
         				{% assign LatestBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
-						{% for LimitedLastestBlogs in LatestBlogsList | limit: 2 %}
+{% for LimitedLastestBlogs in LatestBlogsList | limit: 2 %}
         				
         					<div class="blogitem" data-category-ids="{% for cat in LimitedLastestBlogs.category %} {{ cat.id }} {% endfor %}">
         						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'blog' }}">
@@ -315,7 +315,7 @@
 						</div>
 
 						<div class="boxes">
-                        {% assign OffersSorted = site.data._models.Offers | sort: 'menu_order' %}
+                        {% assign OffersSorted = site.data._models.Offers | sort: 'datemeta' | reverse %}
                         {% for Offers in OffersSorted %}    
                         
 							<div class="boxcontainer">
@@ -374,7 +374,7 @@
 
 						<div class="boxes">
                     
-                    	{% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
+                    	{% assign AmenitiesSorted = site.data._models.Amenities | sort: 'datemeta' | reverse %}
                         {% for Amenities in AmenitiesSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
@@ -431,7 +431,7 @@
 						</div>
 
 						<div class="boxes">
-                      {% assign DiningSorted = site.data._models.Dining | sort: 'menu_order' %}
+                      {% assign DiningSorted = site.data._models.Dining | sort: 'datemeta' | reverse %}
                 
                         {% for Dining in DiningSorted %}    
                         
@@ -617,7 +617,7 @@
 						</div>
 
 						<div class="boxes">
-                {% assign PartnersSorted = site.data._models.Partners | sort: 'menu_order' %}
+                {% assign PartnersSorted = site.data._models.Partners | sort: 'datemeta' | reverse %}
                 
                         {% for Partners in PartnersSorted %}    
                         
@@ -679,7 +679,7 @@
                         
 					
                             {% assign navBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
-							{% for navBlogs in navBlogsList | limit: 8 %}
+{% for navBlogs in navBlogsList | limit: 8 %}
                         
 							<div class="boxcontainer" data-category-ids="{% for cat in navBlogs.category %} {{ cat.id }} {% endfor %}">
 
