@@ -315,7 +315,7 @@
 						</div>
 
 						<div class="boxes">
-                        {% assign OffersSorted = site.data._models.Offers | sort: 'menu_order' %}
+                        {% assign OffersSorted = site.data._models.Offers | sort: 'datemeta' | reverse %}
                         {% for Offers in OffersSorted %}    
                         
 							<div class="boxcontainer">
@@ -374,7 +374,7 @@
 
 						<div class="boxes">
                     
-                    {% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
+                    	{% assign AmenitiesSorted = site.data._models.Amenities | sort: 'datemeta' | reverse %}
                         {% for Amenities in AmenitiesSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
@@ -431,7 +431,7 @@
 						</div>
 
 						<div class="boxes">
-                      {% assign DiningSorted = site.data._models.Dining | sort: 'menu_order' %}
+                      {% assign DiningSorted = site.data._models.Dining | sort: 'datemeta' | reverse %}
                 
                         {% for Dining in DiningSorted %}    
                         
@@ -552,97 +552,29 @@
 							<div class="clear"></div>
 						</div>
 
+
 						<div class="boxes">
-                
-                         
-                        
-							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9503/original/neighborhood1.jpg);"></div>
-
-								</div>
-
-								<h2>Arts & Culture</h2>
-								
-							</div>
+						{% assign MenuArea = site.data._models.MenuItems | sort: 'datemeta' | reverse %}
+						{% for MenuAreaList in MenuArea %}
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}" class="dropanchor"></a>
+								<a href="{{ MenuAreaList.menulink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
-									<div class="boxpic" style="background-image: url(/assets/images/9504/original/neighborhood9.jpg);"></div>
+									<div class="boxpic" style="background-image: url({{ MenuAreaList.image }});"></div>
 
 								</div>
 
-								<h2>Shopping</h2>
+								<h2>{{ MenuAreaList.title }}</h2>
 								
 							</div>
+
+						{% endfor %}
 							
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9505/original/neighborhood13.jpg);"></div>
-
-								</div>
-
-								<h2>Entertainment Guide</h2>
-								
-							</div>
-                            
-                            <div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9506/original/neighborhood17.jpg);"></div>
-
-								</div>
-
-								<h2>Must See NYC</h2>
-								
-							</div>
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'events-in-nyc' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9507/original/westhouse-hotel-new-york-events.jpg);"></div>
-
-								</div>
-
-								<h2>Events</h2>
-								
-							</div>
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9633/original/westhouse-culinary-guide2.jpg);"></div>
-
-								</div>
-
-								<h2>Culinary Guide</h2>
-								
-							</div>
-							
-                            
-                            <div class="clear"></div>
+							<div class="clear"></div>
                             
 						</div>
 						
@@ -685,7 +617,7 @@
 						</div>
 
 						<div class="boxes">
-                {% assign PartnersSorted = site.data._models.Partners | sort: 'menu_order' %}
+                {% assign PartnersSorted = site.data._models.Partners | sort: 'datemeta' | reverse %}
                 
                         {% for Partners in PartnersSorted %}    
                         
