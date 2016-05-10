@@ -7524,3 +7524,7 @@ p.first_linec{
 p.second_linec a {
     font-size: 12px;
 }
+
+.vrg-preview{
+  background-position: center center;
+}
