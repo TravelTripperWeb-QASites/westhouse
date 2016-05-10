@@ -40,10 +40,8 @@
 			<ul>
 				{% for LatestVRTours in site.data._models.VRTour %}
 					
-					<li style="background-image: url({{LatestVRTours.image_banner }});">
-						<a target="_blank" href="http://viewer.vrglobal.com/{{LatestVRTours.vr_url_key }}">
-							<h3>{{LatestVRTours.title }}</h3>
-						</a>
+					<li >
+                   <link vr-embed  popup="true" rel="import" href="https://static.vrglobal.com/embed/{{LatestVRTours.vr_url_key }}.html"/>	 
 					</li>
 				
 				{% endfor %}
@@ -84,6 +82,20 @@
 			</ul>
 				
 			</div>
+<style type="text/css">
+.vrglobal-embed {
+ 
+    vertical-align: top;
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.vrg-popup{
+	z-index: 99999999999999999999 !important;
+}
+</style>
+
 
 		</div>
 {% include footer.html %}
