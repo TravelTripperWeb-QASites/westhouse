@@ -108,7 +108,7 @@
 					<h3>from the westhouse your house blog</h3>
 					
         				{% assign LatestBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
-{% for LimitedLastestBlogs in LatestBlogsList | limit: 2 %}
+						{% for LimitedLastestBlogs in LatestBlogsList | limit: 2 %}
         				
         					<div class="blogitem" data-category-ids="{% for cat in LimitedLastestBlogs.category %} {{ cat.id }} {% endfor %}">
         						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'blog' }}">
@@ -374,7 +374,7 @@
 
 						<div class="boxes">
                     
-                    {% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
+                    	{% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
                         {% for Amenities in AmenitiesSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
@@ -489,62 +489,25 @@
 						</div>
 
 						<div class="boxes">
+
+						{% assign GallerySorted = site.data._models.Gallery | sort: 'menu_order' %}
+                        {% for Gallery in GallerySorted %}  
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ 'photo-album/accommodations' | permalink }}" class="dropanchor"></a>
+								<a href="{{ Gallery.menulink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
-									<div class="boxpic" style="background-image: url(/assets/images/4372/original/WestHouse_Room_2504_Livingroom_v3s.jpg);"></div>
+									<div class="boxpic" style="background-image: url({{ Gallery.image }});"></div>
 
 								</div>
 
-								<h2>Accommodations</h2>
+								<h2>{{ Gallery.title }}</h2>
 								
 							</div>
-							
-							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ 'photo-album/dining-2' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9508/original/westhouse-hotel-new-york-the-terrace-food2.jpg);"></div>
-
-								</div>
-
-								<h2>Dining</h2>
-								
-							</div>
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'photo-album/nyc-hotel-amenities' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/6162/original/westhouse-hotel-new-york-amenities-gallery.jpg);"></div>
-
-								</div>
-
-								<h2>Amenities</h2>
-								
-							</div>
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'photo-album/virtual-tours' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9649/original/WestHouse_Room_2108_Livingroom_v3s.jpg);"></div>
-
-								</div>
-
-								<h2>Virtual Tours</h2>
-								
-							</div>
+						{% endfor %}
 							
 							<div class="clear"></div>
                             
@@ -590,100 +553,30 @@
 						</div>
 
 						<div class="boxes">
-                
-                         
-                        
-							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ 'things-to-do-in-nyc/art-culture' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9503/original/neighborhood1.jpg);"></div>
-
-								</div>
-
-								<h2>Arts & Culture</h2>
-								
-							</div>
+						{% assign AreaSorted = site.data._models.Area | sort: 'menu_order' %}
+                        {% for Area in AreaSorted %}  
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ 'things-to-do-in-nyc/shopping' | permalink }}" class="dropanchor"></a>
+								<a href="{{ Area.menulink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
-									<div class="boxpic" style="background-image: url(/assets/images/9504/original/neighborhood9.jpg);"></div>
+									<div class="boxpic" style="background-image: url({{ Area.image }});"></div>
 
 								</div>
 
-								<h2>Shopping</h2>
+								<h2>{{ Area.title }}</h2>
 								
 							</div>
+
+						{% endfor %}
 							
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'things-to-do-in-nyc/entertainment' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9505/original/neighborhood13.jpg);"></div>
-
-								</div>
-
-								<h2>Entertainment Guide</h2>
-								
-							</div>
-                            
-                            <div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'things-to-do-in-nyc/must-see-nyc' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9506/original/neighborhood17.jpg);"></div>
-
-								</div>
-
-								<h2>Must See NYC</h2>
-								
-							</div>
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'events-in-nyc' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9507/original/westhouse-hotel-new-york-events.jpg);"></div>
-
-								</div>
-
-								<h2>Events</h2>
-								
-							</div>
-							
-							<div class="boxcontainer halfsiebox">
-
-								<a href="{{ 'things-to-do-in-nyc/culinary-guide' | permalink }}" class="dropanchor"></a>
-
-								<div class="lining">
-
-									<div class="boxpic" style="background-image: url(/assets/images/9633/original/westhouse-culinary-guide2.jpg);"></div>
-
-								</div>
-
-								<h2>Culinary Guide</h2>
-								
-							</div>
-							
-                            
-                            <div class="clear"></div>
+							<div class="clear"></div>
                             
 						</div>
-						
-						
+											
 
 					<!--	<div class="massivebutton">
 							<a href="{{ 'things-to-do-in-nyc' | permalink }}">View Neighborhood Guide</a>
@@ -784,7 +677,7 @@
                         
 					
                             {% assign navBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
-{% for navBlogs in navBlogsList | limit: 8 %}
+							{% for navBlogs in navBlogsList | limit: 8 %}
                         
 							<div class="boxcontainer" data-category-ids="{% for cat in navBlogs.category %} {{ cat.id }} {% endfor %}">
 
@@ -1144,8 +1037,6 @@ WestHouse Tracking Pixel
     }());
 
 </script>
-
- <script src="https://static.vrglobal.com/embedv2.js"></script>
         
         <script>(function(){ var v = document.createElement('script'); var s = document.getElementsByTagName('script')[0]; v.src = '//io.voyat.com/v.js'; v.async = true; s.parentNode.insertBefore(v, s); })();</script>
 

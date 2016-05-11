@@ -2629,6 +2629,12 @@ and (max-width: 499px) {
     .continuebutton{
         margin-left: 25% !important;
     }
+
+    p.two.cnt-text {
+    line-height: 21px !important;
+    margin-bottom: 0px;
+    padding-bottom: 6px;
+	}
 }
 
 
@@ -2765,6 +2771,11 @@ and (max-width: 479px) {
     .continuebutton{
         margin-left: 30% !important;
     }
+     p.two.cnt-text {
+    line-height: 21px !important;
+    margin-bottom: 0px;
+    padding-bottom: 6px;
+	}
 
 }
 
@@ -2828,6 +2839,11 @@ and (max-width: 479px) {
     .continuebutton{
         margin-left: 25% !important;
     }
+     p.two.cnt-text {
+    line-height: 21px !important;
+    margin-bottom: 0px;
+    padding-bottom: 6px;
+	}
 
 }
 
@@ -2869,6 +2885,12 @@ and (max-width: 479px) {
     .continuebutton{
         margin-left: 25% !important;
     }
+
+     p.two.cnt-text {
+    line-height: 21px !important;
+    margin-bottom: 0px;
+    padding-bottom: 6px;
+	}
 
 }
 
@@ -2993,6 +3015,11 @@ and (max-height: 360px) {
         margin-left: 25% !important;
     }
 
+    p.two.cnt-text {
+    line-height: 21px !important;
+    margin-bottom: 0px;
+    padding-bottom: 6px;
+	}
 
 
 
