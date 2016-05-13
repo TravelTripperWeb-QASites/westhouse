@@ -7507,3 +7507,41 @@ float:right;
 .v__wd {
 	z-index: 999999 !important;
 }
+
+/* CNT Voter */
+.conde_holder{
+      width: auto;
+      margin-top: 15px;
+}
+.conde_desc{
+  float:right;
+}
+p.first_linec{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 12px;
+}
+p.second_linec a {
+    font-size: 12px;
+}
+.cnt-calltext{
+    font-family: BiloxiScript;
+    line-height: 1.3;
+    color: #000;
+    font-size: 50.35px;
+}
+.cnt-text{
+  font-size: 16px !important;
+   line-height: 5px !important;
+}
+.fr-50.right.maxcont div.desc {
+    max-width: 100% !important;
+    float:left;
+}
+
+.fr-50.left div.conde {
+    max-width: 340px;
+    float: right;
+    margin-right: 100px;
+    margin-top: 45px;
+}

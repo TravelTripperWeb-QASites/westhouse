@@ -15,13 +15,13 @@
 .cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
 #colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
 
-/* 
+/*
     User Style:
     Change the following styles to modify the appearance of Colorbox.  They are
     ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
 #cboxOverlay{background:#000; opacity: 0.75; filter: alpha(opacity = 75);}
-#colorbox{outline:0;}
+#colorbox{outline:0;position: fixed !important; top: 0 !important;}
     #cboxContent{margin-top:32px; overflow:visible; background:#000;}
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
@@ -29,7 +29,7 @@
         #cboxLoadingGraphic{background:url(../images/loading.gif) no-repeat center center;}
         #cboxLoadingOverlay{background:#000;}
         #cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
-		
+
 #cboxCurrent {
   font-size: 20px;
   font-weight: bold;
@@ -40,12 +40,12 @@
 
         /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
         #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; text-indent:-9999px; width:20px; height:20px; position:absolute; top:-20px; background:url(../images/controls.png) no-repeat 0 0;}
-		
+
 		#cboxPrevious, #cboxNext {
 		  top: initial;
 		  bottom: 20px;
 		}
-        
+
         /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
         #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
 
@@ -65,7 +65,7 @@
   bottom: 50px;
   right: 29%;
 }
-		
+
 #cboxClose {
   background: url(/assets/images/5762/original/close.png) no-repeat center;
   width: 30px;
@@ -74,7 +74,7 @@
   top: 74px;
   right: 37%;
 }
-	
+
         .cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious{right:66px;}
         .cboxSlideshow_on #cboxSlideshow{background-position:-75px -25px; right:44px;}
         .cboxSlideshow_on #cboxSlideshow:hover{background-position:-100px -25px;}
