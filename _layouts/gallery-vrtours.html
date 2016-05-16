@@ -39,9 +39,9 @@
 		<div id="gallerylist">
 			<ul>
 				{% for LatestVRTours in site.data._models.VRTour %}
-					
+					<li>
 				   <link vr-embed  popup="true" rel="import" href="https://static.vrglobal.com/embed/{{LatestVRTours.vr_url_key }}.html"/>	 
-
+ 					</li>
 				{% endfor %}
 
 
