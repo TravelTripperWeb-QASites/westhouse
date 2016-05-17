@@ -108,7 +108,7 @@
 					<h3>from the westhouse your house blog</h3>
 					
         				{% assign LatestBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
-{% for LimitedLastestBlogs in LatestBlogsList | limit: 2 %}
+						{% for LimitedLastestBlogs in LatestBlogsList | limit: 2 %}
         				
         					<div class="blogitem" data-category-ids="{% for cat in LimitedLastestBlogs.category %} {{ cat.id }} {% endfor %}">
         						<a href="{{ LimitedLastestBlogs.id | permalink: model_dir: 'blog' }}">
@@ -315,7 +315,7 @@
 						</div>
 
 						<div class="boxes">
-                        {% assign OffersSorted = site.data._models.Offers | sort: 'datemeta' | reverse %}
+                        {% assign OffersSorted = site.data._models.Offers | sort: 'menu_order' %}
                         {% for Offers in OffersSorted %}    
                         
 							<div class="boxcontainer">
@@ -374,7 +374,7 @@
 
 						<div class="boxes">
                     
-                    	{% assign AmenitiesSorted = site.data._models.Amenities | sort: 'datemeta' | reverse %}
+                    	{% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
                         {% for Amenities in AmenitiesSorted %}    
                         
 							<div class="boxcontainer halfsiebox">
@@ -431,7 +431,7 @@
 						</div>
 
 						<div class="boxes">
-                      {% assign DiningSorted = site.data._models.Dining | sort: 'datemeta' | reverse %}
+                      {% assign DiningSorted = site.data._models.Dining | sort: 'menu_order' %}
                 
                         {% for Dining in DiningSorted %}    
                         
@@ -490,20 +490,20 @@
 
 						<div class="boxes">
 
-						{% assign MenuGallery = site.data._models.MenuItems | sort: 'datemeta' | reverse %}
-						{% for MenuGalleryList in MenuGallery %}
+						{% assign GallerySorted = site.data._models.Gallery | sort: 'menu_order' %}
+                        {% for Gallery in GallerySorted %}  
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ MenuGalleryList.menulink }}" class="dropanchor"></a>
+								<a href="{{ Gallery.menulink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
-									<div class="boxpic" style="background-image: url({{ MenuGalleryList.image }});"></div>
+									<div class="boxpic" style="background-image: url({{ Gallery.image }});"></div>
 
 								</div>
 
-								<h2>{{ MenuGalleryList.title }}</h2>
+								<h2>{{ Gallery.title }}</h2>
 								
 							</div>
 
@@ -552,23 +552,22 @@
 							<div class="clear"></div>
 						</div>
 
-
 						<div class="boxes">
 
-						{% assign MenuArea = site.data._models.MenuItems | sort: 'datemeta' | reverse %}
-						{% for MenuAreaList in MenuArea %}
+						{% assign AreaSorted = site.data._models.Area | sort: 'menu_order' %}
+                        {% for Area in AreaSorted %}  
 							
 							<div class="boxcontainer halfsiebox">
 
-								<a href="{{ MenuAreaList.menulink }}" class="dropanchor"></a>
+								<a href="{{ Area.menulink }}" class="dropanchor"></a>
 
 								<div class="lining">
 
-									<div class="boxpic" style="background-image: url({{ MenuAreaList.image }});"></div>
+									<div class="boxpic" style="background-image: url({{ Area.image }});"></div>
 
 								</div>
 
-								<h2>{{ MenuAreaList.title }}</h2>
+								<h2>{{ Area.title }}</h2>
 								
 							</div>
 
@@ -577,8 +576,7 @@
 							<div class="clear"></div>
                             
 						</div>
-						
-						
+											
 
 					<!--	<div class="massivebutton">
 							<a href="{{ 'things-to-do-in-nyc' | permalink }}">View Neighborhood Guide</a>
@@ -617,7 +615,7 @@
 						</div>
 
 						<div class="boxes">
-                {% assign PartnersSorted = site.data._models.Partners | sort: 'datemeta' | reverse %}
+                {% assign PartnersSorted = site.data._models.Partners | sort: 'menu_order' %}
                 
                         {% for Partners in PartnersSorted %}    
                         
@@ -679,7 +677,7 @@
                         
 					
                             {% assign navBlogsList = site.data._models.Blog | sort: 'datemeta' | reverse %}
-{% for navBlogs in navBlogsList | limit: 8 %}
+							{% for navBlogs in navBlogsList | limit: 8 %}
                         
 							<div class="boxcontainer" data-category-ids="{% for cat in navBlogs.category %} {{ cat.id }} {% endfor %}">
 
@@ -1039,6 +1037,8 @@ WestHouse Tracking Pixel
     }());
 
 </script>
+
+<script src="https://static.vrglobal.com/embedv2.js"></script>
         
         <script>(function(){ var v = document.createElement('script'); var s = document.getElementsByTagName('script')[0]; v.src = '//io.voyat.com/v.js'; v.async = true; s.parentNode.insertBefore(v, s); })();</script>
 
