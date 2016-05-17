@@ -7524,6 +7524,7 @@ p.first_linec{
 p.second_linec a {
     font-size: 12px;
 }
+
 .cnt-calltext{
     font-family: BiloxiScript;
     line-height: 1.3;
@@ -7545,3 +7546,7 @@ p.second_linec a {
     margin-right: 100px;
     margin-top: 45px;
 }
+
+.vrg-preview{
+  background-position: center center;
+  }
