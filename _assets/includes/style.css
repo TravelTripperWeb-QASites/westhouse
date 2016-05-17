@@ -7550,3 +7550,13 @@ p.second_linec a {
 .vrg-preview{
   background-position: center center;
   }
+
+.vtr-btn-box{
+  margin-left: 20%;
+}
+
+.vtr-btn-box .button1{
+  color:#fff;
+  background:#333;
+  padding: 10px 60px;
+}
