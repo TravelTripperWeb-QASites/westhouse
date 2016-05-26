@@ -61,12 +61,12 @@
       if (hashName !== '') {
         var hash = window.location.hash;
         if (hash === '') {
-          alert('Back button was pressed.');
+          $( "body" ).addClass( "opennav" );
         }
       }
     });
 
-    window.history.pushState('forward', null, './#forward');
+    window.history.pushState('forward', null, './');
   }
 		$('#map-side-bar li').on('click', function(e){
 		e.preventDefault();
