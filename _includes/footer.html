@@ -1038,6 +1038,30 @@ WestHouse Tracking Pixel
 
 </script>
 
+<script>
+jQuery(document).ready(function($) {
+
+  if (window.history && window.history.pushState) {
+
+    $(window).on('popstate', function() {
+      var hashLocation = location.hash;
+      var hashSplit = hashLocation.split("#!/");
+      var hashName = hashSplit[1];
+
+      if (hashName !== '') {
+        var hash = window.location.hash;
+        if (hash === '') {
+          alert('Back button was pressed.');
+        }
+      }
+    });
+
+    window.history.pushState('forward', null, './#forward');
+  }
+
+});
+</script>
+
 <script src="https://static.vrglobal.com/embedv2.js"></script>
         
         <script>(function(){ var v = document.createElement('script'); var s = document.getElementsByTagName('script')[0]; v.src = '//io.voyat.com/v.js'; v.async = true; s.parentNode.insertBefore(v, s); })();</script>
