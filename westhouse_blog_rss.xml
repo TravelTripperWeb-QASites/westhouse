@@ -17,7 +17,7 @@
       <item>
         <title>{{blog.title | replace: "& ", '&amp;' }}</title>
         <link>http://www.westhousehotelnewyork.com{{ blog.id | permalink: model_dir: 'blog' }}</link>
-        <description>{{ blog.seo_description | replace: "& ", '&amp;' }}</description>
+        <description>{{ blog.seo_description | replace: "& ", '&amp;' }}</description>        
       </item>
     {% endfor %}
   </channel>
