@@ -867,6 +867,12 @@ h6 {font-size: 55px;}
 
 .fr-mob { display: none;}
 
+
+.frieze .fr-50.right {
+    padding-top: 100px;
+}
+
+
 #award .awardpic {
   float: left;
     width: 170px;

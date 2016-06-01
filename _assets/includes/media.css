@@ -804,7 +804,25 @@ and (max-width: 1023px) {
     .continuebutton{
     
     	margin-left: 20% !important;
-    }    
+    }
+	
+	.frieze .fr-50.left {
+		width: 100%;
+		float: none;
+		margin-bottom: 20px;
+	}
+		.frieze .fr-50.right {
+		width: 100%;
+		float: none;
+		padding-top: 0;
+	}
+	.frieze .fr-50.left .conde {
+		margin: 0 auto;
+		float: none;
+	}
+	.fr-50.right.maxcont div.desc {
+		float: none;
+	}
 
 }
 
