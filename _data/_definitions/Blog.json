@@ -11,7 +11,7 @@
 "category":
 	{"type":"model","model_name":"BlogCategory","multiple":true,"default_text":"Select Blog Post Categories","display_field":"name"},
 "date":
-	{"required":true,"placeholder":"MM/DD/YY",instructions":"Publishing date (MM/DD/YY)"},
+	{"required":true,"placeholder":"MM/DD/YY","instructions":"Publishing date (MM/DD/YY)"},
 "datemeta":
 	{"required":true,"placeholder":"YYYY/MM/DD","instructions":"Used to sort blogs by date (YYYY/MM/DD)"},
 "preview":
