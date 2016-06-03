@@ -632,11 +632,57 @@ $(document).ready(function(){
 
 
   // TABS FUNCTION //
-  $('.tabs-wrapper').each(function() {
-    $(this).find(".tab-content").hide(); //Hide all content
-    $(this).find("ul.tabs li:first").addClass("active").show(); //Activate first tab
-    $(this).find(".tab-content:first").show(); //Show first tab content
-  });
+  
+  if(window.location.href.indexOf("/offers/") > -1) {
+	$('.tabs-wrapper').each(function() {
+		$(this).find(".tab-content").hide(); //Hide all content
+		$(this).find("ul.tabs li:nth-child(2)").addClass("active").show(); //Activate offers tab
+		$(this).find(".tab-content:nth-child(2)").show(); //Show offers tab content
+	});
+  } else if(window.location.href.indexOf("/westhouse-hotel-amenities-nyc/") > -1) {
+	$('.tabs-wrapper').each(function() {
+		$(this).find(".tab-content").hide(); //Hide all content
+		$(this).find("ul.tabs li:nth-child(3)").addClass("active").show(); //Activate amenities tab
+		$(this).find(".tab-content:nth-child(3)").show(); //Show amenities tab content
+	});
+  } else if(window.location.href.indexOf("/westhouse-hotel-new-york-dining/") > -1) {
+	$('.tabs-wrapper').each(function() {
+		$(this).find(".tab-content").hide(); //Hide all content
+		$(this).find("ul.tabs li:nth-child(4)").addClass("active").show(); //Activate dining tab
+		$(this).find(".tab-content:nth-child(4)").show(); //Show dining tab content
+	});
+  } else if(window.location.href.indexOf("/photo-album/") > -1) {
+	$('.tabs-wrapper').each(function() {
+		$(this).find(".tab-content").hide(); //Hide all content
+		$(this).find("ul.tabs li:nth-child(5)").addClass("active").show(); //Activate gallery tab
+		$(this).find(".tab-content:nth-child(5)").show(); //Show gallery tab content
+	});
+  } else if(window.location.href.indexOf("/things-to-do-in-nyc/") > -1) {
+	$('.tabs-wrapper').each(function() {
+		$(this).find(".tab-content").hide(); //Hide all content
+		$(this).find("ul.tabs li:nth-child(6)").addClass("active").show(); //Activate area tab
+		$(this).find(".tab-content:nth-child(6)").show(); //Show area tab content
+	});
+  } else if(window.location.href.indexOf("/westhouse-hotel-new-york-partners/") > -1) {
+	$('.tabs-wrapper').each(function() {
+		$(this).find(".tab-content").hide(); //Hide all content
+		$(this).find("ul.tabs li:nth-child(7)").addClass("active").show(); //Activate partners tab
+		$(this).find(".tab-content:nth-child(7)").show(); //Show partners tab content
+	});
+  } else if(window.location.href.indexOf("/blog/") > -1) {
+	$('.tabs-wrapper').each(function() {
+		$(this).find(".tab-content").hide(); //Hide all content
+		$(this).find("ul.tabs li:nth-child(8)").addClass("active").show(); //Activate partners tab
+		$(this).find(".tab-content:nth-child(8)").show(); //Show partners tab content
+	});
+  } else {
+	$('.tabs-wrapper').each(function() {
+		$(this).find(".tab-content").hide(); //Hide all content
+		$(this).find("ul.tabs li:first").addClass("active").show(); //Activate first tab
+		$(this).find(".tab-content:first").show(); //Show first tab content
+	});
+  }
+  
   $("ul.tabs li").click(function(e) {
     $(this).parents('.tabs-wrapper').find("ul.tabs li").removeClass("active"); //Remove any "active" class
     $(this).addClass("active"); //Add "active" class to selected tab
@@ -647,6 +693,7 @@ $(document).ready(function(){
     $(this).parents('.tabs-wrapper').find(activeTab).fadeIn(); //Fade in the active ID content
     e.preventDefault();
   });
+  
   $("ul.tabs li a:not(.connect)").click(function(e) {
     e.preventDefault();
   })
