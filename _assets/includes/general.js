@@ -672,8 +672,8 @@ $(document).ready(function(){
   } else if(window.location.href.indexOf("/blog/") > -1) {
 	$('.tabs-wrapper').each(function() {
 		$(this).find(".tab-content").hide(); //Hide all content
-		$(this).find("ul.tabs li:nth-child(8)").addClass("active").show(); //Activate partners tab
-		$(this).find(".tab-content:nth-child(8)").show(); //Show partners tab content
+		$(this).find("ul.tabs li:nth-child(8)").addClass("active").show(); //Activate blog tab
+		$(this).find(".tab-content:nth-child(8)").show(); //Show blog tab content
 	});
   } else {
 	$('.tabs-wrapper').each(function() {
