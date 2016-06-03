@@ -657,7 +657,7 @@ $(document).ready(function(){
 		$(this).find("ul.tabs li:nth-child(5)").addClass("active").show(); //Activate gallery tab
 		$(this).find(".tab-content:nth-child(5)").show(); //Show gallery tab content
 	});
-  } else if(window.location.href.indexOf("/things-to-do-in-nyc/") > -1) {
+  } else if((window.location.href.indexOf("/things-to-do-in-nyc/") > -1) || (window.location.href.indexOf("/events-in-nyc/") > -1)) {
 	$('.tabs-wrapper').each(function() {
 		$(this).find(".tab-content").hide(); //Hide all content
 		$(this).find("ul.tabs li:nth-child(6)").addClass("active").show(); //Activate area tab
