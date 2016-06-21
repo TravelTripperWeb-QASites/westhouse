@@ -253,7 +253,7 @@ $(document).ready(function(){
 
       if( (getthedate == getdateLastDayOfMonth) && (getthemonth != getdateLastMonthOfYear) ) {
 
-        var d1 =  d.getFullYear() + '-' + ('0' + (d.getMonth() + 2)).slice(-2) + '-' + ('0' + d3).slice(-2);
+        var d1 =  d.getFullYear() + '-' + ('0' + (d.getMonth() + 2)).slice(-2) + '-' + ('0' + d3).slice(-2); // will add zero
 
         $('.departdatepicker').datepicker('setDate',d1);
 
