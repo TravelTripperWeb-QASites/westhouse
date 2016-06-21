@@ -1228,6 +1228,11 @@ and (max-width: 799px) {
 /* ================================================ 767 - 000 ======================================= */
 
 @media only screen and (max-width: 767px) {
+
+	.highgate{
+	    float: inherit;
+	    margin: 10px;
+	}
     
     #maincontent h1 {
         font-size: 40px;
