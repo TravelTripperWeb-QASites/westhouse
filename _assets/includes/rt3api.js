@@ -210,7 +210,7 @@
 
     // Private
     function query(path, params) {
-        var rootPath = 'http://rt3api-prd.ttaws.com';
+        var rootPath = 'https://rt3api-prd.ttaws.com';
 
         return $.ajax({
             url: rootPath + path,
