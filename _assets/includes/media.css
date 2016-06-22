@@ -715,14 +715,20 @@ and (max-width: 1023px) {
 	#signup .signuptext { width: 400px;}
 	#signup .signupform { width: auto;}
 	
+	#signup .signupform .da_block {
+		float: none;
+		margin: 0 auto;
+		width: 400px;
+	}
+	
 	#signup .signupform input {
 		display: block;
-		width: 360px;
+		width: 100%;
 		margin: 0 auto 10px;
 	}
 	
 	#signup .signupform input[type="submit"] {
-		width: 400px;
+		max-width: 400px;
 		margin: 0 auto;
 	}
 	
@@ -1228,6 +1234,10 @@ and (max-width: 799px) {
 	
 	#featuredcontent .contenttitle_ppc {
 		top: 12%;
+	}
+	
+	#maincontent p, #maincontent ul li {
+		word-wrap: break-word;
 	}
 
 
@@ -2738,6 +2748,9 @@ and (max-width: 479px) {
 	#signup .signupform input,
 	#signup .signupform input[type="submit"] {
 		width: 90%;
+	}
+	#signup .signupform .da_block {
+		width: 100%;
 	}
 	#signup .signupform input { box-sizing: border-box;}
 	
