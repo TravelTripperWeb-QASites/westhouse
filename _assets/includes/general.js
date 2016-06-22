@@ -253,7 +253,7 @@ $(document).ready(function(){
 
       if( (getthedate == getdateLastDayOfMonth) && (getthemonth != getdateLastMonthOfYear) ) {
 
-        var d1 =  d.getFullYear() + '-' + (d.getMonth() + 2) + '-' + d3;
+        var d1 =  d.getFullYear() + '-' + ('0' + (d.getMonth() + 2)).slice(-2) + '-' + ('0' + d3).slice(-2); // will add zero
 
         $('.departdatepicker').datepicker('setDate',d1);
 
@@ -273,7 +273,7 @@ $(document).ready(function(){
 
       } else if( (getthedate == getdateLastDayOfMonth) && (getthemonth == getdateLastMonthOfYear) ) {
 
-        var d1 =  (d.getFullYear()+1) + '-' + '1' + '-' + d3;
+        var d1 =  (d.getFullYear()+1) + '-' + ('0'+'1').slice(-2) + '-' + ('0' + d3).slice(-2);
 
         $('.departdatepicker').datepicker('setDate',d1);
 
@@ -293,7 +293,7 @@ $(document).ready(function(){
 
       } else {
 
-        var d1 =  d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + (d.getDate() + 1);
+        var d1 =  d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ( '0' + (d.getDate() + 1)).slice(-2);
 
         $('.departdatepicker').datepicker('setDate',d1);
 
