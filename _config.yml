@@ -47,4 +47,4 @@ page_gen:
     dir: 'culinary-single'
   - data: 'PPC-Landing-Page'
     template: 'ppc-landing-single'
-    dir: 'ppc'
+    dir: ''
