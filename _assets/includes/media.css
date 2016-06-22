@@ -633,6 +633,12 @@ and (max-width: 1024px) {
 	.flexslider .slides > li {
 	    max-height: 230px;
 	}
+	
+	#featuredcontent .contenttitle_ppc {
+		max-width: 200px;
+		width: 100%;
+		top: 25%;
+	}
 
 
 }
@@ -1218,6 +1224,10 @@ and (max-width: 799px) {
 
 	.relatedposts .postimag {
 		height: 120px;
+	}
+	
+	#featuredcontent .contenttitle_ppc {
+		top: 12%;
 	}
 
 
