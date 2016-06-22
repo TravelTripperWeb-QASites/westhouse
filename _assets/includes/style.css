@@ -7583,23 +7583,29 @@ p.second_linec a {
   text-align: center;
   text-transform: uppercase;
   z-index: 2;
-  padding: 20px 0;
   text-align: center;
   width: 20%;
   margin: 0 auto;
 }
+
 .content_border {
 
   border-top:    3px solid  #fff;
   border-right:  0px;
   border-bottom: 3px solid  #fff;
   border-left:   0px;
+  padding: 20px 0;
 
 }
 #featuredcontent .contenttitle_ppc #save25
 {
     font-size: 65px;
     font-weight: 500;
+}
+
+#featuredcontent .reserveppc {
+    z-index: 4;
+    margin-top: 10px;
 }
 
 a.button_ppc {
