@@ -1228,6 +1228,12 @@ and (max-width: 799px) {
 /* ================================================ 767 - 000 ======================================= */
 
 @media only screen and (max-width: 767px) {
+
+	.highgate {
+	    text-align: center;
+	    width: 90%;
+	    padding: 10px 0;
+	}
     
     #maincontent h1 {
         font-size: 40px;

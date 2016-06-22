@@ -7567,3 +7567,8 @@ p.second_linec a {
   background:#333;
   padding: 10px 60px;
 }
+
+.highgate{
+    float: left;
+    margin: -10px 0 0 60px;
+}
