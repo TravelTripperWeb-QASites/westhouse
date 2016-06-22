@@ -633,12 +633,6 @@ and (max-width: 1024px) {
 	.flexslider .slides > li {
 	    max-height: 230px;
 	}
-	
-	#featuredcontent .contenttitle_ppc {
-		max-width: 200px;
-		width: 100%;
-		top: 25%;
-	}
 
 
 }
@@ -1233,7 +1227,7 @@ and (max-width: 799px) {
 	}
 	
 	#featuredcontent .contenttitle_ppc {
-		top: 12%;
+		top: 25%;
 	}
 	
 	#maincontent p, #maincontent ul li {
@@ -2828,6 +2822,21 @@ and (max-width: 479px) {
 
 }
 
+/* ================================================ 425 - 000 ======================================= */
+
+@media only screen and (max-width: 425px) {
+	
+	#featuredcontent .contenttitle_ppc {
+		width: 100%;
+		max-width: 290px;
+		font-size: 15px;
+	}
+	#featuredcontent .contenttitle_ppc #save25 {
+		font-size: 50px;
+	}
+	
+}
+
 
 
 /* ================================================ 399 - 000 ======================================= */
@@ -2934,9 +2943,6 @@ and (max-width: 479px) {
 	}
 
 }
-
-
-
 
 /* ================================================ HEIGHT 640 - 000 ======================================= */
 
