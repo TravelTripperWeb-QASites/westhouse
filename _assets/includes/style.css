@@ -7579,18 +7579,43 @@ p.second_linec a {
   left: 0;
   right: 0;
   font-size: 14px;
+  font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   z-index: 2;
+  padding: 20px 0;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+}
+.content_border {
+
   border-top:    3px solid  #fff;
   border-right:  0px;
   border-bottom: 3px solid  #fff;
   border-left:   0px;
-  padding: 20px 0;
-  text-align: center;
-}
 
+}
 #featuredcontent .contenttitle_ppc #save25
 {
-  font-size:60px;
+    font-size: 65px;
+    font-weight: 500;
+}
+
+a.button_ppc {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #343434;
+    letter-spacing: 0.055em;
+    background: #fff;
+    padding: 5px 30px;
+    display: inline-block;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    opacity: 0.75;
 }
