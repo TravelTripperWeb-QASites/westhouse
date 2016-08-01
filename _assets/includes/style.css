@@ -7590,7 +7590,8 @@ p.second_linec a {
     font-weight: 500;
     text-align: left;
     padding: 0 90px;
-    font-size: 14px;
+    font-size: 12px;
+    color: #808080;
 }
 
 .resident
@@ -7611,7 +7612,7 @@ p.second_linec a {
     right: 40px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 0.06em;
