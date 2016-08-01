@@ -7580,7 +7580,8 @@ p.second_linec a {
     margin-bottom: 21px;
     margin-top: 80px;
     text-align: left;
-    padding: 0 30px;
+    padding: 0 90px;
+    font-size: 14px;
 }
 
 .awc-four
@@ -7588,7 +7589,8 @@ p.second_linec a {
     font-family: 'GothamLight';
     font-weight: 500;
     text-align: left;
-    padding: 0 30px;
+    padding: 0 90px;
+    font-size: 14px;
 }
 
 .resident
