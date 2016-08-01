@@ -7578,6 +7578,7 @@ p.second_linec a {
     font-family: 'GothamBold';
     font-weight: 500;
     margin-bottom: 21px;
+    margin-top: 80px;
     text-align: left;
     padding: 0 30px;
 }
@@ -7593,8 +7594,26 @@ p.second_linec a {
 .resident
 {
     width: 48%;
-    height: 500px;
+    height: 350px;
     background-position: center;
     background-size: cover;
     position: relative;
+}
+
+
+.restext
+{
+    position: absolute;
+    bottom: 30px;
+    z-index: 2;
+    right: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.06em;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
 }
