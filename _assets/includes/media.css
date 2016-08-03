@@ -347,6 +347,23 @@ and (max-width: 1279px) {
 }
 
 
+/* ================================================ 1200 - 0000 ======================================= */
+
+@media only screen
+and (max-width: 1200px) {
+	
+	.resident {
+		width: 50%;
+	}
+	.awc-three {
+		padding: 0 0 0 40px;
+	}
+	.awc-four {
+		padding: 0 0 0 40px;
+	}
+	
+}
+
 
 /* ================================================ 1160 - 0000 ======================================= */
 
@@ -1172,6 +1189,11 @@ and (max-width: 799px) {
     .bookrate .left {
         width: 100%;
     }
+	
+	
+	.awc-three {
+		margin-top: 40px;
+	}
     
 
 }
@@ -1826,6 +1848,10 @@ and (max-width: 799px) {
 /* ================================================ 699 - 000 ======================================= */
 
 @media only screen and (max-width: 699px) {
+	
+	.awc-three {
+		margin-top: 20px;
+	}
 
 
 }
@@ -2005,6 +2031,19 @@ and (max-width: 799px) {
     .infocontainer {
         display: none !important;
     }
+	
+	
+	.frieze .col2 {
+		width: 100%;
+	}
+	
+	.awc-three {
+		padding: 0;
+		margin-top: 30px;
+	}
+	.awc-four {
+		padding: 0;
+	}
     
 }
 
@@ -2867,6 +2906,14 @@ and (max-width: 479px) {
     line-height: 21px !important;
     margin-bottom: 0px;
     padding-bottom: 6px;
+	}
+	
+	.resident {
+		height: 230px;
+	}
+	.restext {
+		right: 20px;
+		bottom: 20px;
 	}
 
 }
