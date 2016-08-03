@@ -2907,6 +2907,14 @@ and (max-width: 479px) {
     margin-bottom: 0px;
     padding-bottom: 6px;
 	}
+	
+	.resident {
+		height: 230px;
+	}
+	.restext {
+		right: 20px;
+		bottom: 20px;
+	}
 
 }
 
