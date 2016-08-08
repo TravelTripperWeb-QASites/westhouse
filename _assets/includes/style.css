@@ -1878,6 +1878,7 @@ a.hasher {
 .roominfo .reservenowbutton .button2 {
   cursor: pointer;
   width: 100%;
+  padding: 1px 10px;
 }
 
 .roomdate #datepicker {
