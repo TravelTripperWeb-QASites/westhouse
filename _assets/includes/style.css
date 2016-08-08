@@ -7630,3 +7630,9 @@ a.button_ppc:hover {
     color: fff;
     background: #343434;
 }
+
+.specialppc p
+{
+  font-weight: 600;
+  font-size: 16px;
+}
