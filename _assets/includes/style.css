@@ -1879,6 +1879,7 @@ a.hasher {
   cursor: pointer;
   width: 100%;
   padding: 1px 10px;
+  font-size:11px;
 }
 
 .roomdate #datepicker {
