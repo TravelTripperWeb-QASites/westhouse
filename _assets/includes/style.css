@@ -1878,6 +1878,8 @@ a.hasher {
 .roominfo .reservenowbutton .button2 {
   cursor: pointer;
   width: 100%;
+  padding: 1px 10px;
+  font-size:11px;
 }
 
 .roomdate #datepicker {
@@ -7620,4 +7622,8 @@ p.second_linec a {
     transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
+}
+
+#maincontent a.button.slipbutton {
+    display: none;
 }
