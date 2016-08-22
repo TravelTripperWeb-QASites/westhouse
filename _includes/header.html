@@ -50,6 +50,24 @@
 {% endif %}
 <script type="text/javascript">
      $(document).ready(function(){
+
+        if (window.history && window.history.pushState) {
+
+    $(window).on('popstate', function() {
+      var hashLocation = location.hash;
+      var hashSplit = hashLocation.split("#!/");
+      var hashName = hashSplit[1];
+
+      if (hashName !== '') {
+        var hash = window.location.hash;
+        if (hash === '') {
+          $( "body" ).addClass( "opennav" );
+        }
+      }
+    });
+
+   // window.history.pushState('forward', null, './');
+  }
 		$('#map-side-bar li').on('click', function(e){
 		e.preventDefault();
 			$('#map-side-bar').find('li').removeClass('active');
@@ -145,7 +163,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
 <!-- CRAZY EGG -->	
 
-<!--<a class="stay-wanderful-button" href="https://staywanderful.com/widgets/#/30">Stay Wanderful</a> <script src="https://scripts.staywanderful.com/widgets/30.js"></script>-->
+<!--<a class="stay-wanderful-button" href="https://staywanderful.com/widgets/#/30">Stay Wanderful</a> <script src="https://scripts.staywanderful.com/widgets/30.js"></script> -->
 
 {% if template_class == "index" %}
 <!-- Sojern Tag v6_js, Pixel Version: 2 -->
