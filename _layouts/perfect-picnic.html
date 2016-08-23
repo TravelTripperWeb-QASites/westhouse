@@ -30,29 +30,29 @@
 		
 			<div class="container">
 		
-				{% region entertainment_neighborhood_text %}
+		    <div class="culinary-outer">
+				{% for LocationsInCategory-Culinary-Dinner in site.data._models.Culinary-Guide %}
+				{% assign categoryIds = LocationsInCategory-Culinary-Dinner.category | map: 'id' %}
+				{% if categoryIds contains '56b0c34c77e2f50003f8af66' %}
+
+				<div class="hvr-sweep-to-left cg-post-image{% comment %} // Saved %comment% for future use. // Delete it if you want {% cycle 'cg-post-image', 'cg-post-noimage' %} {% endcomment %}">
+
+				<div class="culinary-post">
+				<div class="cg-image"><img src="{{LocationsInCategory-Culinary-Dinner.image.url }}" align="left"></div>
+				<div class="cg-details">
+				<h3><a target="_blank" href="{{ LocationsInCategory-Culinary-Dinner.Outbound_Link }}">{{ LocationsInCategory-Culinary-Dinner.title }}</a></h3>
+				<p>{{ LocationsInCategory-Culinary-Dinner.contents }}</p>
+				</div>
+				</div>
+
+			</div>
+
+				{% endif %}
+				{% endfor %}
 				
 		    </div>
 		    
-		    <div class="culinary-outer">
-			{% for LocationsInCategory-Culinary-Dinner in site.data._models.Culinary-Guide %}
-{% assign categoryIds = LocationsInCategory-Culinary-Dinner.category | map: 'id' %}
-{% if categoryIds contains '56b0c34c77e2f50003f8af66' %}
-			
-				<div class="hvr-sweep-to-left cg-post-image{% comment %} // Saved %comment% for future use. // Delete it if you want {% cycle 'cg-post-image', 'cg-post-noimage' %} {% endcomment %}">
-				
-				<div class="culinary-post">
-				    <div class="cg-image"><img src="{{LocationsInCategory-Culinary-Dinner.image.url }}" align="left"></div>
-					<div class="cg-details">
-					    <h3><a target="_blank" href="{{ LocationsInCategory-Culinary-Dinner.Outbound_Link }}">{{ LocationsInCategory-Culinary-Dinner.title }}</a></h3>
-					    <p>{{ LocationsInCategory-Culinary-Dinner.contents }}</p>
-				    </div>
-				</div>
-				
-				</div>
-			
-			{% endif %}
-{% endfor %}
+
 			
 			<div class="clear"></div>
 			
