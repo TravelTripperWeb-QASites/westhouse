@@ -32,6 +32,8 @@
 		 
 		    <div class="culinary-outer">
 				{% for LocationsInCategory-PerfectPicnic in site.data._models.PerfectPicnic %}
+				{% assign PicnicSorted = site.data._models.PerfectPicnic | sort: 'orderby' %}
+				{% for PerfectPicnic in PicnicSorted %}    
 			
 
 				<div class="hvr-sweep-to-left cg-post-image{% comment %} // Saved %comment% for future use. // Delete it if you want {% cycle 'cg-post-image', 'cg-post-noimage' %} {% endcomment %}">
