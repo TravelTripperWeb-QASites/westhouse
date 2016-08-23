@@ -1,11 +1,11 @@
 {"title":
 	{"required":true},
-"h1_title":
-	{"required":true},
 "seo_title":
 	{"required":true},
 "seo_description":
 	{"type":"text","required":true},
 "header_image":
-	{"type":"image","required":true}
+	{"type":"image","required":true},
+"contents":
+	{"type":"richtext","required":true}
 }
