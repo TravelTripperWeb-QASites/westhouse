@@ -1,5 +1,11 @@
 {"title":
 	{"required":true},
-"image":
-	{"type":"image"}
+"h1_title":
+	{"required":true},
+"seo_title":
+	{"required":true},
+"seo_description":
+	{"type":"text","required":true},
+"header_image":
+	{"type":"image","required":true}
 }
