@@ -7646,12 +7646,12 @@ p.second_linec a {
 }
 
 
-.picnic-title h3 {
-    color: #0f0f0f;
+h3.picnic-title {
+    color: #343434;
     text-transform: uppercase;
 }
 
-#price-picnic h3 {
+div.price-picnic {
     font-family: GothamThin;
     font-size: 35px;
     color: #333333;
