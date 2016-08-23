@@ -4,6 +4,10 @@
 	{"required":true},
 "seo_description":
 	{"type":"text","required":true},
+"date":
+	{"required":true,"placeholder":"MM/DD/YY","instructions":"Publishing date (MM/DD/YY)"},
+"datemeta":
+	{"required":true,"placeholder":"YYYY/MM/DD","instructions":"Used to sort entry by date (YYYY/MM/DD)"},	
 "featured_image":
 	{"type":"image","required":true},
 "price":
