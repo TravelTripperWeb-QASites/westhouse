@@ -1,4 +1,4 @@
 {
     "definition_names": ["PerfectPicnic"],
-    "sort": { "datemeta": -1 }
+    "sort": { "menu_order": -1 }
 }
