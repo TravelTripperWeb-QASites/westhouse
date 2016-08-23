@@ -7627,3 +7627,35 @@ p.second_linec a {
 #maincontent a.button.slipbutton {
     display: none;
 }
+
+
+/**** PERFECT PICNIC ****/
+.picnic-details {
+    width: 60%;
+    float: left;
+}
+
+.cg-post-image .picnic-post .picnic-image img {
+    height: 248px;
+    padding: 0px 0px 0px 20px;
+}
+
+.picnic-image {
+    width: 27%;
+    float: left;
+}
+
+
+.picnic-title h3 {
+    color: #0f0f0f;
+    text-transform: uppercase;
+}
+
+#price-picnic h3 {
+    font-family: GothamThin;
+    font-size: 35px;
+    color: #333333;
+    letter-spacing: -0.025em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
