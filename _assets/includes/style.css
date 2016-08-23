@@ -7653,9 +7653,9 @@ h2.picnic-title {
 }
 
 h3.price-picnic {
-    font-family: GothamThin;
-    font-size: 30px;
-    color: #333333;
-    letter-spacing: -0.025em;
-    font-weight: 600;
+    font-family: GothamThin !important;
+    font-size: 30px !important;
+    color: #333333 !important;
+    letter-spacing: -0.025em !important;
+    font-weight: 600 !important;
 }
