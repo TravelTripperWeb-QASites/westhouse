@@ -1,13 +1,5 @@
 {"title":
 	{"required":true},
-"titleh1":
-	{"required":true},
-"seo_title":
-	{"required":true},
-"seo_description":
-	{"type":"text","required":true},
-"url_friendly_name":
-	{"type":"url_slug"},
 "image":
 	{"type":"image"}
 }
