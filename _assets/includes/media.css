@@ -1154,6 +1154,31 @@ and (max-width: 860px) {
 	    width: 100%;
     }
 
+
+    /* PICNIC */
+
+   .picnic-image {
+    width: 100%;
+    float: left;
+	}
+
+	.picnic-details {
+	width: 100%;
+	float: left;
+	}
+
+	div.price-picnic {
+    text-align: center;
+	}
+
+	h3.picnic-title {
+    text-align: center;
+	}
+
+	#maincontent p, #maincontent ul li {
+    padding: 10px;
+	}
+
 }
 
 
