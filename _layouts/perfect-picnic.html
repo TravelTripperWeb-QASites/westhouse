@@ -31,19 +31,19 @@
 			<div class="container">
 		 
 		    <div class="culinary-outer">
-				{% for LocationsInCategory-PerfectPicnic in site.data._models.PerfectPicnic | sort: 'menu_order' %}
+				{% for Perfectpicnic in site.data._models.PerfectPicnic | sort: 'menu_order' | ASC %}
 			
 
 				<div class="hvr-sweep-to-left cg-post-image{% comment %} // Saved %comment% for future use. // Delete it if you want {% cycle 'cg-post-image', 'cg-post-noimage' %} {% endcomment %}">
 
 				<div class="picnic-post">
-				<div class="picnic-image"><img src="{{LocationsInCategory-PerfectPicnic.featured_image.url }}" align="left"></div>
+				<div class="picnic-image"><img src="{{PerfectPicnic.featured_image.url }}" align="left"></div>
 				<div class="picnic-details ">
-				<h3 class="picnic-title">{{ LocationsInCategory-PerfectPicnic.title }}</h3>
+				<h3 class="picnic-title">{{ PerfectPicnic.title }}</h3>
 				<br>
-				<div class="price-picnic">{{ LocationsInCategory-PerfectPicnic.price }}</div>
-				<div class="price-picnic">{{ LocationsInCategory-PerfectPicnic.price2 }}</div>
-				<p>{{ LocationsInCategory-PerfectPicnic.contents }}</p>
+				<div class="price-picnic">{{ PerfectPicnic.price }}</div>
+				<div class="price-picnic">{{ PerfectPicnic.price2 }}</div>
+				<p>{{ PerfectPicnic.contents }}</p>
 				</div>
 				</div>
 
