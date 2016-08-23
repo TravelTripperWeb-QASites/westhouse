@@ -4,7 +4,9 @@
 	{"required":true},
 "seo_description":
 	{"type":"text","required":true},
-"header_image":
+"featured_image":
+	{"type":"image","required":true},
+"price":
 	{"type":"image","required":true},
 "contents":
 	{"type":"richtext","required":true}
