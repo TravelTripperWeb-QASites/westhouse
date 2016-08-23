@@ -1167,11 +1167,11 @@ and (max-width: 860px) {
 	float: left;
 	}
 
-	div.price-picnic {
+	h3.price-picnic {
     text-align: center;
 	}
 
-	h3.picnic-title {
+	h2.picnic-title {
     text-align: center;
 	}
 
