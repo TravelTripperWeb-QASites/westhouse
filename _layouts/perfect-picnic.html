@@ -31,7 +31,7 @@
 			<div class="container">
 		 
 		    <div class="culinary-outer">
-				{% for LocationsInCategory-PerfectPicnic in site.data._models.PerfectPicnic | sort: 'datemeta' %}
+				{% for LocationsInCategory-PerfectPicnic in site.data._models.PerfectPicnic | sort: 'menu_order' %}
 			
 
 				<div class="hvr-sweep-to-left cg-post-image{% comment %} // Saved %comment% for future use. // Delete it if you want {% cycle 'cg-post-image', 'cg-post-noimage' %} {% endcomment %}">
