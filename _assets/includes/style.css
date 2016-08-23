@@ -7647,8 +7647,9 @@ p.second_linec a {
 
 
 h3.picnic-title {
-    color: #343434;
+    color: #343434 !important;
     text-transform: uppercase;
+    font-size: 18px !important;
 }
 
 div.price-picnic {
@@ -7656,6 +7657,4 @@ div.price-picnic {
     font-size: 35px;
     color: #333333;
     letter-spacing: -0.025em;
-    margin-bottom: 40px;
-    text-transform: uppercase;
 }

@@ -7,7 +7,9 @@
 "featured_image":
 	{"type":"image","required":true},
 "price":
-	{"type":"text","required":true},
+	{"type":"text"},
+"price2":
+	{"type":"text"},
 "contents":
 	{"type":"richtext","required":true}
 }
