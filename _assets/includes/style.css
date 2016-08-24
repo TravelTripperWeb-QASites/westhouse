@@ -5819,6 +5819,15 @@ padding: 14px 0;
   text-transform: uppercase;
 }
 
+#maincontent h1 p {
+  font-family: GothamThin;
+  font-size: 55px;
+  color: #333333;
+  letter-spacing: -0.025em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
 #maincontent.blogsingle h1 {
     margin-bottom: 10px;
 }
