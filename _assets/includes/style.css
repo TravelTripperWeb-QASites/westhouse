@@ -1254,6 +1254,10 @@ font-family: GothamLight;
     box-sizing: border-box;
 }
 
+#signup .signupform input::-ms-clear {
+    display: none;
+}
+
 #contact-signup input[type="text"], #contact-signup input[type="email"] {
     width: 40%;
 }
@@ -1278,6 +1282,14 @@ font-family: GothamLight;
 #signup .signupform input[type="submit"]:hover {
   background: #d0d0d0;
   color: #696b65;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+input[type=submit] {
+    -webkit-border-radius:0px;
 }
 
 #footer::after {
@@ -5819,6 +5831,15 @@ padding: 14px 0;
   text-transform: uppercase;
 }
 
+#maincontent h1 p {
+  font-family: GothamThin;
+  font-size: 55px;
+  color: #333333;
+  letter-spacing: -0.025em;
+  margin-top: 110px;
+  text-transform: uppercase;
+}
+
 #maincontent.blogsingle h1 {
     margin-bottom: 10px;
 }
@@ -7626,4 +7647,54 @@ p.second_linec a {
 
 #maincontent a.button.slipbutton {
     display: none;
+}
+
+
+/**** PERFECT PICNIC ****/
+.picnic-details {
+    width: 60%;
+    float: left;
+    margin-left: 40px;
+}
+
+.picnic-details  p{
+    padding: 0 !important;
+
+}
+
+
+.cg-post-image .picnic-post .picnic-image img {
+    width:90%;
+    padding: 0px 0px 0px 20px;
+}
+
+.picnic-image {
+    width: 27%;
+    float: left;
+}
+
+
+h2.picnic-title {
+    color: #343434 !important;
+    text-transform: uppercase;
+    font-size: 18px !important;
+}
+
+h3.price-picnic {
+    font-family: GothamThin !important;
+    font-size: 30px !important;
+    color: #333333 !important;
+    letter-spacing: -0.025em !important;
+    font-weight: 600 !important;
+}
+
+div.picnic-post
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.conpic
+{
+  width: 100% !important;
 }
