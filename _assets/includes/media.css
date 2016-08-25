@@ -1160,6 +1160,7 @@ and (max-width: 860px) {
    .picnic-image {
     width: 100%;
     float: left;
+    margin-bottom: 20px;
 	}
 
 	.picnic-details {
