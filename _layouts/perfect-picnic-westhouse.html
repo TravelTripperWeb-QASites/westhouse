@@ -31,10 +31,11 @@
 
 			<h1 class="contenttitle">{% region title_picnic %}</h1>
 		
+
 			<div class="container">
 		 
 		    <div class="culinary-outer">
-		    	{% assign PicnicSorted = site.data._models.PerfectPicnic | sort: 'orderby' %}
+		    	{% assign PicnicSorted = site.data._models.Picnic | sort: 'orderby' %}
 				{% for LocationsInCategory-PerfectPicnic in PicnicSorted %}
 
 			
@@ -44,10 +45,10 @@
 				<div class="picnic-post">
 				<div class="picnic-image"><img src="{{LocationsInCategory-PerfectPicnic.featured_image.url }}" align="left"></div>
 				<div class="picnic-details ">
-				<h2 class="picnic-title">{{ LocationsInCategory-PerfectPicnic.title }}</h2>
-				<h3 class="price-picnic">{{ LocationsInCategory-PerfectPicnic.price }}</h3>
-				<h3 class="price-picnic">{{ LocationsInCategory-PerfectPicnic.price2 }}</h3>
-				<p>{{ LocationsInCategory-PerfectPicnic.contents }}</p>
+				<h2 class="picnic-title">{{ LocationsInCategory-Picnic.title }}</h2>
+				<h3 class="price-picnic">{{ LocationsInCategory-Picnic.price }}</h3>
+				<h3 class="price-picnic">{{ LocationsInCategory-Picnic.price2 }}</h3>
+				<p>{{ LocationsInCategory-Picnic.contents }}</p>
 				</div>
 				</div>
 
