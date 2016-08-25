@@ -7669,3 +7669,14 @@ h3.price-picnic {
     letter-spacing: -0.025em !important;
     font-weight: 600 !important;
 }
+
+div.picnic-post
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.conpic
+{
+  width: 100% !important;
+}
