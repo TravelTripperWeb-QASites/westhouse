@@ -1254,6 +1254,10 @@ font-family: GothamLight;
     box-sizing: border-box;
 }
 
+#signup .signupform input::-ms-clear {
+    display: none;
+}
+
 #contact-signup input[type="text"], #contact-signup input[type="email"] {
     width: 40%;
 }
