@@ -1163,9 +1163,9 @@ and (max-width: 860px) {
 	}
 
 	.picnic-details {
-	width: 100%;
-	float: left;
-	margin-left: 0px;
+	width: 90%;
+    float: none;
+    margin: 0 auto;
 	}
 
 	h3.price-picnic {
@@ -1174,6 +1174,7 @@ and (max-width: 860px) {
 
 	h2.picnic-title {
     text-align: center;
+    margin: 20px !important;
 	}
 
 	#maincontent p, #maincontent ul li {
@@ -1184,6 +1185,19 @@ and (max-width: 860px) {
     line-height: 50px;
     margin: 0;
 	}
+
+	/* Footer Social Media  */
+	#footer .socialmedia ul
+	{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	#footer .socialmedia
+	{
+		float: none;
+	}
+
 
 }
 
@@ -2945,6 +2959,10 @@ and (max-width: 479px) {
 	.restext {
 		right: 20px;
 		bottom: 20px;
+	}
+
+	#footer div.col2:first-child {
+		width: 65%;
 	}
 
 }
