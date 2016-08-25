@@ -1284,6 +1284,14 @@ font-family: GothamLight;
   color: #696b65;
 }
 
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+input[type=submit] {
+    -webkit-border-radius:0px;
+}
+
 #footer::after {
     background: #DADADA none repeat scroll 0 0;
     content: "";
