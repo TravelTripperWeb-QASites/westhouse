@@ -7688,10 +7688,18 @@ h3.picnic {
     font-weight: 600 !important;
 }
 
+#maincontent h3.picnic.sub-heading {
+	font-size: 13px !important;
+}
+
 div.picnic-post
 {
     width: 90%;
     margin: 0 auto;
+}
+
+#maincontent .picnic-post .content {
+	margin-bottom: 25px;
 }
 
 .conpic
