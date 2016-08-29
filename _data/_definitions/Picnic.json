@@ -1,5 +1,7 @@
 {"title":
 	{"required":true},
+"sub_heading":
+	{"type":"text"},
 "seo_title":
 	{"required":true},
 "seo_description":
