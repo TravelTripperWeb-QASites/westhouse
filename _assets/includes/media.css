@@ -1169,11 +1169,11 @@ and (max-width: 860px) {
     margin: 0 auto;
 	}
 
-	h3.price-picnic {
+	h3.picnic {
     text-align: center;
 	}
 
-	h2.picnic-title {
+	h2.picnic {
     text-align: center;
     margin: 20px !important;
 	}
