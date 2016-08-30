@@ -7650,11 +7650,13 @@ p.second_linec a {
 }
 
 
-/**** PERFECT PICNIC ****/
+/**** PERFECT PICNIC ********************************************************/
+
 .picnic-details {
-    width: 60%;
-    float: left;
-    margin-left: 40px;
+	width: 60%;
+	float: left;
+	margin-left: 40px;
+	padding: 30px 0 20px;
 }
 
 .picnic-details  p{
