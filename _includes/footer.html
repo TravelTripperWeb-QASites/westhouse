@@ -376,20 +376,40 @@
 						<div class="boxes">
                     
                     	{% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
-                        {% for Amenities in AmenitiesSorted %}    
-                        
-							<div class="boxcontainer halfsiebox">
+                        {% for Amenities in AmenitiesSorted %}   
 
-								<a href="{{ Amenities.id | permalink: model_dir: 'westhouse-hotel-amenities-nyc' }}" class="dropanchor"></a>
+                        	{% if Amenities.url_friendly_name == 'perfect-picnic' %}
 
-								<div class="lining">
+                        		<div class="boxcontainer halfsiebox">
 
-									<div class="boxpic" style="background-image: url({{ Amenities.image.url }});"></div>
+									<a href="{{ Amenities.vr_btn_link }}" class="dropanchor"></a>
 
+									<div class="lining">
+
+										<div class="boxpic" style="background-image: url({{ Amenities.image.url }});"></div>
+
+									</div>
+
+									<h2>{{ Amenities.title }}</h2>
+									
 								</div>
 
-								<h2>{{ Amenities.title }}</h2>
-							</div>
+                        	{% else %}
+                        
+								<div class="boxcontainer halfsiebox">
+
+									<a href="{{ Amenities.id | permalink: model_dir: 'westhouse-hotel-amenities-nyc' }}" class="dropanchor"></a>
+
+									<div class="lining">
+
+										<div class="boxpic" style="background-image: url({{ Amenities.image.url }});"></div>
+
+									</div>
+
+									<h2>{{ Amenities.title }}</h2>
+								</div>
+
+							{% endif %}
                             
                             {% endfor %}
                             
