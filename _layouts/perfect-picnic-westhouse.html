@@ -47,15 +47,15 @@
 							</div>
 							<div class="picnic-details ">
 
-								<% if LocationsInCategory-Picnic.sub_heading != '' %>
+								{% if LocationsInCategory-Picnic.sub_heading != '' %}
 									<h3 class="picnic sub-heading">{{ LocationsInCategory-Picnic.sub_heading }}</h3>
-								<% endif %>
+								{% endif %}
 
 								<h3 class="picnic">{{ LocationsInCategory-Picnic.price }}</h3>
 
-								<% if LocationsInCategory-Picnic.price2 != '' %>
+								{% if LocationsInCategory-Picnic.price2 != '' %}
 									<h3 class="picnic">{{ LocationsInCategory-Picnic.price2 }}</h3>
-								<% endif %>
+								{% endif %}
 
 								<div class="content">
 									{{ LocationsInCategory-Picnic.contents }}
