@@ -7706,6 +7706,10 @@ div.picnic-post
 	margin-top: 25px;
 }
 
+#maincontent.picnic .contenttitle p {
+	margin-bottom: .5em;
+}
+
 .conpic
 {
   width: 100% !important;
