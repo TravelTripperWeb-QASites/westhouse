@@ -7591,6 +7591,76 @@ p.second_linec a {
   padding: 10px 60px;
 }
 
+<<<<<<< HEAD
+/*** FEATURED CONTENT PPC ****/
+
+#featuredcontent .contenttitle_ppc
+{
+  font-family: GothamLight;
+  color: #fff;
+  position: absolute;
+  top: 36%;
+  left: 0;
+  right: 0;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 2;
+  text-align: center;
+  width: 340px;
+  margin: 0 auto;
+}
+
+.content_border {
+
+  border-top:    3px solid  #fff;
+  border-right:  0px;
+  border-bottom: 3px solid  #fff;
+  border-left:   0px;
+  padding: 20px 0 5px;
+
+}
+#featuredcontent .contenttitle_ppc #save25
+{
+    font-size: 65px;
+    font-weight: 600;
+}
+
+#featuredcontent .reserveppc {
+    z-index: 4;
+    margin-top: 10px;
+}
+
+a.button_ppc {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #343434;
+    letter-spacing: 0.055em;
+    background: #fff;
+    padding: 5px 30px;
+    display: inline-block;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    opacity: 0.75;
+}
+
+a.button_ppc:hover {
+    color: #fff;
+    background: #343434;
+}
+
+.specialppc p
+{
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+=======
 .highgate{
     float: left;
     margin: -10px 0 0 60px;
@@ -7713,4 +7783,5 @@ div.picnic-post
 .conpic
 {
   width: 100% !important;
+>>>>>>> master
 }

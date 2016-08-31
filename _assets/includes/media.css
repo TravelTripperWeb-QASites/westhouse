@@ -725,15 +725,25 @@ and (max-width: 1023px) {
 
 	#signup .signuptext { width: 400px;}
 	#signup .signupform { width: auto;}
+<<<<<<< HEAD
+	
+	#signup .signupform .da_block {
+		float: none;
+		margin: 0 auto;
+		width: 400px;
+	}
+	
+=======
 
+>>>>>>> master
 	#signup .signupform input {
 		display: block;
-		width: 360px;
+		width: 100%;
 		margin: 0 auto 10px;
 	}
 
 	#signup .signupform input[type="submit"] {
-		width: 400px;
+		max-width: 400px;
 		margin: 0 auto;
 	}
 
@@ -1293,6 +1303,14 @@ and (max-width: 799px) {
 
 	.relatedposts .postimag {
 		height: 120px;
+	}
+	
+	#featuredcontent .contenttitle_ppc {
+		top: 25%;
+	}
+	
+	#maincontent p, #maincontent ul li {
+		word-wrap: break-word;
 	}
 
 
@@ -2831,6 +2849,9 @@ and (max-width: 479px) {
 	#signup .signupform input[type="submit"] {
 		width: 90%;
 	}
+	#signup .signupform .da_block {
+		width: 100%;
+	}
 	#signup .signupform input { box-sizing: border-box;}
 
 
@@ -2905,6 +2926,21 @@ and (max-width: 479px) {
 
 @media only screen and (max-width: 440px) {
 
+}
+
+/* ================================================ 425 - 000 ======================================= */
+
+@media only screen and (max-width: 425px) {
+	
+	#featuredcontent .contenttitle_ppc {
+		width: 100%;
+		max-width: 290px;
+		font-size: 15px;
+	}
+	#featuredcontent .contenttitle_ppc #save25 {
+		font-size: 50px;
+	}
+	
 }
 
 
@@ -3025,9 +3061,6 @@ and (max-width: 479px) {
 	}
 
 }
-
-
-
 
 /* ================================================ HEIGHT 640 - 000 ======================================= */
 
