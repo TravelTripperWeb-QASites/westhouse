@@ -7591,7 +7591,7 @@ p.second_linec a {
   padding: 10px 60px;
 }
 
-<<<<<<< HEAD
+ 
 /*** FEATURED CONTENT PPC ****/
 
 #featuredcontent .contenttitle_ppc
@@ -7660,7 +7660,7 @@ a.button_ppc:hover {
   font-weight: 600;
   font-size: 16px;
   text-align: center;
-=======
+}
 .highgate{
     float: left;
     margin: -10px 0 0 60px;
@@ -7783,5 +7783,5 @@ div.picnic-post
 .conpic
 {
   width: 100% !important;
->>>>>>> master
+ 
 }
