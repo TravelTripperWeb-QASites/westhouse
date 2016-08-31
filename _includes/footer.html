@@ -152,6 +152,7 @@
 
                    
 					<!--<li><a href="{{ 'about' | permalink }}">Our House</a></li>-->
+					<li><a href="{{ 'terms-of-use' | permalink }}">Terms of Use</a></li> 
 					<li><a href="{{ 'privacy-policy' | permalink }}">Privacy Policy</a></li> 
 					<li><a href="{{ 'partners/affiliate-charities' | permalink }}">Affiliate Charities</a></li>
 					<li><a href="{{ 'sitemap' | permalink }}">Sitemap</a></li> 
@@ -160,6 +161,7 @@
 				<!--	<li><a href="{{ 'luxury-hotel-amenities-nyc' | permalink }}">Sitemap</a></li> -->
 					<li><a href="{{ 'contact-us' | permalink }}">Contact</a></li>
 					<li><a href="{{ 'social-media' | permalink }}">Connect</a></li>
+					<li class="highgate"><a href="http://www.highgate.com" target="_blank"><img style="height:50px;" src="/assets/images/highgate-logo-white.png" alt="Highgate" /></a></li>
 					
 				</ul>
 		</div>
@@ -375,20 +377,40 @@
 						<div class="boxes">
                     
                     	{% assign AmenitiesSorted = site.data._models.Amenities | sort: 'menu_order' %}
-                        {% for Amenities in AmenitiesSorted %}    
-                        
-							<div class="boxcontainer halfsiebox">
+                        {% for Amenities in AmenitiesSorted %}   
 
-								<a href="{{ Amenities.id | permalink: model_dir: 'westhouse-hotel-amenities-nyc' }}" class="dropanchor"></a>
+	                        	{% if Amenities.url_friendly_name == 'perfect-picnic' %}
 
-								<div class="lining">
+	                        		<div class="boxcontainer halfsiebox">
 
-									<div class="boxpic" style="background-image: url({{ Amenities.image.url }});"></div>
+										<a href="{{ Amenities.vr_btn_link }}" class="dropanchor"></a>
 
-								</div>
+										<div class="lining">
 
-								<h2>{{ Amenities.title }}</h2>
-							</div>
+											<div class="boxpic" style="background-image: url({{ Amenities.image.url }});"></div>
+
+										</div>
+
+										<h2>{{ Amenities.title }}</h2>
+										
+									</div>
+
+	                        	{% else %}
+	                        
+									<div class="boxcontainer halfsiebox">
+
+										<a href="{{ Amenities.id | permalink: model_dir: 'westhouse-hotel-amenities-nyc' }}" class="dropanchor"></a>
+
+										<div class="lining">
+
+											<div class="boxpic" style="background-image: url({{ Amenities.image.url }});"></div>
+
+										</div>
+
+										<h2>{{ Amenities.title }}</h2>
+									</div>
+
+								{% endif %}
                             
                             {% endfor %}
                             
@@ -889,7 +911,7 @@
                 resolution: 'low_resolution',
                 userId: 467174069,
                 limit: 4,
-                accessToken: '467174069.475e40e.5b2dc84993424a20b69cd2aa47af498f',
+                accessToken: '467174069.1677ed0.1521647cfacc426aa15794fb2d7912a7',
             });
             userFeed.run();
             

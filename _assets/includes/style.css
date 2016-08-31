@@ -869,7 +869,7 @@ h6 {font-size: 55px;}
 
 
 .frieze .fr-50.right {
-    padding-top: 60px;
+    padding-top: 100px;
 }
 
 
@@ -1254,6 +1254,10 @@ font-family: GothamLight;
     box-sizing: border-box;
 }
 
+#signup .signupform input::-ms-clear {
+    display: none;
+}
+
 #contact-signup input[type="text"], #contact-signup input[type="email"] {
     width: 40%;
 }
@@ -1278,6 +1282,14 @@ font-family: GothamLight;
 #signup .signupform input[type="submit"]:hover {
   background: #d0d0d0;
   color: #696b65;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+input[type=submit] {
+    -webkit-border-radius:0px;
 }
 
 #footer::after {
@@ -1878,6 +1890,8 @@ a.hasher {
 .roominfo .reservenowbutton .button2 {
   cursor: pointer;
   width: 100%;
+  padding: 1px 10px;
+  font-size:11px;
 }
 
 .roomdate #datepicker {
@@ -3674,16 +3688,16 @@ a.mobihid {
 }
 
 .cls {
-    position: absolute;
-  padding: 5px 12px;
-  color: #fff;
-  top: 0px;
-  font-size: 15px;
-  left: -35px;
-  background: #333;
-  font-family: 'Open Sans', sans-serif;
+	position: absolute;
+	padding: 5px 12px;
+	color: #fff;
+	top: 0px;
+	font-size: 15px;
+	left: -35px;
+	background: #333;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
 }
-
 
 .datepicker, .datepickerr {
   transition: all 0.6s ease-in-out;
@@ -5817,6 +5831,15 @@ padding: 14px 0;
   text-transform: uppercase;
 }
 
+#maincontent h1 p {
+  font-family: GothamThin;
+  font-size: 55px;
+  color: #333333;
+  letter-spacing: -0.025em;
+  margin-top: 110px;
+  text-transform: uppercase;
+}
+
 #maincontent.blogsingle h1 {
     margin-bottom: 10px;
 }
@@ -7568,6 +7591,7 @@ p.second_linec a {
   padding: 10px 60px;
 }
 
+<<<<<<< HEAD
 /*** FEATURED CONTENT PPC ****/
 
 #featuredcontent .contenttitle_ppc
@@ -7636,4 +7660,128 @@ a.button_ppc:hover {
   font-weight: 600;
   font-size: 16px;
   text-align: center;
+=======
+.highgate{
+    float: left;
+    margin: -10px 0 0 60px;
+}
+
+.awc-three
+{
+    font-family: 'GothamBold';
+    font-weight: 500;
+    margin-bottom: 21px;
+    margin-top: 80px;
+    text-align: left;
+    padding: 0 90px;
+    font-size: 14px;
+}
+
+.awc-four
+{
+    font-family: 'GothamLight';
+    font-weight: 500;
+    text-align: left;
+    padding: 0 90px;
+    font-size: 14px;
+    color: #808080;
+    line-height: 25px;
+}
+
+.resident
+{
+    width: 48%;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.restext
+{
+    position: absolute;
+    bottom: 30px;
+    z-index: 2;
+    right: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.06em;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+#maincontent a.button.slipbutton {
+    display: none;
+}
+
+
+/**** PERFECT PICNIC ********************************************************/
+
+.picnic-details {
+	width: 60%;
+	float: left;
+	margin-left: 40px;
+	padding: 30px 0 20px;
+}
+
+.picnic-details  p{
+    padding: 0 !important;
+
+}
+
+
+.cg-post-image .picnic-post .picnic-image img {
+    width:90%;
+    padding: 0px 0px 0px 20px;
+}
+
+.picnic-image {
+    width: 27%;
+    float: left;
+}
+
+
+h2.picnic {
+    color: #343434 !important;
+    text-transform: uppercase;
+    font-size: 18px !important;
+}
+
+h3.picnic {
+    font-family: GothamThin !important;
+    font-size: 30px !important;
+    color: #333333 !important;
+    letter-spacing: -0.025em !important;
+    font-weight: 600 !important;
+}
+
+#maincontent h3.picnic.sub-heading {
+	font-size: 13px !important;
+	line-height: 1.7;
+}
+
+div.picnic-post
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#maincontent .picnic-post .content {
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+#maincontent.picnic .contenttitle p {
+	padding-bottom: .5em;
+}
+
+.conpic
+{
+  width: 100% !important;
+>>>>>>> master
 }
