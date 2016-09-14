@@ -2,25 +2,18 @@ require 'i18n'
 
 module Jekyll
   class TranslateTag < Liquid::Tag
-   
-    def initialize(tag_name, text, tokens)      
+    def initialize(tag_name, token, *args)
       super
-      params = text.to_s.strip.split(',')
+      params = token.to_s.strip.split(',')
       @token = eval(params[0].strip)
-      @locale = nil
-      options = params[1] ? params[1].strip : ''
-      if options != ''
-        options = options.split(':')
-        if options[0].strip == 'locale'
-          @locale = eval(options[1].strip)
-        end
-      end
+      @locale = params[1].to_s.strip
+      @locale = nil if @locale == ''
     end
 
     def render(context)
       site = context.registers[:site]
       load_translations(site.source)
-      locale = @locale || site.active_lang || site.default_lang || 'en'
+      locale = context[@locale] || @locale || site.active_lang || site.default_lang || 'en'
       I18n.available_locales = site.languages || [site.default_lang || 'en']
 
       I18n.t @token, locale: locale
