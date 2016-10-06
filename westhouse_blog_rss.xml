@@ -5,8 +5,7 @@
   <!ENTITY lsquo "&#145;">
   <!ENTITY rsquo "&#146;">
   <!ENTITY ldquo "&#147;">
-  <!ENTITY rdquo "&#148;">
-]>
+  <!ENTITY rdquo "&#148;">]>
 <rss version="2.0">
   <channel>
     <title>The Westhouse Blog</title>
