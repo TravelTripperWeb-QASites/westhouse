@@ -188,7 +188,11 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
 <!-- End Sojern Tag -->	
 {% endif %}
-
+<!-- careers redirect http://highgate.com/careers --> 
+{% if page.url =="/careers/" %}
+<meta http-equiv="refresh" content="0;URL='http://highgate.com/careers'" /> 
+{% endif %}
+<!-- End Sojern Tag --> 
 </head>
 <body ng-app="westHouse" ng-cloak>
 <a class="shutdown" href="#"></a>
