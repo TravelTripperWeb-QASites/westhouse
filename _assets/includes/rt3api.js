@@ -70,7 +70,8 @@
             hotel_id: this.config.hotelId,
             portal_id: this.config.portalId,
             locale: this.config.defaultLocale,
-            currency: this.config.defaultCurrency
+            currency: this.config.defaultCurrency,
+            ip_address : sessionStorage.ip_add
         };
 
         var params = $.extend(defaultParams, searchParams);
@@ -91,14 +92,15 @@
            num_rates_display: 5,
            client_ip: '64.78.249.12',
            lowest_rate: null,
-           search_lowest: true
+           search_lowest: true,
+           ip_address : sessionStorage.ip_add
         };
 
         var params = $.extend(defaultParams, reformatParams(searchParams));
 
         function reformatParams(searchParams) {
            var params = searchParams;
-           
+
            params['adults[]'] = searchParams.adults || 1;
            params['children[]'] = searchParams.children || 0;
            params.rooms = searchParams.rooms || 1;
@@ -122,7 +124,7 @@
         var params = $.extend(defaultParams, searchParams);
 
         var defered = $.Deferred();
-        
+
         roomInfoRequest = this.getRoomInfo(params);
         abortOldRoomDetailsRequest();
         var roomInfo = roomInfoRequest.then(function(response) {
@@ -218,12 +220,12 @@
             data: params
         });
     }
-    
+
     var roomDetailsRequests = [];
     function addToRoomDetailsRequests(request) {
         roomDetailsRequests.push(request);
     }
-    
+
     function abortOldRoomDetailsRequest() {
         if (roomDetailsRequests.length > 1) {
             roomDetailsRequests.shift().abort();

@@ -21,8 +21,8 @@ $(".inline").colorbox({
 		rel:'inline',
 		current: "{current} OF {total}"
 	});
-	
-	
+
+
   $('#selectUl li:not(":first")').addClass('unselected');
   $('#selectUl').hover(
     function(){
@@ -42,25 +42,25 @@ $(".inline").colorbox({
   });
 
   $(function() {
-    var fixadent = $(".topnav"), 
+    var fixadent = $(".topnav"),
     pos = fixadent.offset();
 
     if(fixadent.length) {
       $(window).scroll(function() {
-        if($(this).scrollTop() > (pos.top + 10) && fixadent.css('position') == 'absolute') { 
-          fixadent.addClass('fixed'); 
-        } else if( $(this).scrollTop() <= pos.top && fixadent.hasClass('fixed') ) { 
-          fixadent.removeClass('fixed'); 
+        if($(this).scrollTop() > (pos.top + 10) && fixadent.css('position') == 'absolute') {
+          fixadent.addClass('fixed');
+        } else if( $(this).scrollTop() <= pos.top && fixadent.hasClass('fixed') ) {
+          fixadent.removeClass('fixed');
         }
       })
-    }    
+    }
   });
 
 });
 
 
 $(document).ready(function(){
-    
+
     window.wasScrolled = false;
     $(window).scroll(function(){
         if (!window.wasScrolled){
@@ -68,8 +68,8 @@ $(document).ready(function(){
         }
         window.wasScrolled = true;
     });
-    
-    
+
+
   // Datepicker
 
 	var new_date = new Date();
@@ -77,11 +77,11 @@ $(document).ready(function(){
 	var defaultformatteddate2 = $.datepicker.formatDate("yy-mm-dd", new Date(new_date.setDate(new_date.getDate() + 1)));
 	$("#arrival_dates").val(defaultformatteddate1);
 	$("#departure_dates").val(defaultformatteddate2);
-	
+
 	$('.merch-copy .button1').attr('href','https://westhousehotelnewyork.reztrip.com/search?arrival_date='+defaultformatteddate1+'&departure_date='+defaultformatteddate2);
 
   $.datepicker._defaults.dateFormat = 'yy-mm-dd';
-  
+
   $(".datepickerman").datepicker({
     minDate: 0,
     numberOfMonths: [1,1],
@@ -127,7 +127,7 @@ $(document).ready(function(){
         	$("#departure_dates").val(formattedDatee);
         	$("#arrival_dates").trigger("input");
         	$("#departure_dates").trigger("input");
-        	
+
         	$("#arrival_datess").val(dateText);
         	$("#departure_datess").val(formattedDatee);
         	$("#arrival_datess").trigger("input");
@@ -135,7 +135,7 @@ $(document).ready(function(){
         } else {
 			$("#departure_dates").val(dateText);
 			$("#departure_dates").trigger("input");
-			
+
 			$("#departure_datess").val(dateText);
 			$("#departure_datess").trigger("input");
             $(this).datepicker();
@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 // Datepicker
 		$.datepicker._defaults.dateFormat = 'yy-mm-dd';
-		
+
 		$(".datepickerly").datepicker({
 			minDate: 0,
 			numberOfMonths: [2,1],
@@ -163,7 +163,7 @@ $(document).ready(function(){
 				var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#departure_dater").val());
                 var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
 
-                
+
                 if (!date1 || date2) {
 					$("#arrival_dater").val(dateText);
 					$("#departure_dater").val("");
@@ -194,7 +194,7 @@ $(document).ready(function(){
 				var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#departure_daterr").val());
                 var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
 
-                
+
                 if (!date1 || date2) {
 					$("#arrival_daterr").val(dateText);
 					$("#departure_daterr").val("");
@@ -492,7 +492,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function() {
-    
+
   $("#header .nav a").click(function(e) {
     e.preventDefault();
     $("body").addClass("opennav");
@@ -515,7 +515,7 @@ $(document).ready(function() {
     e.preventDefault();
     $("body").removeClass("opennav");
   });
-  
+
   $(document).on("click", ".click-and-close", function(){
     $("body").removeClass("opennav");
   });
@@ -632,7 +632,7 @@ $(document).ready(function(){
 
 
   // TABS FUNCTION //
-  
+
   if(window.location.href.indexOf("/offers/") > -1) {
 	$('.tabs-wrapper').each(function() {
 		$(this).find(".tab-content").hide(); //Hide all content
@@ -682,7 +682,7 @@ $(document).ready(function(){
 		$(this).find(".tab-content:first").show(); //Show first tab content
 	});
   }
-  
+
   $("ul.tabs li").click(function(e) {
     $(this).parents('.tabs-wrapper').find("ul.tabs li").removeClass("active"); //Remove any "active" class
     $(this).addClass("active"); //Add "active" class to selected tab
@@ -693,7 +693,7 @@ $(document).ready(function(){
     $(this).parents('.tabs-wrapper').find(activeTab).fadeIn(); //Fade in the active ID content
     e.preventDefault();
   });
-  
+
   $("ul.tabs li a:not(.connect)").click(function(e) {
     e.preventDefault();
   })
@@ -811,7 +811,7 @@ $(document).ready(function(){
       $('.tabpusher').addClass('activate');
       spann.removeClass('fa-angle-left');
       spann.addClass('fa-angle-right');
-      
+
       var windowsize = $('body').width()
       if (windowsize > 767) {
           $('ul.tabs').addClass('activate');
@@ -822,8 +822,8 @@ $(document).ready(function(){
   $(window).resize(function() {
     var windowsize = $('body').width();
 
-    
-    
+
+
     if (windowsize > 767) {
       $('.tabpusher').removeClass('activate');
       spann.removeClass('fa-angle-right');
@@ -833,10 +833,10 @@ $(document).ready(function(){
       $('.navcontainer').removeClass('activate');
     }
   });
-  
-  
+
+
   // nmapcon
-  
+
     $('.nmapcon *:not(.nmapcontent)').click(function() {
     	if ($('.nmapcon').hasClass('disabled')) {
     		$('.nmapcon').removeClass('disabled');
@@ -846,23 +846,23 @@ $(document).ready(function(){
     		$('.nmapcon span:first').text('Disable');
     	}
     });
-  
+
   // subnavmobile
-  
+
     $('.subclose').click(function() {
     	var textstore = $('.subclose span').text();
-    	
+
     	if($('.subclose i').hasClass('fa-bars')) {
     		$('.subclose i').removeClass('fa-bars');
     		$('.subclose i').addClass('fa-times');
-    		
+
     		$('.subnavmobile ul').slideDown();
     		$('.subclose span').text('Close');
     		storeage = textstore;
     	} else {
     		$('.subclose i').removeClass('fa-times');
-    		$('.subclose i').addClass('fa-bars');	
-    		
+    		$('.subclose i').addClass('fa-bars');
+
     		$('.subnavmobile ul').slideUp();
     		$('.subclose span').text(storeage);
     	}
@@ -870,3 +870,7 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function() {
+  localStorage.removeItem("relevance");
+  localStorage.removeItem("searchParams");
+});
