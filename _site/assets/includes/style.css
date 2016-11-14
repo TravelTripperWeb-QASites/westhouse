@@ -1416,6 +1416,8 @@ a.hasher {
 #footer .slh {
     float: right;
     margin-top: 10px;
+	position: relative;
+	z-index: 1;
 }
 
 #footer .fromtheblog h3 {
