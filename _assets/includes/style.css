@@ -1629,14 +1629,17 @@ a.hasher {
 #maincontent .container {
   width: 84%;
 }
-
+#maincontent.ppc .container{
+	max-width:750px; text-align:center;
+}
 #maincontent p, #maincontent ul li {
   font-family: GothamLight;
   color: #161616;
   line-height: 30px;
   letter-spacing: 0.01em;
 }
-
+#maincontent.ppc .container p strong a{color:#fff;}
+#maincontent.ppc .container p strong a:hover{ color:#161616;}
 #maincontent ul {
 	padding-left: 60px;
 }
