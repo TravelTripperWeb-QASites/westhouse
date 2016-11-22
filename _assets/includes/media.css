@@ -1305,9 +1305,9 @@ and (max-width: 799px) {
 		height: 120px;
 	}
 	
-	#featuredcontent .contenttitle_ppc {
+	/*#featuredcontent .contenttitle_ppc {
 		top: 25%;
-	}
+	}*/
 	#featuredcontent .contenttitle_ta {
 		
 	}
