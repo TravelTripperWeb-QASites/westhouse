@@ -1308,6 +1308,9 @@ and (max-width: 799px) {
 	#featuredcontent .contenttitle_ppc {
 		top: 25%;
 	}
+	#featuredcontent .contenttitle_ta {
+		
+	}
 	
 	#maincontent p, #maincontent ul li {
 		word-wrap: break-word;

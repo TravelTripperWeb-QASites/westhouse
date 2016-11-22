@@ -7601,7 +7601,8 @@ p.second_linec a {
   font-family: GothamLight;
   color: #fff;
   position: absolute;
-  top: 36%;
+  top: 50%;
+  transform: translate(0%, -50%);
   left: 0;
   right: 0;
   font-size: 17px;
@@ -7613,7 +7614,9 @@ p.second_linec a {
   width: 340px;
   margin: 0 auto;
 }
-
+#featuredcontent .contenttitle_ppc .content_border{
+	padding:20px 0;
+}
 .content_border {
 
   border-top:    3px solid  #fff;
