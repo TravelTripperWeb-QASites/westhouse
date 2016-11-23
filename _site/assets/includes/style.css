@@ -1537,6 +1537,7 @@ a.hasher {
   z-index: 1;
   opacity: 0.5;
 }
+#featuredcontent.darker:before{background: url(/assets/images/9488/original/texture_dark.png);}
 #featuredcontent .contenttitle {
   color: #fff;
   position: absolute;
@@ -1622,10 +1623,10 @@ a.hasher {
   color: #7e7c7c !important;
 }
 
-#maincontent {
+#maincontent{
   margin-bottom: 60px;
 }
-
+#maincontent.ta-exclusive{ padding-top:30px;}
 #maincontent .container {
   width: 84%;
 }
@@ -1640,6 +1641,7 @@ a.hasher {
 }
 #maincontent.ppc .container p strong a{color:#fff;}
 #maincontent.ppc .container p strong a:hover{ color:#161616;}
+
 #maincontent ul {
 	padding-left: 60px;
 }
