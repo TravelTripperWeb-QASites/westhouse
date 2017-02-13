@@ -3224,11 +3224,14 @@ and (max-device-width : 1175px) {
 	h3.picnic span{
 		color: #000 !important;
 	    opacity: 1 !important;
-	    font-size: 22px;
+	    font-size: 18px;
 	    font-weight: bold;
 	    letter-spacing: normal;
 	}
 	.ypp-tagline{
 		margin-top: 30px !important;
     	text-align: center !important;
+	}
+	.culinary-guide-main.no-space{
+		margin-bottom: 0 !important;
 	}
