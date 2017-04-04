@@ -10,5 +10,11 @@
 	"datemeta": "2017/04/06",
 	"preview": "<p>&nbsp;</p>\n<p>Spending an afternoon exploring Central Park is a quintessential New York experience. Located in the true heart of the city, its 843 acres of inspiring architecture and landscape design offer a quiet escape in a vibrant, dynamic atmosphere.</p>",
 	"seo_description": "Spending an afternoon exploring Central Park is a quintessential New York experience. Located in the true heart of the city, its 843 acres of inspiring architecture and landscape design offer a quiet escape in a vibrant, dynamic atmosphere.",
-	"url_friendly_name": "spring-inspired-self-guided-walking-tour-of-central-park"
+	"url_friendly_name": "spring-inspired-self-guided-walking-tour-of-central-park",
+	"thumbnail": {
+		"url": "https://cdn.traveltripper.io/site-assets/92_368_2163/media/2017-04-04-164132/central-park-header.jpg"
+	},
+	"image": {
+		"url": "https://cdn.traveltripper.io/site-assets/92_368_2163/media/2017-04-04-164132/central-park-header.jpg"
+	}
 }
