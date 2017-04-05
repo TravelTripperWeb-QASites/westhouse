@@ -9,5 +9,6 @@
 	},
 	"title": "Girls Getaway",
 	"outbound": "https://westhousehotelnewyork.reztrip.com/ext/promoRate?property=354&mode=b&pm=true&sr=223975&vr=3",
-	"offer_code": "GETAWA"
+	"offer_code": "GETAWA",
+	"menu_order": -1
 }
