@@ -7,5 +7,7 @@
 	"seo_description": "Treat your Mum on Mothers Day with a break at WestHouse Hotel New York. Enjoy 50% discount on your mum’s room then visit The Den for a complimentary cocktail!",
 	"image": {
 		"url": "https://cdn.traveltripper.io/site-assets/92_368_2555/media/2017-04-11-202453/Blowout.jpg"
-	}
+	},
+	"outbound": "https://westhousehotelnewyork.reztrip.com/classic/en/special_offer?action=show&controller=landings&locale=en&rate_code=MOTHER&rate_code=MOTHER&starting_page=special_offer&vr=3",
+	"offer_code": "MOTHER"
 }
