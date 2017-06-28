@@ -503,7 +503,7 @@ $(document).ready(function() {
         e.preventDefault();
         $("body").addClass("openbooking");
     }else{
-        $(this).attr('href' , 'https://westhousehotelnewyork.reztrip.com/search?');
+        $(this).attr('href' , 'https://westhousehotelnewyork.reztrip.com/mobile/');
     }
   });
 
