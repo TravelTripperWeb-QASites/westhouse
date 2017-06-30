@@ -57,25 +57,32 @@
 			
 			{% for Offers in site.data._models.Offers %}
 			
-			<div class="halfoffer {% cycle 'steerleft', 'steerright' %}">
+			<div class="halfoffer {% cycle 'steerleft' %}">
 				
-				<div class="hoffer-one" style="background-image: url({{ Offers.image.url }});">{% if Offer.partner_name %}<p>{{ Offers.partner_name }}</p>{% endif %}</div>
+				<div class="hoffer-one" style="background-image: url({{ Offers.image.url }});">{% if Offer.partner_name %}<p>{{ Offers.partner_name }}</p>{% endif %}
+					<a class="button1" href="{{ Offers.outbound }}">Book Now</a>
+
+
+				</div>
 				
 				<div class="hoffer-two">
 					<h3>{{ Offers.title }}</h3>
-					<p>{{ Offers.contents }}</p>
+					<div style="min-height: 180px;">
+					<p>{{ Offers.contents | truncate:126 }}</p>
+					</div>
 					
 					<div class="offerbook">
 						<a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="first">Read More</a>
-						<a class="button1" href="{{ Offers.outbound }}">Book Now</a>
-					</div>
-					
-					<ul class="offermedia">
+						<ul class="offermedia">
 						<li><a href="http://facebook.com/<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://twitter.com/<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
 						<li><a class="last" href="http://instagram.com/<?php echo $instagram; ?>" target="_blank"><i class="fa fa-envelope"></i></a></li>
 						<div class="clear"></div>
 					</ul>
+						
+					</div>
+					
+					
 				</div>
 				
 				<div class="clear"></div>
