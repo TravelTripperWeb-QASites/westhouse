@@ -59,9 +59,22 @@
 
 				<div class="socialmedia">
 					<ul>
-						<li><a href="#" target="_blank" onclick="window.open('https://www.facebook.com/dialog/feed?app_id=489136131246132&display=popup&caption='+ offer_content +'&link='+ window.location.href +'&redirect_uri='+ window.location.href,'popUpWindow','height=350,width=520,scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+ window.location.href +'&text={{ Offers.title }}&via=westhouseny','popUpWindow','height=350,width=520,scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="mailto:?subject={{ Offers.title }}&body='+ offer_content +'" target="_blank"><i class="fa fa-envelope"></i></a></li>
+						<li><a href="JavaScript:Void(0);" class="share_button"><i class="fa fa-facebook"></i></a>
+						<div id="fb-root"></div>
+						<script>
+							window.fbAsyncInit = function() {
+							FB.init({appId: '489136131246132', status: true, cookie: true,
+							xfbml: true});
+							};
+							(function() {
+							var e = document.createElement('script'); e.async = true;
+							e.src = document.location.protocol +
+							'//connect.facebook.net/en_US/all.js';
+							document.getElementById('fb-root').appendChild(e);
+							}());
+						</script>
+						</li>
+						<li><a href="JavaScript:Void(0);" onclick="window.open('https://twitter.com/share?url='+ window.location.href +'&text={{ Offers.title }}&via=westhouseny','popUpWindow','height=350,width=520,scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a></li>
 					</ul>
 				</div>
 

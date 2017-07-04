@@ -74,11 +74,25 @@
 					<div class="offerbook">
 						<a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="first">Read More</a>
 						<ul class="offermedia">
-						<li><a href="http://facebook.com/<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="http://twitter.com/<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li><a class="last" href="http://instagram.com/<?php echo $instagram; ?>" target="_blank"><i class="fa fa-envelope"></i></a></li>
+						<li>
+							<a href="JavaScript:Void(0);" class="share_button"><i class="fa fa-facebook"></i></a>
+							<div id="fb-root"></div>
+							<script>
+								window.fbAsyncInit = function() {
+								FB.init({appId: '489136131246132', status: true, cookie: true,
+								xfbml: true});
+								};
+								(function() {
+								var e = document.createElement('script'); e.async = true;
+								e.src = document.location.protocol +
+								'//connect.facebook.net/en_US/all.js';
+								document.getElementById('fb-root').appendChild(e);
+								}());
+							</script>
+						</li>
+						<li><a href="https://twitter.com/home?status={{ Offers.title }}: {{ site.url }}{{ Offers.id | permalink: model_dir: 'offers' }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
 						<div class="clear"></div>
-					</ul>
+						</ul>
 						
 					</div>
 					
