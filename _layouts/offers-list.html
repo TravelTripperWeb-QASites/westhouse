@@ -76,19 +76,6 @@
 						<ul class="offermedia">
 						<li>
 							<a href="JavaScript:Void(0);" class="share_button"><i class="fa fa-facebook"></i></a>
-							<div id="fb-root"></div>
-							<script>
-								window.fbAsyncInit = function() {
-								FB.init({appId: '1883009305284419', status: true, cookie: true,
-								xfbml: true});
-								};
-								(function() {
-								var e = document.createElement('script'); e.async = true;
-								e.src = document.location.protocol +
-								'//connect.facebook.net/en_US/all.js';
-								document.getElementById('fb-root').appendChild(e);
-								}());
-							</script>
 						</li>
 						<li><a href="https://twitter.com/home?status={{ Offers.title }}: {{ site.url }}{{ Offers.id | permalink: model_dir: 'offers' }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
 						<div class="clear"></div>
@@ -106,7 +93,38 @@
 			{% endfor %}
 		
 		</div>
-
-		
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+	FB.init({appId: '1883009305284419', status: true, cookie: true,
+	xfbml: true});
+	};
+	(function() {
+	var e = document.createElement('script'); e.async = true;
+	e.src = document.location.protocol +
+	'//connect.facebook.net/en_US/all.js';
+	document.getElementById('fb-root').appendChild(e);
+	}());
+	
+	$(document).ready(function() {
+		$('.share_button').click(function(e){            
+		   e.preventDefault();
+			FB.ui({
+				method: 'share_open_graph',
+				action_type: 'og.shares',
+				action_properties: JSON.stringify({
+					object : {
+					   'og:url': window.location.href,
+					   'og:title': $(this).closest(".halfoffer").find("h3").text(),
+					   'og:description': $(".hoffer-two p").text(),
+					   'og:image:width': '1200',
+					   'og:image:height': '650',
+					   'og:image': $(this).closest(".halfoffer").find('.hoffer-one').css("backgroundImage").replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '')
+					}
+				})
+			});
+		});
+	});
+</script>	
 
 {% include footer.html %}
