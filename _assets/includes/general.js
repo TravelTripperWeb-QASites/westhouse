@@ -6,23 +6,6 @@ function stripHTML(dirtyString) {
 
 $(document).ready(function() {
 	
-$('.share_button').click(function(e){            
-   e.preventDefault();
-	FB.ui({
-		method: 'share_open_graph',
-		action_type: 'og.shares',
-		action_properties: JSON.stringify({
-			object : {
-			   'og:url': window.location.href,
-			   'og:title': $(this).closest(".halfoffer").find("h3").text(),
-			   'og:description': $(".hoffer-two p").text(),
-			   'og:image:width': '1200',
-			   'og:image:height': '650',
-			   'og:image': $(this).closest(".halfoffer").find('.hoffer-one').css("backgroundImage").replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '')
-			}
-		})
-	});
-});
 
 $('.closethiswindow').click(function(){
     $('.merch-sec').removeClass('slideup');
