@@ -78,6 +78,7 @@
 							<a href="JavaScript:Void(0);" class="share_button"><i class="fa fa-facebook"></i></a>
 						</li>
 						<li><a href="JavaScript:Void(0);" onclick="window.open('https://twitter.com/share?url='+ window.location.href +'&text={{ Offers.title }}&via=westhouseny','popUpWindow','height=350,width=520,scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="mailto:?subject={{ Offers.title }}&body=Hey! Check this exciting offer. {{ site.url }}{{ Offers.id | permalink: model_dir: 'offers' }}"  title="Share by e-mail"><i class="fa fa-envelope"></i></a></li>
 						<div class="clear"></div>
 						</ul>
 						
