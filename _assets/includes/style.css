@@ -8002,5 +8002,12 @@ div.picnic-post
   }
 
 
-
+/*nav*/
+.disp{
+  .navbar-nav{
+    li{
+      display: inline-block !important;
+    }
+  }
+}
 
