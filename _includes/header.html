@@ -217,15 +217,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="slightover"><a href="#"></a></div>
  <nav class="navbar navbar-fixed-top">
   <div class="container-fluid">
+  <div class=" no-padding">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#"><img src="/assets/images/712/original/logo3.png" alt="westhouse"></a>
+      <a class="navbar-brand" href="/"><img src="/assets/images/712/original/logo3.png" alt="westhouse"></a>
     </div>
+    </div>
+    <div class=" text-center">
+     
     <div class="collapse navbar-collapse" id="myNavbar">
+
     <ul class="nav navbar-nav">
       {% for items in site.data.navigation.mainnav %}
       <li {% if items.submenu == "true" %} class="dropdown" {% endif %}><a href="{{ items.url }}" {% if items.name == page.pagename %} class="active" {% endif %} {% if items.submenu == "true" %} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}>{{ items.title }}</a>
@@ -240,6 +245,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        {% endfor %}
     </ul>
       </div>
-      <a class="buttonres" href="https://westhousehotelnewyork.reztrip.com/classic/en/searches/59635985c958ee640d2ead89/hotels/NYCWST/rooms?_ga=2.85681118.65011620.1499660657-772280168.1493273384&action=show&arrival_date=&controller=landings&departure_date=&rooms=1&starting_page=search">Reserve</a></li>
+      </div>
+      <div class=" no-padding">
+      <a class="buttonres" href="https://westhousehotelnewyork.reztrip.com/classic/en/searches/59635985c958ee640d2ead89/hotels/NYCWST/rooms?_ga=2.85681118.65011620.1499660657-772280168.1493273384&action=show&arrival_date=&controller=landings&departure_date=&rooms=1&starting_page=search">Reserve</a>
+      </div>
   </div>
 </nav>
