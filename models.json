@@ -275,6 +275,7 @@
       "file": "Blog51.json"
     },
     {
+<<<<<<< HEAD
       "title": "The 5 Best Things to Do for Free This Summer",
       "file": "Blog52.json"
     },
@@ -287,6 +288,8 @@
       "file": "Blog54.json"
     },
     {
+=======
+>>>>>>> f469852bf3e79a07561d6e946295ad4e48b5776b
       "title": "WestHouseΓÇÖs Guide to Biking the Hudson River Greenway",
       "file": "Blog6.json"
     },
