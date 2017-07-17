@@ -63,24 +63,31 @@
 					<a class="button1" href="{{ Offers.outbound }}">Book Now</a>
 
 
-				</div>
-				
+				</div> 				
 				<div class="hoffer-two">
 					<h3>{{ Offers.title }}</h3>
-					<div style="min-height: 180px;">
-					<p>{{ Offers.contents | truncate:126 }}</p>
+					<div style="min-height: 160px;">
+					 {{ Offers.contents | truncate:126 }} 
 					</div>
 					
 					<div class="offerbook">
-						<a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="first">Read More</a>
-						<ul class="offermedia">
-						<li>
-							<a href="JavaScript:Void(0);" class="share_button"><i class="fa fa-facebook"></i></a>
-						</li>
-						<li><a href="JavaScript:Void(0);" onclick="window.open('https://twitter.com/share?url='+ window.location.href +'&text={{ Offers.title }}&via=westhouseny','popUpWindow','height=350,width=520,scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="mailto:?subject={{ Offers.title }}&body=Hey! Check this exciting offer. {{ site.url }}{{ Offers.id | permalink: model_dir: 'offers' }}"  title="Share by e-mail"><i class="fa fa-envelope"></i></a></li>
-						<div class="clear"></div>
-						</ul>
+						<a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="first">Read More +</a> 
+						  
+						 <span class="dropdown-social">
+						   <button><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+						   <label>
+						      
+						     <ul class="share-widgets">
+						       <li>
+						       	 <a href="JavaScript:Void(0);" class="share_button"><i class="fa fa-facebook"></i></a>  
+						       	 <a href="JavaScript:Void(0);" onclick="window.open('https://twitter.com/share?url='+ window.location.href +'&text={{ Offers.title }}&via=westhouseny','popUpWindow','height=350,width=520,scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a> 
+						       	 <a href="mailto:?subject={{ Offers.title }}&body=Hey! Check this exciting offer. {{ site.url }}{{ Offers.id | permalink: model_dir: 'offers' }}"  title="Share by e-mail"><i class="fa fa-envelope"></i></a>
+						       	 </li>
+						     </ul>
+						   </label>
+						 </span>
+						<div class="clear"></div> 
+						
 						
 					</div>
 					
@@ -108,6 +115,10 @@
 	}());
 	
 	$(document).ready(function() {
+		$('.dropdown-social').click(function(){
+			 $('.dropdown-social').not(this).find('.share-widgets').hide('slow');
+			$(this).find('.share-widgets').toggle();
+		});
 		$('.share_button').click(function(e){            
 		   e.preventDefault();
 			FB.ui({
