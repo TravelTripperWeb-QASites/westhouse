@@ -7926,36 +7926,38 @@ div.picnic-post {
     display: inline-block;
 }
 .nav>li>a {
-    padding: 10px 12px;
+    padding: 10px 7px;
 }
 .navbar {
     z-index: 99999999 !important;
 }
+.navbar-brand{
+    height: auto!important;
+}
 .navbar-brand>img {
     display: block;
-    width: 150px !important;
+    /*width: 150px !important;*/
     height: auto !important;
 }
 .navbar-nav>li {
-    margin-top: 10px !important;
-    padding-right: 10px;
+    margin-top: 35px !important;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.055em;
-    padding: 3px 0px;
-    line-height: 27px;
+    font-size: 13px;
+    letter-spacing: 0.035em;
 }
-@media (max-width: 1300px) {
+@media only screen and (max-width: 1119px) and (min-width: 990px) {
     .navbar-nav>li {
-        font-size: 10px;
+        letter-spacing: 0.015em !important;
+        font-size: 8.9px !important;
     }
 }
-@media (max-width: 1300px) {
+@media only screen and (max-width: 1280px) and (min-width: 1120px) {
     .navbar-nav>li {
-        font-size: 10px;
+        font-size: 11px !important;
     }
 }
+
 .navbar {
     background-color: white;
     min-height: 75px;
@@ -7964,14 +7966,12 @@ div.picnic-post {
 }
 @media (min-width: 768px) {
     .navbar-nav>li>a {
-        padding-top: 15px;
-        padding-bottom: 15px;
         font-weight: 700;
         color: black;
     }
 }
 .navbar-toggle {
-    margin-top: 18px;
+    margin-top: 30px;
     margin-right: 0px;
 }
 .navbar-toggle .icon-bar {
@@ -7988,30 +7988,22 @@ div.picnic-post {
     letter-spacing: .3em;
     text-align: center;
     text-transform: uppercase;
-    top: 18px;
+    top: 30px;
     position: absolute;
-    right: 16px;
+    right: 10px;
     display: block;
     background: #333;
     color: white !important;
-    padding: 13px 32px;
+    padding: 13px 28px;
     font-size: 13px;
 }
-@media only screen and (max-width: 1240px) {
-    .buttonres {
-        letter-spacing: .2em;
-        position: absolute;
-        right: 10px;
-        top: 3px;
-        margin: 12px 0 0 0;
-        padding: 13px 17px;
-    }
-}
+
+
 @media only screen and (max-width: 768px) {
     .buttonres {
         letter-spacing: .06em;
         font-size: 12px;
-        margin: 17px 0 0 0;
+        /*margin: 17px 0 0 0;*/
         padding: 9px 10px;
     }
 }
@@ -8031,7 +8023,12 @@ div.picnic-post {
     .nav>li>a {
         position: relative;
         display: block;
-        padding: 10px 6px;
+        padding: 5px 3px;
+    }
+}
+ @media (max-width: 992px) {
+    .navbar-header a img {
+        width: 150px!important;
     }
 }
 @media (max-width: 992px) {
@@ -8069,9 +8066,8 @@ div.picnic-post {
     padding-right: 0px;
 }
 .navbar-fixed-top .navbar-collapse {
-    max-height: 340px;
-    max-width: 990px;
-    padding-right: 150px;
+    max-width: 995px;
+    padding-right: 175px;
     margin: 0 auto;
     overflow-y: auto !important;
     overflow-x: hidden;
