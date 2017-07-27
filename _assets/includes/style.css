@@ -7936,7 +7936,7 @@ div.picnic-post {
 }
 .navbar-brand>img {
     display: block;
-    /*width: 150px !important;*/
+    width: 250px !important;
     height: auto !important;
 }
 .navbar-nav>li {
@@ -8026,9 +8026,14 @@ div.picnic-post {
         padding: 5px 3px;
     }
 }
- @media (max-width: 992px) {
+ @media (max-width: 435px) {
+    .navbar-brand {
+        padding: 22px 0px !important;
+    }
+}
+ @media (max-width: 435px) {
     .navbar-header a img {
-        width: 150px!important;
+        width: 160px!important;
     }
 }
 @media (max-width: 992px) {
