@@ -5323,7 +5323,7 @@ body .ui-tooltip {
   font-size: 18px;
   color: #fff;
   border-right: 1px solid #fff;
-  width: 5%;
+  width: 12%;
   float: left;
 }
 
@@ -5363,7 +5363,7 @@ body .ui-tooltip {
   font-size: 18px;
   color: #fff;
   border-right: 1px solid #fff;
-  width: 5%;
+  width: 12%;
   float: left;
 }
 
@@ -6752,7 +6752,7 @@ ul#map-side-bar li:nth-child(2) {
     margin: auto;
     left:auto;
     right: 0;
-    max-width: 140px;
+    max-width: 165px;
     bottom:0;
     text-align: center;
 }
