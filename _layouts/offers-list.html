@@ -58,8 +58,8 @@
 
         <h3>{{ Offers.title }}</h3>
 
-        <div style="min-height: 130px;">
-          {{ Offers.contents | truncatewords: 14 }}
+        <div style="min-height: 120px;">
+          {{ Offers.contents | truncate: 105 }}
         </div>
 
         <div class="offerbook">
