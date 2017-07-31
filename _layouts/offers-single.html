@@ -5,59 +5,42 @@
 {% assign seo_description = Offers.seo_description %}
 
 {% include header.html %}
-
-	
-		<div id="featuredcontent" style="background-image: url({{Offers.image.url}});">
-
-			<h1 class="contenttitle">Offers</h1>
-
-			<!-- <div class="reserve"><a class="button1" href="#">Reserve</a></div> -->
-
-		</div>
-
-		<div id="contentwidget">
-		   <div class="logo"><a href="/"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></a></div>
-
-           <!-- include booking form -->
-
-            {% include booking_form_interior.html %}
-
-            <!-- // include booking form -->
-		</div>
-
-		<div class="subnav">
-			<ul>
-			  {% for Offers in site.data._models.Offers %}
-
-        		<li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}">{{ Offers.title }}</a></li>
-            
-            {% endfor %}
-            
-			</ul>
-		</div>
-		
-        <div class="subnavmobile">
-          <ul>
-            {% for Offers in site.data._models.Offers %}
-            <li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}"><span>{{ Offers.title }}</span></a></li>
-            {% endfor %}
-            <div class="clear"></div>
-          </ul>
-          
-          <div class="subclose"><i class="fa fa-bars"></i><span>View More Offers</span></div>
-        </div>
-
-		<div id="roomdetails">
-		
-		    <div class="share">
-
-				<h3>Share</h3>
-				
-				<script>
- var offer_content = stripHTML('{{ Offers.contents }}');
+<div class="share-offer">
+  <div id="featuredcontent" class="featuredcontent" style="background-image: url({{Offers.image.url}});">
+    <h1 class="contenttitle">Offers</h1>
+    <div class="reserve"><a class="button1" href="#">Reserve</a></div>
+  </div>
+  <div id="contentwidget">
+    <div class="logo"><a href="/"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></a></div>
+    
+    <!-- include booking form --> 
+    
+    {% include booking_form_interior.html %} 
+    
+    <!-- // include booking form --> 
+  </div>
+  <div class="subnav">
+    <ul>
+      {% for Offers in site.data._models.Offers %}
+      <li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="offer-title">{{ Offers.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="subnavmobile">
+    <ul>
+      {% for Offers in site.data._models.Offers %}
+      <li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="offer-title"><span>{{ Offers.title }}</span></a></li>
+      {% endfor %}
+      <div class="clear"></div>
+    </ul>
+    <div class="subclose"><i class="fa fa-bars"></i><span>View More Offers</span></div>
+  </div>
+  <div id="roomdetails">
+    <div class="share">
+      <h3>Share</h3>
+      <script>
+				    var offer_content = stripHTML('{{ Offers.contents }}');
 				</script>
-				    var offer_content = stripHTML('{{ Offers.contents }}');</script>
-
       <div class="socialmedia">
         <ul>
           <li> <a href="JavaScript:Void(0);" class="share_button"><i class="fa fa-facebook"></i></a></li>
