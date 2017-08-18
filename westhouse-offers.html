@@ -1,3 +1,10 @@
+---
+label: "Special Offers"
+title: Luxury Hotel Offers in Midtown NYC | WestHouse Hotel Deals
+meta_description: "Use NYC luxury hotel deals at WestHouse Hotel New York to save on your next stay in the heart of the city."
+meta_keywords: "Luxury Hotel Offers in NYC, Midtown Hotels"
+---
+
 {% assign template_class = 'page-offers' %}
 
 {% include header.html %}
@@ -46,24 +53,26 @@
 
 <div id="offerbox">
 
-  {% for Offers in site.data._models.Offers %}
+  {% assign offers = site.data._models.Offers | sort: 'menu_order' %}
+
+  {% for offer in offers %}
     <div class="halfoffer {% cycle 'steerleft' %}">
 
-      <div class="hoffer-one" style="background-image: url({{ Offers.image.url }});">{% if Offer.partner_name %}
-        <p>{{ Offers.partner_name }}</p>{% endif %}
-        <a class="button1" href="{{ Offers.outbound }}">Book Now</a>
+      <div class="hoffer-one" style="background-image: url({{ offer.image.url }});">{% if Offer.partner_name %}
+        <p>{{ offer.partner_name }}</p>{% endif %}
+        <a class="button1" href="{{ offer.outbound }}">Book Now</a>
       </div>
 
       <div class="hoffer-two">
 
-        <h3>{{ Offers.title }}</h3>
+        <h3>{{ offer.title }}</h3>
 
         <div style="min-height: 120px;">
-          {{ Offers.short_description | truncate: 150 }}
+          {{ offer.short_description | truncate: 150 }}
         </div>
 
         <div class="offerbook">
-          <a href="{{ Offers.id | permalink: model_dir: 'offers' }}" class="first">Read More +</a>
+          <a href="{{ offer.id | permalink: model_dir: 'offers' }}" class="first">Read More +</a>
 
           <span class="dropdown-social">
   			   <button><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
@@ -71,8 +80,8 @@
              <ul class="share-widgets">
   			       <li>
   			       	 <a href="JavaScript:Void(0);" class="share_button"><i class="fa fa-facebook"></i></a>
-  			       	 <a href="JavaScript:Void(0);" onclick="window.open('https://twitter.com/share?url='+ window.location.href +'&text={{ Offers.title }}&via=westhouseny','popUpWindow','height=350,width=520,scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
-  			       	 <a href="mailto:?subject={{ Offers.title }}&body=Hey! Check this exciting offer. {{ site.url }}{{ Offers.id | permalink: model_dir: 'offers' }}"  title="Share by e-mail"><i class="fa fa-envelope"></i></a>
+  			       	 <a href="JavaScript:Void(0);" onclick="window.open('https://twitter.com/share?url='+ window.location.href +'&text={{ offer.title }}&via=westhouseny','popUpWindow','height=350,width=520,scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+  			       	 <a href="mailto:?subject={{ offer.title }}&body=Hey! Check this exciting offer. {{ site.url }}{{ offer.id | permalink: model_dir: 'offers' }}"  title="Share by e-mail"><i class="fa fa-envelope"></i></a>
   			       	 </li>
   			     </ul>
   			   </label>
