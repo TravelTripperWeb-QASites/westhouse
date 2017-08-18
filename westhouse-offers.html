@@ -6,6 +6,7 @@ meta_keywords: "Luxury Hotel Offers in NYC, Midtown Hotels"
 ---
 
 {% assign template_class = 'page-offers' %}
+{% assign offers = site.data._models.Offers | sort: 'menu_order' %}
 
 {% include header.html %}
 
@@ -17,7 +18,7 @@ meta_keywords: "Luxury Hotel Offers in NYC, Midtown Hotels"
 <div id="contentwidget">
 
   <div class="logo">
-    <a href="/"><img src="/assets/images/712/original/logo3.png" alt="logo3" /></a>
+    <a href="/"><img src="/assets/images/712/original/logo3.png" alt="Hotel Logo"></a>
   </div>
 
   {% include booking_form_interior.html %}
@@ -26,8 +27,8 @@ meta_keywords: "Luxury Hotel Offers in NYC, Midtown Hotels"
 
 <div class="subnav">
 	<ul>
-    {% for Offers in site.data._models.Offers %}
-		  <li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}">{{ Offers.title }}</a></li>
+    {% for offer in offers %}
+		  <li><a href="{{ offer.id | permalink: model_dir: 'offers' }}">{{ offer.title }}</a></li>
 		{% endfor %}
 	</ul>
 </div>
@@ -35,8 +36,8 @@ meta_keywords: "Luxury Hotel Offers in NYC, Midtown Hotels"
 
 <div class="subnavmobile">
   <ul>
-    {% for Offers in site.data._models.Offers %}
-      <li><a href="{{ Offers.id | permalink: model_dir: 'offers' }}"><span>{{ Offers.title }}</span></a></li>
+    {% for offer in offers %}
+      <li><a href="{{ offer.id | permalink: model_dir: 'offers' }}"><span>{{ offer.title }}</span></a></li>
     {% endfor %}
     <div class="clear"></div>
   </ul>
@@ -52,8 +53,6 @@ meta_keywords: "Luxury Hotel Offers in NYC, Midtown Hotels"
 </div>
 
 <div id="offerbox">
-
-  {% assign offers = site.data._models.Offers | sort: 'menu_order' %}
 
   {% for offer in offers %}
     <div class="halfoffer {% cycle 'steerleft' %}">
