@@ -1076,24 +1076,27 @@ font-family: GothamLight;
   margin-bottom: 0px;
   position: relative;
     background: #f4f4f4;
-  padding: 40px 0 0;
+  padding: 60px 0 0;
   overflow: hidden;
 }
 
 #tripadvisory .flexslider {
   background: transparent;
+  text-align: center;
 }
 
 #tripadvisory .col3.triplogo {
-  width: 80px;
+  width: 100%; 
 }
-
+#tripadvisory .col3.triplogo img{ 
+ margin: 20px auto;
+}
 #tripadvisory .col3.testimonials {
-  width: 50%;
+  width: 100%;
 }
 
 #tripadvisory .col3.author {
-  width: 25%;
+  width: 100%;
   text-align: center;
 }
 
@@ -1106,8 +1109,7 @@ font-family: GothamLight;
 }
 
 #tripadvisory .flexslider .slides .triplogo img {
-  width: auto;
-  margin: 0 auto;
+  width: auto; 
   max-width: 100%;
 }
 
@@ -3235,6 +3237,7 @@ clear: both;
   width: 100%;
   margin: 0 auto 40px;
 }
+
 
 #connect  .flexslider .slides .triplogo img {
   width: auto;
@@ -8335,12 +8338,20 @@ div.picnic-post
        min-height: 200px; 
     }
   }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1200px) {
    .insta-pic a{
-      height: 300px; 
+      height: 250px; 
     }
     .insta-pic a img{ 
-       min-height: 300px; 
+       min-height: 250px; 
+    }
+  }
+@media only screen and (min-width: 1600px) {
+   .insta-pic a{
+      height: 400px; 
+    }
+    .insta-pic a img{ 
+       min-height: 400px; 
     }
   }
 .socialmedia-connect ul{
@@ -8368,7 +8379,6 @@ div.picnic-post
     -moz-transition: all 0.25s ease;
     -webkit-transition: all 0.25s ease;
 }
-
 .socialmedia-connect ul li a:hover {
     color: #696b65;
     background: #fff;
