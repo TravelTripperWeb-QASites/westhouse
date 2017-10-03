@@ -8326,7 +8326,7 @@ div.picnic-post
   margin-bottom: 30px;
 }
 .insta-pic a img{
-   width: 100%;
+   min-width: 100%;
    min-height: 150px;
    overflow: hidden;
 }
