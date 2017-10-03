@@ -73,8 +73,8 @@
         success: function (response) {  
         setTimeout(function(){
           $.each(response.data, function(i, item) { 
-          	 if(i < 12){
-          	 	 $('#instapics').append('<div class="col-xs-6 col-sm-3 col-md-3 col-lg-4 insta-pic"><a href="'+item.link+'" target="_blank"><img src="'+item.images.standard_resolution.url+'" class="img-respond"/> </a></div>');
+          	 if(i < 4){
+          	 	 $('#instapics').append('<div class="col-md-4 col-sm-6  insta-pic"><a href="'+item.link+'" target="_blank"><img src="'+item.images.standard_resolution.url+'" class="img-respond"/> </a></div>');
           	 }
               
           });
