@@ -82,7 +82,7 @@
         },
         "data_source": null,
         "source_path": "westhouse_blog_rss.xml",
-        "order": 51
+        "order": 52
       }
     ],
     "about": {
@@ -603,6 +603,20 @@
         }
       ]
     },
+    "thankyou": {
+      "__PAGES__": [
+        {
+          "label": "Thank you | WestHouse Hotel New York",
+          "published": true,
+          "locales": {
+            "en": "/thankyou/"
+          },
+          "data_source": null,
+          "source_path": "thankyou/index.html",
+          "order": 38
+        }
+      ]
+    },
     "things-to-do-in-nyc": {
       "__PAGES__": [
         {
@@ -613,7 +627,7 @@
           },
           "data_source": null,
           "source_path": "things-to-do-in-nyc/index.html",
-          "order": 47
+          "order": 48
         }
       ],
       "art-culture": {
@@ -626,7 +640,7 @@
             },
             "data_source": null,
             "source_path": "things-to-do-in-nyc/art-culture/index.html",
-            "order": 38
+            "order": 39
           }
         ]
       },
@@ -640,7 +654,7 @@
             },
             "data_source": null,
             "source_path": "things-to-do-in-nyc/culinary-guide/index.html",
-            "order": 43
+            "order": 44
           }
         ],
         "coffee-and-drinks": {
@@ -653,7 +667,7 @@
               },
               "data_source": null,
               "source_path": "things-to-do-in-nyc/culinary-guide/coffee-and-drinks/index.html",
-              "order": 39
+              "order": 40
             }
           ]
         },
@@ -667,7 +681,7 @@
               },
               "data_source": null,
               "source_path": "things-to-do-in-nyc/culinary-guide/desserts-and-snacks/index.html",
-              "order": 40
+              "order": 41
             }
           ]
         },
@@ -681,7 +695,7 @@
               },
               "data_source": null,
               "source_path": "things-to-do-in-nyc/culinary-guide/dinner/index.html",
-              "order": 41
+              "order": 42
             }
           ]
         },
@@ -695,7 +709,7 @@
               },
               "data_source": null,
               "source_path": "things-to-do-in-nyc/culinary-guide/lunch/index.html",
-              "order": 42
+              "order": 43
             }
           ]
         }
@@ -710,7 +724,7 @@
             },
             "data_source": null,
             "source_path": "things-to-do-in-nyc/entertainment/index.html",
-            "order": 44
+            "order": 45
           }
         ]
       },
@@ -724,7 +738,7 @@
             },
             "data_source": null,
             "source_path": "things-to-do-in-nyc/must-see-nyc/index.html",
-            "order": 45
+            "order": 46
           }
         ]
       },
@@ -738,7 +752,7 @@
             },
             "data_source": null,
             "source_path": "things-to-do-in-nyc/shopping/index.html",
-            "order": 46
+            "order": 47
           }
         ]
       }
@@ -753,7 +767,7 @@
           },
           "data_source": null,
           "source_path": "westhouse-blog/index.html",
-          "order": 48
+          "order": 49
         }
       ]
     },
@@ -767,7 +781,7 @@
           },
           "data_source": null,
           "source_path": "westhouse-offers/index.html",
-          "order": 49
+          "order": 50
         }
       ]
     }
@@ -924,6 +938,12 @@
     "photo-album/nyc-hotel-amenities/index.html/nav_amenities_content.json",
     "photo-album/nyc-hotel-amenities/index.html/nav_dining_content.json",
     "photo-album/nyc-hotel-amenities/index.html/nav_neighborhood_content.json",
+    "photo-album/virtual-tours/index.html/accommodations_gallery_text.json",
+    "photo-album/virtual-tours/index.html/nav_rooms_content.json",
+    "photo-album/virtual-tours/index.html/nav_offers_content.json",
+    "photo-album/virtual-tours/index.html/nav_amenities_content.json",
+    "photo-album/virtual-tours/index.html/nav_dining_content.json",
+    "photo-album/virtual-tours/index.html/nav_neighborhood_content.json",
     "index.html/home_hotel_content.json",
     "index.html/home_hotel_content_two.json",
     "index.html/home_rooms_content.json",
@@ -933,12 +953,6 @@
     "index.html/nav_amenities_content.json",
     "index.html/nav_dining_content.json",
     "index.html/nav_neighborhood_content.json",
-    "photo-album/index.html/galleries_text.json",
-    "photo-album/index.html/nav_rooms_content.json",
-    "photo-album/index.html/nav_offers_content.json",
-    "photo-album/index.html/nav_amenities_content.json",
-    "photo-album/index.html/nav_dining_content.json",
-    "photo-album/index.html/nav_neighborhood_content.json",
     "ppc/index.html/ppc.json",
     "ppc/index.html/nav_rooms_content.json",
     "ppc/index.html/nav_offers_content.json",
@@ -994,6 +1008,11 @@
     "terms-of-use/index.html/nav_amenities_content.json",
     "terms-of-use/index.html/nav_dining_content.json",
     "terms-of-use/index.html/nav_neighborhood_content.json",
+    "thankyou/index.html/nav_rooms_content.json",
+    "thankyou/index.html/nav_offers_content.json",
+    "thankyou/index.html/nav_amenities_content.json",
+    "thankyou/index.html/nav_dining_content.json",
+    "thankyou/index.html/nav_neighborhood_content.json",
     "things-to-do-in-nyc/art-culture/index.html/entertainment_neighborhood_text.json",
     "things-to-do-in-nyc/art-culture/index.html/nav_rooms_content.json",
     "things-to-do-in-nyc/art-culture/index.html/nav_offers_content.json",
@@ -1067,12 +1086,12 @@
     "westhouse-offers/index.html/nav_amenities_content.json",
     "westhouse-offers/index.html/nav_dining_content.json",
     "westhouse-offers/index.html/nav_neighborhood_content.json",
-    "photo-album/virtual-tours/index.html/accommodations_gallery_text.json",
-    "photo-album/virtual-tours/index.html/nav_rooms_content.json",
-    "photo-album/virtual-tours/index.html/nav_offers_content.json",
-    "photo-album/virtual-tours/index.html/nav_amenities_content.json",
-    "photo-album/virtual-tours/index.html/nav_dining_content.json",
-    "photo-album/virtual-tours/index.html/nav_neighborhood_content.json",
+    "photo-album/index.html/galleries_text.json",
+    "photo-album/index.html/nav_rooms_content.json",
+    "photo-album/index.html/nav_offers_content.json",
+    "photo-album/index.html/nav_amenities_content.json",
+    "photo-album/index.html/nav_dining_content.json",
+    "photo-album/index.html/nav_neighborhood_content.json",
     "blog/4-inspirational-designers.html/nav_rooms_content.json",
     "blog/4-inspirational-designers.html/nav_offers_content.json",
     "blog/4-inspirational-designers.html/nav_amenities_content.json",
@@ -1408,6 +1427,21 @@
     "blog/the-most-iconic-nyc-movie-scene-locations.html/nav_amenities_content.json",
     "blog/the-most-iconic-nyc-movie-scene-locations.html/nav_dining_content.json",
     "blog/the-most-iconic-nyc-movie-scene-locations.html/nav_neighborhood_content.json",
+    "blog/five-favorite-late-night-jazz-venues.html/nav_rooms_content.json",
+    "blog/five-favorite-late-night-jazz-venues.html/nav_offers_content.json",
+    "blog/five-favorite-late-night-jazz-venues.html/nav_amenities_content.json",
+    "blog/five-favorite-late-night-jazz-venues.html/nav_dining_content.json",
+    "blog/five-favorite-late-night-jazz-venues.html/nav_neighborhood_content.json",
+    "blog/the-best-halloween-streets-in-new-york.html/nav_rooms_content.json",
+    "blog/the-best-halloween-streets-in-new-york.html/nav_offers_content.json",
+    "blog/the-best-halloween-streets-in-new-york.html/nav_amenities_content.json",
+    "blog/the-best-halloween-streets-in-new-york.html/nav_dining_content.json",
+    "blog/the-best-halloween-streets-in-new-york.html/nav_neighborhood_content.json",
+    "blog/nycs-most-popular-workout-classes.html/nav_rooms_content.json",
+    "blog/nycs-most-popular-workout-classes.html/nav_offers_content.json",
+    "blog/nycs-most-popular-workout-classes.html/nav_amenities_content.json",
+    "blog/nycs-most-popular-workout-classes.html/nav_dining_content.json",
+    "blog/nycs-most-popular-workout-classes.html/nav_neighborhood_content.json",
     "blog/finding-the-hamptons-in-nyc.html/nav_rooms_content.json",
     "blog/finding-the-hamptons-in-nyc.html/nav_offers_content.json",
     "blog/finding-the-hamptons-in-nyc.html/nav_amenities_content.json",
@@ -2353,5 +2387,5 @@
     "navigation",
     "_model_filters"
   ],
-  "__SHA__": "95405870b1c9210aa36482616c2584528fb7ebf8"
+  "__SHA__": "731621a84eca5fc41fd1819a61ef174119345f5b"
 }
