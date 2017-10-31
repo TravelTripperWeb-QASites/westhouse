@@ -2113,6 +2113,11 @@
     "offers/girls-pamper-package-nyc.html/nav_amenities_content.json",
     "offers/girls-pamper-package-nyc.html/nav_dining_content.json",
     "offers/girls-pamper-package-nyc.html/nav_neighborhood_content.json",
+    "offers/celebrate-new-years-eve-in-the-heart-of-new-york-city.html/nav_rooms_content.json",
+    "offers/celebrate-new-years-eve-in-the-heart-of-new-york-city.html/nav_offers_content.json",
+    "offers/celebrate-new-years-eve-in-the-heart-of-new-york-city.html/nav_amenities_content.json",
+    "offers/celebrate-new-years-eve-in-the-heart-of-new-york-city.html/nav_dining_content.json",
+    "offers/celebrate-new-years-eve-in-the-heart-of-new-york-city.html/nav_neighborhood_content.json",
     "offers/valet-parking.html/nav_rooms_content.json",
     "offers/valet-parking.html/nav_offers_content.json",
     "offers/valet-parking.html/nav_amenities_content.json",
@@ -2368,5 +2373,5 @@
     "navigation",
     "_model_filters"
   ],
-  "__SHA__": "ea7359cebca658beb98ec489fa7175e2345e7244"
+  "__SHA__": "25a14ba8a41020f0eb412263e22c89382e644ba5"
 }
