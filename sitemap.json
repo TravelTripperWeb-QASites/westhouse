@@ -127,20 +127,6 @@
         }
       ]
     },
-    "black-friday": {
-      "__PAGES__": [
-        {
-          "label": "Special Offers",
-          "published": true,
-          "locales": {
-            "en": "/black-friday/"
-          },
-          "data_source": null,
-          "source_path": "black-friday/index.html",
-          "order": 4
-        }
-      ]
-    },
     "careers": {
       "__PAGES__": [
         {
@@ -151,7 +137,7 @@
           },
           "data_source": null,
           "source_path": "careers/index.html",
-          "order": 5
+          "order": 4
         }
       ]
     },
@@ -165,6 +151,20 @@
           },
           "data_source": null,
           "source_path": "contact-us/index.html",
+          "order": 5
+        }
+      ]
+    },
+    "cyber-monday": {
+      "__PAGES__": [
+        {
+          "label": "Special Offers",
+          "published": true,
+          "locales": {
+            "en": "/cyber-monday/"
+          },
+          "data_source": null,
+          "source_path": "cyber-monday/index.html",
           "order": 6
         }
       ]
@@ -810,16 +810,6 @@
     "about-2/index.html/nav_amenities_content.json",
     "about-2/index.html/nav_dining_content.json",
     "about-2/index.html/nav_neighborhood_content.json",
-    "black-friday/index.html/black-friday_heading1.json",
-    "black-friday/index.html/black-friday_heading2.json",
-    "black-friday/index.html/black-friday_content1.json",
-    "black-friday/index.html/black-friday_content2.json",
-    "black-friday/index.html/black-friday_content3.json",
-    "black-friday/index.html/nav_rooms_content.json",
-    "black-friday/index.html/nav_offers_content.json",
-    "black-friday/index.html/nav_amenities_content.json",
-    "black-friday/index.html/nav_dining_content.json",
-    "black-friday/index.html/nav_neighborhood_content.json",
     "careers/index.html/content_image.json",
     "careers/index.html/the_content.json",
     "careers/index.html/nav_rooms_content.json",
@@ -834,6 +824,16 @@
     "contact-us/index.html/nav_amenities_content.json",
     "contact-us/index.html/nav_dining_content.json",
     "contact-us/index.html/nav_neighborhood_content.json",
+    "cyber-monday/index.html/black-friday_heading1.json",
+    "cyber-monday/index.html/black-friday_heading2.json",
+    "cyber-monday/index.html/black-friday_content1.json",
+    "cyber-monday/index.html/black-friday_content2.json",
+    "cyber-monday/index.html/black-friday_content3.json",
+    "cyber-monday/index.html/nav_rooms_content.json",
+    "cyber-monday/index.html/nav_offers_content.json",
+    "cyber-monday/index.html/nav_amenities_content.json",
+    "cyber-monday/index.html/nav_dining_content.json",
+    "cyber-monday/index.html/nav_neighborhood_content.json",
     "dining/speakeasy-lounge-nyc/index.html/nav_rooms_content.json",
     "dining/speakeasy-lounge-nyc/index.html/nav_offers_content.json",
     "dining/speakeasy-lounge-nyc/index.html/nav_amenities_content.json",
@@ -2407,5 +2407,5 @@
     "navigation",
     "_model_filters"
   ],
-  "__SHA__": "d961d6d89fb42f07aa27eb7c3feb822ba04ed351"
+  "__SHA__": "4f01b749e0855bf0ce3f3a7e39b2b4c05ba52b5f"
 }
