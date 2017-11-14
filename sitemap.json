@@ -810,6 +810,11 @@
     "about-2/index.html/nav_amenities_content.json",
     "about-2/index.html/nav_dining_content.json",
     "about-2/index.html/nav_neighborhood_content.json",
+    "black-friday/index.html/black-friday_heading1.json",
+    "black-friday/index.html/black-friday_heading2.json",
+    "black-friday/index.html/black-friday_content1.json",
+    "black-friday/index.html/black-friday_content2.json",
+    "black-friday/index.html/black-friday_content3.json",
     "black-friday/index.html/nav_rooms_content.json",
     "black-friday/index.html/nav_offers_content.json",
     "black-friday/index.html/nav_amenities_content.json",
@@ -2402,5 +2407,5 @@
     "navigation",
     "_model_filters"
   ],
-  "__SHA__": "fdd621e01ef7034ffd51faa0933edbd4562ea217"
+  "__SHA__": "d961d6d89fb42f07aa27eb7c3feb822ba04ed351"
 }
