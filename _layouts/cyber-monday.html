@@ -1,9 +1,12 @@
 {% include header.html %}
-    {% regionblock black-friday_heading1, type:header %}
+    
     <div id="featuredcontent" class="featuredcontent" style="background-image: url(/assets/images/3982/original/westhouse-hotel-new-york-your-house.jpg);">
-        <h1 class="contenttitle">Cyber Monday</h1>
+        <h1 class="contenttitle">
+        {% regionblock black-friday_heading1, type:header %}
+        Cyber Monday
+        {% endregionblock %}
+    </h1>
     </div>
-    {% endregionblock %}
     <div id="roomdetails">
         <div class="share">
             <h3>Share</h3>
