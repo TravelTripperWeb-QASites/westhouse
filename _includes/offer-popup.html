@@ -1,0 +1,36 @@
+<div id="offer-popup" class="offer-popup modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-wrapper">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-content-inner">
+                    <p>Register to our newsletter to <b>unlock 50%</b> savings on all rooms!</p>
+                    <form class="jotform-form" action="https://submit.jotform.me/submit/72972211982461/" method="post" name="form_72972211982461" id="72972211982461" accept-charset="utf-8">
+  <input type="hidden" name="formID" value="72972211982461" />
+                    <input type="email" name="q3_email" value="" placeholder="Enter Your Email" required="required">
+                    <input type="hidden" id="input_4" name="q4_bookNow" data-type="input-textbox" class="form-textbox" size="20" value="https://westhousehotelnewyork.reztrip.com/en/special_offer?rate_code=GETAWA" data-component="textbox" />
+                    <div>
+                      <button id="input_2" type="submit" class="button-common btn-blue" data-component="button">UNLOCK NOW!</button>
+                   </div>
+               </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  if (!Cookies.get('popup')) {
+    $('#offer-popup').show();
+    //$('#offer-popup').modal();
+    Cookies.set('popup', '1', {
+      expires: 1
+    });
+  }
+   // $('#offer-popup').modal();
+    $(document).ready(function(){
+        $(".close").click(function(){
+            $("#offer-popup").fadeOut();
+        });
+    });
+</script>
