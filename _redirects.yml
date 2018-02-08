@@ -479,7 +479,7 @@
 - album/the-terrace/: photo-album/
 - Amenities/Concierge: westhouse-hotel-amenities-nyc/luxury-lifestyle-concierge/
 - Amenities/CONCIERGE: westhouse-hotel-amenities-nyc/luxury-lifestyle-concierge/
-- amenities/concierge/: westhouse-hotel-amenities-nyc/luxury-lifestyle-concierge/
+- amenities/concierge/: amenities/luxury-lifestyle-concierge/
 - attraction-type/entertainment/: things-to-do-in-nyc/entertainment/
 - attraction-type/events/: events-in-nyc/
 - attraction-type/shopping/: things-to-do-in-nyc/shopping/
