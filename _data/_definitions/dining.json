@@ -1,0 +1,27 @@
+{"title":
+	{"required":true},
+"seo_title":
+	{"required":true},
+"seo_description":
+	{"type":"text","required":true},
+"url_friendly_name":
+	{"type":"url_slug"},
+"outbound":
+	{"hint":"PDF link for Menu"},
+"image":
+	{},
+"image1":
+	{},
+"image2":
+	{},
+"image3":
+	{},
+"image4":
+	{},
+"image5":
+	{},
+"vr_btn_link":
+	{},
+"contents":
+	{"type":"richtext","required":true,"hint":"Write the content of your dining spot"},
+  "menu_order":{"type":"integer"}}

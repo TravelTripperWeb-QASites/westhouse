@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{% assign neighborhood = page %}
+{% assign model = page %}
+
+<div class="inner-banner pattern bg-cover" style="background-image: url('{{ neighborhood.image.url }}');">
+  <h1>Area</h1>
+</div>
+
+{% include booking-widget.html %}
+
+<div class="sub-nav">
+  <a href="/things-to-do-in-nyc/culinary-guide/">Culinary Guide</a>
+  {% for area in site.data._models.area %}
+    <a href="/things-to-do-in-nyc/{{ area.url_friendly_name }}/">{{ area.title }}</a>
+  {% endfor %}
+  <a href="/events-in-nyc/">Events</a>
+</div>
+
+<section class="common-details">
+  <div class="common-details-container">
+    <div class="common-details-row">
+      <div class="common-content">
+        <h3>{{ neighborhood.title }}</h3>
+        {{ neighborhood.contents }}
+        <a href="" class="common-btn">Visit Website</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="inner-banner pattern bg-cover" style="background-image: url('{{ page.image.url }}');">
+  <h1>Westhouse Your House</h1>
+</div>
+
+{% include booking-widget.html %}
+
+<section class="random-details">
+  <div class="random-details-container">
+    <div class="random-head">
+      <h2>{{ page.title }}</h2>
+      <div class="blog-date">{{ page.date }}</div>
+    </div>
+    <div class="random-body">
+      {{ page.contents }}
+    </div>
+  </div>
+</section>

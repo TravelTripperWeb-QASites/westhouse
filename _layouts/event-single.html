@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign event = page %}
+{% assign model = page %}
+
+<div class="inner-banner pattern bg-cover" style="background-image: url('{{ event.image.url }}');"></div>
+
+<section class="random-details">
+  <div class="random-details-container">
+      <div class="random-head">
+        <h2>{{ event.title }}</h2>
+        <div class="blog-date">{{ event.date }}</div>
+      </div>
+      <div class="random-body">
+        <p>{{ event.contents }}</p>
+      </div>
+      <div class="random-footer">
+        <p><a href="/events-in-nyc/" class="">Click here</a> to discover more New York City events taking place at the Westhouse Hotel</p>
+      </div>
+    </div>
+  </div>
+</section>

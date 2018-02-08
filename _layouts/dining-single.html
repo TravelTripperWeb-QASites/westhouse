@@ -1,0 +1,92 @@
+---
+layout: default
+---
+{% assign dining = page %}
+{% assign model = page %}
+
+<div class="inner-banner pattern bg-cover" style="background-image: url('{{ dining.image }}');">
+  <h1>{{ dining.title }}</h1>
+</div>
+
+{% include booking-widget.html %}
+
+<div class="sub-nav">
+  {% for dining in site.data._models.dining %}
+    <a href="/dining/{{ dining.url_friendly_name }}/">{{ dining.title }}</a>
+  {% endfor %}
+</div>
+
+<section class="common-details">
+  <div class="common-details-container">
+    <div class="common-details-row">
+      <div class="common-content">
+        {{ dining.contents }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if dining.image %}
+  <section class="dining-detail carousel-common">
+    <div class="hotel-info-container">
+      <div id="main-carousel" class="main-carousel carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators center-indicators">
+        {% if dining.image != '' %}
+          <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+        {% endif %}
+        {% if dining.image1 != '' %}
+          <li data-target="#main-carousel" data-slide-to="1"></li>
+        {% endif %}
+        {% if dining.image2 != '' %}
+          <li data-target="#main-carousel" data-slide-to="2"></li>
+        {% endif %}
+        {% if dining.image3 != '' %}
+          <li data-target="#main-carousel" data-slide-to="3"></li>
+        {% endif %}
+        {% if dining.image4 != '' %}
+          <li data-target="#main-carousel" data-slide-to="4"></li>
+        {% endif %}
+        {% if dining.image5 != '' %}
+          <li data-target="#main-carousel" data-slide-to="5"></li>
+        {% endif %}
+        </ol>
+
+        <div class="carousel-inner">
+        {% if dining.image != '' %}
+          <div class="carousel-item active bg-cover" style="background-image: url('{{ dining.image }}')"></div>
+        {% endif %}
+        {% if dining.image1 != '' %}
+          <div class="carousel-item bg-cover" style="background-image: url('{{ dining.image1 }}')"></div>
+        {% endif %}
+        {% if dining.image2 != '' %}
+          <div class="carousel-item bg-cover" style="background-image: url('{{ dining.image2 }}')"></div>
+        {% endif %}
+        {% if dining.image3 != '' %}
+          <div class="carousel-item bg-cover" style="background-image: url('{{ dining.image3 }}')"></div>
+        {% endif %}
+        {% if dining.image4 != '' %}
+          <div class="carousel-item bg-cover" style="background-image: url('{{ dining.image4 }}')"></div>
+        {% endif %}
+        {% if dining.image5 != '' %}
+          <div class="carousel-item bg-cover" style="background-image: url('{{ dining.image5 }}')"></div>
+        {% endif %}
+        </div>
+
+        <a class="carousel-control-prev" href="#main-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true">
+            <img src="/assets/images/prev.png" alt="Previous Slide">
+          </span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#main-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true">
+            <img src="/assets/images/next.png" alt="Next Slide">
+          </span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+{% endif %}

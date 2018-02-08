@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{% assign amenities = page %}
+{% assign model = page %}
+
+<div class="inner-banner pattern bg-cover" style="background-image: url('{{ amenities.image.url }}');">
+  <h1>{{ amenities.title }}</h1>
+</div>
+
+{% include booking-widget.html %}
+
+<div class="sub-nav">
+  <a href="/perfect-picnic-in-nyc/">Your Perfect Picnic</a></li>
+  {% for amenities in site.data._models.amenities %}
+    <a href="/amenities/{{ amenities.url_friendly_name }}/">{{ amenities.title }}</a></li>
+  {% endfor %}
+</div>
+
+<section class="common-details">
+  <div class="common-details-container">
+    <div class="common-details-row">
+      <div class="common-content">
+        <h3>{{ amenities.title }}</h3>
+        {{ amenities.contents }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
