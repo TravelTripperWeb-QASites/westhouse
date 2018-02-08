@@ -20,7 +20,7 @@
 - attraction-type/art-culture: art-culture
 - press-releases: press
 - rooms/prestige-suite: luxury-rooms-suites-nyc
-- dining/the-terrace-nyc-rooftop-bar: the-terrace-nyc-rooftop-bar
+- dining/the-terrace-nyc-rooftop-bar: dining/the-terrace/
 - attraction-type/events: events-in-nyc
 - the-neighborhood/: things-to-do-in-nyc
 - dining/the-den: speakeasy-lounge-nyc
@@ -243,7 +243,6 @@
 - v1-0-westhouse/model_instances/57110be624a3b90003e24f41/jade%20melissa: ''
 - wp-content/uploads/2015/02/Quest_2.13.15_WestHouse.pdf: ''
 - wp-content/uploads/2015/02/StyleBistro_12815_WestHouse.pdf: ''
-- wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4: ''
 - var/westhousehotelnewyork/storage/original/application/3313827ad7619e9956b7c1fdc1311dec.pdf: ''
 - wp-content/uploads/2015/02/Conceito_de_Luxo_Magazine.pdf: ''
 - blog/best-hot-dogs-in-nyc-to-try-now-today/: blog/
