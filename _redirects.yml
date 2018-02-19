@@ -44,7 +44,7 @@
 - dining/the-terrace-nyc-rooftop-bar: dining/the-terrace/
 - attraction-type/events: events-in-nyc
 - the-neighborhood/: things-to-do-in-nyc
-- luxury-hotel-amenities-nyc/concierge: luxury-hotel-amenities-nyc
+- luxury-hotel-amenities-nyc/concierge: amenities/
 - amenities/concierge: luxury-hotel-amenities-nyc
 - pt-pt: ''
 - pt-pt/bedrooms-suites: ''
