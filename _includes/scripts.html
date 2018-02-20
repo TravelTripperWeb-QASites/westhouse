@@ -39,3 +39,27 @@
 </script>
 
 <script src="{{ '/assets/js/main.min.js' | absolute_url }}"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('body').RTwidgets(
+{% if site.data.special-popup-modal.publish == 'true' %}      
+       {
+              offer_popup_widget: {
+                  show: true,
+                       offer_data_url: '/assets/js/api/special-offer-popup.json',
+                        timeout: 3000
+              }
+          }
+{% else %}
+          {
+              offer_popup_widget: {
+                  show: false,
+                  timeout: 3000
+              }
+          }
+{% endif %}
+          );
+    });
+</script>
