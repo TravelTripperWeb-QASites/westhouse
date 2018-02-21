@@ -97,7 +97,7 @@ var css = __webpack_require__(2);
 				overlay_text_color: '#ffffff',
 				offer_popup_type: 'reztrip',
 				offer_data_url: 'http://localhost:3000/special-offer-popup.json',
-				offer_btn_label: "Book Now",
+				offer_btn_label: "Reserve",
 				rt_offer_code: 'DISAP',
 				show_detail: false,
 				timeout: 5000
@@ -152,7 +152,7 @@ var rt_offer_popup_widget = function () {
     this.settings.offer_popup_widget.header_title = options.offer_popup_widget.header_title || 'Exclusive Offer';
     this.settings.offer_popup_widget.offer_popup_type = options.offer_popup_widget.offer_popup_type || 'data-models';
     this.settings.offer_popup_widget.offer_data_url = options.offer_popup_widget.offer_data_url || null;
-    this.settings.offer_popup_widget.btn_label = options.offer_popup_widget.offer_btn_label || 'Book Now';
+    this.settings.offer_popup_widget.btn_label = options.offer_popup_widget.offer_btn_label || 'Reserve';
     this.settings.offer_popup_widget.rt_offer_code = options.offer_popup_widget.rt_offer_code || null;
     this.settings.offer_popup_widget.show_detail = options.offer_popup_widget.show_detail || false;
     this.settings.offer_popup_widget.timeout = options.offer_popup_widget.timeout || 5000;

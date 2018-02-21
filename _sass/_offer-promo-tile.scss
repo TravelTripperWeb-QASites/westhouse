@@ -1,17 +1,23 @@
 .offer-promo-tile {
-    margin: 90px auto 2px;
+    margin: 90px auto 0px;
     text-align: center;
-    padding: 12px 0;
-    color:#fff;
+    padding: 10px 0;
+    color:$white;
     max-width: 100%;
-    h3,a {
+    background-color: $light;
+    a{
         display: inline-block;
         margin: 0px 15px;
+        font-size: .813rem;
     }
     h3 {
+        vertical-align: middle;
         font-family: $google-font;
-        font-size: 30px;
+        font-size: 24px;
         color: $primary;
+        display: inline-block;
+        margin: 0px 15px;
+        text-transform: none;
 
     }
     a {
@@ -38,22 +44,24 @@
         float: left;
         h4 {
         color: $black !important;
-        font-family: $primary-bold;
-        font-size: 1.2rem;
+        font-family: $primary-book;
+        font-size: 1.125rem;
         font-weight: normal;
-        letter-spacing: .7px;
         text-transform: none;
         color: #FFF;
         line-height: normal;
+        margin-bottom: 0px;
             span {
-                font-family: $primary-bold;
-                font-size: 20px;
+                font-family: $primary-book;
+                font-size: 1.125rem;
                 color:#ed1c25;
+                font-weight: bold;
             }
         }
         i {
             color:#999999;
             text-align: right;
+            font-size: 11px;
             sup {
                 color:#ed1c25;
             }
@@ -89,7 +97,7 @@
                 text-transform: uppercase;
                 letter-spacing: .5px; 
                 margin-bottom: 20px;
-                font-family: $primary-bold;
+                font-family: $primary-book;
             }
             .signup {
                 .input-group {
@@ -133,11 +141,12 @@
                 h3{
                     span {
                         color:#ed1c25;
+                        font-weight: bold;
                     } 
                 }
                 h5 {
                     margin-bottom: 20px;
-                    font-size: 1rem;
+                    font-size: 0.875rem;
                     color: $black;
                 }
             }

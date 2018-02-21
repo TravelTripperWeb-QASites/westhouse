@@ -71,13 +71,14 @@ $font-reg: "Open Sans",sans-serif;
                	    -ms-transform: translateY(-50%);
                	    transform: translateY(-50%);
                	    text-align: center;
-               	    padding: 20px;
-               	    font-size: 1.9rem;
+               	    padding: 12px;
+               	    font-size: 1.2rem;
                	    a{
-                      font-size: 1.4rem;
+                      font-size: 1.2rem;
                	    	text-decoration: none;
                	    	color: $white;
-                      font-family: $font-fam;
+                      font-family: $primary-light;
+                      text-transform: uppercase;
                	    }
                 } 
 			}
