@@ -1,0 +1,38 @@
+---
+layout: default
+title: FAQ of the WestHouse Hotel Website
+meta_description: Take a look at the FAQ of the WestHouse Hotel Website before you complete your booking on our Official Website.
+permalink: /faq/
+meta_tags:
+  robots: noindex, nofollow
+---
+
+<div class="inner-banner pattern bg-cover" style="background-image: url('/assets/images/home/westhouse-hotel-new-york-entrance.jpg');">
+  <h1>FAQ</h1>
+</div>
+
+{% include booking-widget.html %}
+
+<section class="common-details">
+  <div class="common-details-container">
+    <div class="common-details-row">
+      <div class="common-content">
+
+        {% regionblock faq_text, type:text %}
+          <ul class="bullet-list">
+            <li>A valid credit card must be presented upon arrival, and you must be over 21 years of age to check-in. In the event that you need to modify or cancel your reservation, please do so by the time noted in the cancellation policy below prior to your arrival in order to avoid a cancellation fee.</li>
+            <li>A Residents Fee of $47.00 (plus taxes) per adult, per night will be charged in addition to the room rate and will be charged upon check-in at the hotel.</li>
+            <li>This fee provides for the following privileges through the stay:</li>
+            <li>Daily sweet & savory breakfast presentation, Barista bar and non-alcoholic beverages, evening light fare, a curated selection of alcoholic beverages every evening.</li>
+            <li>Wi-Fi and local calls, 24-hour Fitness Center, 24-hour business center services, Bottled water in-room, daily housekeeping, including nightly turndown service upon request.</li>
+            <li>The hotel's 48-hour standard cancellation policy allows cancellation by 3 P.M. the day prior to arrival with no penalty. After this time, the credit card on file will be charged the first night's room rate plus taxes & fees. In the event you change your plans, you must cancel or change your hotel reservation in accordance with the hotel's cancellation policy to avoid penalties.</li>
+          </ul>
+        {% endregionblock %}
+
+        {% regionblock faq_text1, type:text %}
+          <p><strong>Cancellation penalties will be charged TO the credit card ON FILE according TO the terms OF the booked rate, IN the amount OF: $ 496.00</strong></p>
+        {% endregionblock %}
+      </div>
+    </div>
+  </div>
+</section>
