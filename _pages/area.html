@@ -36,16 +36,17 @@ meta_tags:
   </div>
 </section>
 
-<div class="neighborhoodmap">
-
+<div class="neighborhoodmap"> 
   {% for location in site.data._models.neighborhood-locations %}
     <div id="infocontainerB{{ location.url_friendly_name }}" class="infocontainer">
+
       <img src="{{ location.image.url }}" alt="{{ location.image.alt }}">
-      <h2>{{ location.title }}</h2>
+      <h2><a href="{{ location.Outbound_Link }}" rel="nofollow" target="_blank">{{ location.title }}</a>
+        </h2>
       <a href="#" class="closer"><i class="fa fa-times"></i></a>
       <div class="clear"></div>
       <div class="neighborhood">
-        <h3>{{ location.category.name }}</h3>
+        <h3>  {{ location.category.title }} </h3>
       </div>
     </div>
   {% endfor %}
