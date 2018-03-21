@@ -40,19 +40,23 @@ meta_tags:
     </div>
 </section>
 
-
 <section class="container offers-listing ppc-offers-list">
     <div class="row">
     	{% for offer in site.data._models.ppc-offers %}
 	    	<div class="col-lg-4">
 	            <div class="offer-item">
 	                <div class="offer-image bg-cover" style="background-image: url({{offer.image.url}})">
-	                    <p class="floating-price">$200</a>
+	                    <p class="floating-price">$200</p>
 	                </div>
-	                <h2><a href="/ppc-offer/#{{offer.url_friendly_name}}" >{{offer.title}}</a></h2>
+	                <h2><a href="javascript:void(0);" class="show-details" >{{offer.title}}</a></h2>
 	                <p>{{offer.short_description}}</p>
 	                <div class="btn-holder">
-	                    <a href="/ppc-offer/#{{offer.url_friendly_name}}" class="btn-empty">Read More +</a>
+	                    <a href="javascript:void(0);" class="btn-empty show-details">Read More +</a>
+	                </div>
+	                <div class="full-description">
+	                	<span class="close">&times;</span>
+	                	<h4 class="details-header">Offer Details</h4>
+	                	{{offer.full_description}}
 	                </div>
 	            </div>
 	        </div>       

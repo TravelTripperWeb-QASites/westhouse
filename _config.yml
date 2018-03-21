@@ -110,7 +110,4 @@ page_gen:
     dir: 'attractions'
   - data: 'culinary-guide'
     template: 'culinary-single'
-    dir: 'things-to-do-in-nyc/culinary-guide'  
-  - data: 'ppc-offers'
-    template: 'ppc-offer-single'
-    dir: 'ppc-offer-single'
+    dir: 'things-to-do-in-nyc/culinary-guide'

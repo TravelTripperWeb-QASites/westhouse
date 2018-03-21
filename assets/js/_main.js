@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+  $(document).on("click", ".ppc-offers-list .offer-item .show-details", function(){
+    $(this).closest(".offer-item").find(".full-description").slideDown(300);
+    $(this).closest(".offer-item").find(".btn-holder .show-details").slideUp(100);
+  });
+
+  $(document).on("click", ".offer-item .full-description .close", function(){
+    $(this).closest(".offer-item").find(".full-description").slideUp(300);
+    $(this).closest(".offer-item").find(".btn-holder .show-details").slideDown(100);
+  });
+
   $('#map-side-bar li').on('click', function(e) {
     e.preventDefault();
     $('#map-side-bar').find('li').removeClass('active');
