@@ -63,6 +63,9 @@
 
 .ppc-offers-list{
 	.offer-item{
+		p{
+			margin-bottom: 0px;
+		}
 		.floating-price{			
 			position: absolute;
 			width: 150px;
@@ -94,6 +97,7 @@
 				font-size: 1rem;
 			}
 			ul{
+				margin-bottom: 15px;
 				li{
 					position: relative;
 					color: $primary;
