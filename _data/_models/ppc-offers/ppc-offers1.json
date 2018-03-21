@@ -1,0 +1,31 @@
+{
+  "title": "Web",
+  "seo_title": "PPC Web",
+  "seo_description": "Room, tax and fee will be charged upon booking; reservation is non-refundable and does not allow date changes. Rooms purchased in advance are not transferable and may not be resold",
+  "url_friendly_name": "ppc-web",
+  "offer_code": "PPCWEB",
+  "short_description": "Room, tax and fee will be charged upon booking; reservation is non-refundable and does not allow date changes. Rooms purchased in advance are not transferable and may not be resold",
+  "full_description": "<p>Room, tax and fee will be charged upon booking; reservation is non-refundable and does not allow date changes. Rooms purchased in advance are not transferable and may not be resold</p>\n<p>A nightly Residents Fee of $47 plus tax per adult is conveniently added to your folio and covers a vast array of bespoke, and unlimited, InResidence privileges:</p>\n<ul>\n<li>Sweet and savory breakfast presentations</li>\n<li>Barista bar and non-alcoholic beverages available all day</li>\n<li>Hours of Indulgence, light fare and curated selection of alcoholic beverages served daily</li>\n<li>High-speed Wi-Fi access</li>\n<li>Local and toll-free phone calls</li>\n<li>24-hour Fitness Center, on the 3rd floor</li>\n<li>24-hour business center services</li>\n<li>Bottled water in-room</li>\n</ul>",
+  "image": {
+    "name": "people-said-about-us",
+    "file_name": "people-said-about-us.jpg",
+    "file_type": "image/jpeg",
+    "url": "//cdn.traveltripper.io/site-assets/192_368_10598/media/2017-12-29-014949/people-said-about-us.jpg",
+    "tags": "",
+    "file_size": 161544,
+    "width": 1000,
+    "height": 666,
+    "description": "",
+    "date_added": "2017-12-29-014949",
+    "url_large": "//cdn.traveltripper.io/site-assets/192_368_10598/media/2017-12-29-014949/large_people-said-about-us.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_368_10598/media/2017-12-29-014949/medium_people-said-about-us.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_368_10598/media/2017-12-29-014949/small_people-said-about-us.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_368_10598/media/2017-12-29-014949/xsmall_people-said-about-us.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_368_10598/media/2017-12-29-014949/thumb_people-said-about-us.jpg",
+    "git_file_name": "_assets/image_data/people-said-about-us.json",
+    "path": "//cdn.traveltripper.io/site-assets/192_368_10598/media/2017-12-29-014949/people-said-about-us.jpg",
+    "alt": "ppc-web",
+    "caption": ""
+  },
+  "sort_order": 1
+}
