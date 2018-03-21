@@ -41,43 +41,21 @@ meta_tags:
 </section>
 
 
-<section class="container offers-listing">
+<section class="container offers-listing ppc-offers-list">
     <div class="row">
-    	<div class="col-lg-4">
-            <div class="offer-item">
-                <div class="offer-image bg-cover" style="background-image: url(https://d31f902anbz5po.cloudfront.net/354/62785_2_master.jpg)">
-                    <a ng-href="https://westhousehotelnewyork.reztrip.com/en/special_offer?rate_code=HENRI1" class="floating-btn" target="_blank" href="https://westhousehotelnewyork.reztrip.com/en/special_offer?rate_code=HENRI1">Book Now</a>
-                </div>
-                <h2><a href="/offer/#shop-in-suite-style" >Shop in ‘Suite’ Style </a></h2>
-                <p>Book a suite with us and enjoy a $100 gift card from Henri Bendel and more.</p>
-                <div class="btn-holder">
-                    <a href="/offer/#shop-in-suite-style" class="btn-empty" href="/offer/#shop-in-suite-style">Read More +</a>
-                </div>
-            </div>
-        </div>
-    	<div class="col-lg-4">
-            <div class="offer-item">
-                <div class="offer-image bg-cover" style="background-image: url(https://d31f902anbz5po.cloudfront.net/354/62785_2_master.jpg)">
-                    <a ng-href="https://westhousehotelnewyork.reztrip.com/en/special_offer?rate_code=HENRI1" class="floating-btn" target="_blank" href="https://westhousehotelnewyork.reztrip.com/en/special_offer?rate_code=HENRI1">Book Now</a>
-                </div>
-                <h2><a href="/offer/#shop-in-suite-style" >Shop in ‘Suite’ Style </a></h2>
-                <p>Book a suite with us and enjoy a $100 gift card from Henri Bendel and more.</p>
-                <div class="btn-holder">
-                    <a href="/offer/#shop-in-suite-style" class="btn-empty" href="/offer/#shop-in-suite-style">Read More +</a>
-                </div>
-            </div>
-        </div>
-    	<div class="col-lg-4">
-            <div class="offer-item">
-                <div class="offer-image bg-cover" style="background-image: url(https://d31f902anbz5po.cloudfront.net/354/62785_2_master.jpg)">
-                    <a ng-href="https://westhousehotelnewyork.reztrip.com/en/special_offer?rate_code=HENRI1" class="floating-btn" target="_blank" href="https://westhousehotelnewyork.reztrip.com/en/special_offer?rate_code=HENRI1">Book Now</a>
-                </div>
-                <h2><a href="/offer/#shop-in-suite-style" >Shop in ‘Suite’ Style </a></h2>
-                <p>Book a suite with us and enjoy a $100 gift card from Henri Bendel and more.</p>
-                <div class="btn-holder">
-                    <a href="/offer/#shop-in-suite-style" class="btn-empty" href="/offer/#shop-in-suite-style">Read More +</a>
-                </div>
-            </div>
-        </div>        
+    	{% for offer in site.data._models.ppc-offers %}
+	    	<div class="col-lg-4">
+	            <div class="offer-item">
+	                <div class="offer-image bg-cover" style="background-image: url({{offer.image.url}})">
+	                    <p class="floating-price">$200</a>
+	                </div>
+	                <h2><a href="/ppc-offer/#{{offer.url_friendly_name}}" >{{offer.title}}</a></h2>
+	                <p>{{offer.short_description}}</p>
+	                <div class="btn-holder">
+	                    <a href="/ppc-offer/#{{offer.url_friendly_name}}" class="btn-empty">Read More +</a>
+	                </div>
+	            </div>
+	        </div>       
+        {% endfor %}
     </div>
 </section>

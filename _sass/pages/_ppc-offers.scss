@@ -60,3 +60,18 @@
 		}
 	}
 }
+
+.ppc-offers-list{
+	.offer-item{
+		.floating-price{			
+			position: absolute;
+			width: 150px;
+			text-align: center;
+			background-color: #000000;
+			color: #FFF;
+			padding: 10px 0 10px 0;
+			bottom: 0;
+			right: 0;
+		}
+	}
+}
