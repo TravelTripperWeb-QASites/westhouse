@@ -7,12 +7,17 @@ meta_tags:
   robots:
 ---
 <div class="inner-banner pattern bg-cover" style="background-image: url('/assets/images/ppc/ppc-banner.jpg');">
-  	<h1>PPC Offers</h1>
+	{% regionblock ppc_offers_heading, type:header %}
+  		<h1>PPC Offers</h1>
+	{% endregionblock %}
 </div>
 <section class="container ppc-offers-intro text-center">
-	<p>Westhouse is please to welcome you to your new <i>House away from home</i>. <br> 
-		<span>Enjoy these exclusive promotion we selected- only on our website. </span></p>
-	<h2>Select your stay date and discover the best offer for you</h2>	
+	{% regionblock ppc_offers_text_1, type:text %}
+		<p>Westhouse is please to welcome you to your new <i>House away from home</i>. <br><span>Enjoy these exclusive promotion we selected- only on our website. </span></p>
+	{% endregionblock %}
+	{% regionblock ppc_offers_heading_2, type:header %}
+		<h2>Select your stay date and discover the best offer for you</h2>
+	{% endregionblock %}	
 </section>
 <section class="offers-filter">
     <div class="booking-widget-container">
