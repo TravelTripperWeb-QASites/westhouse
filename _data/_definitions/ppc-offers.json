@@ -9,9 +9,6 @@
     "type": "text",
     "required": true
   },
-  "url_friendly_name": {
-    "type": "url_slug"
-  },
   "offer_code": {
     "type": "text",
     "required": true
