@@ -13,6 +13,10 @@
     "type": "text",
     "required": true
   },
+  "room_code": {
+    "type": "text",
+    "required": true
+  },
   "short_description": {
     "type": "text",
     "required": true

@@ -4,7 +4,8 @@
   "seo_description": "Room, tax and fee will be charged upon booking; reservation is non-refundable and does not allow date changes. Rooms purchased in advance are not transferable and may not be resold",
   "short_description": "Room, tax and fee will be charged upon booking; reservation is non-refundable and does not allow date changes. Rooms purchased in advance are not transferable and may not be resold",
   "full_description": "<p>A nightly Residents Fee of $47 plus tax per adult is conveniently added to your folio and covers a vast array of bespoke, and unlimited, InResidence privileges:</p>\n<ul>\n<li>Sweet and savory breakfast presentations</li>\n<li>Barista bar and non-alcoholic beverages available all day</li>\n<li>Hours of Indulgence, light fare and curated selection of alcoholic beverages served daily</li>\n<li>High-speed Wi-Fi access</li>\n<li>Local and toll-free phone calls</li>\n<li>24-hour Fitness Center, on the 3rd floor</li>\n<li>24-hour business center services</li>\n<li>Bottled water in-room</li>\n</ul>\n<p>The Residence fee is not inclusive of service gratuities.</p>\n<p>Guarantee/Deposit and Change/Cancellation Fees will depend on selected dates and room/rate combination.</p>",
-  "offer_code": "PPCLOS",
+  "offer_code": "PPCPKG",
+  "room_code": "WHQL",
   "url_friendly_name": "ppc-celebratory",
   "image": {
     "name": "WestHouse-NH-TopOfRock",

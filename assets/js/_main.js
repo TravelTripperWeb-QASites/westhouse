@@ -62,8 +62,8 @@ $(document).ready(function() {
   var new_date = new Date();
   var defaultformatteddate1 = $.datepicker.formatDate("yy-mm-dd", new_date);
   var defaultformatteddate2 = $.datepicker.formatDate("yy-mm-dd", new Date(new_date.setDate(new_date.getDate() + 1)));
-  $("#arrival_dates").val(defaultformatteddate1);
-  $("#departure_dates").val(defaultformatteddate2);
+  $("#arrival_dates, #arrival_date").val(defaultformatteddate1);
+  $("#departure_dates, #departure_date").val(defaultformatteddate2);
 
   $('.merch-copy .button1').attr('href', 'https://westhousehotelnewyork.reztrip.com/search?arrival_date=' + defaultformatteddate1 + '&departure_date=' + defaultformatteddate2);
 
