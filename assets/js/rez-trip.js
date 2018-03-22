@@ -131,7 +131,7 @@
                 $scope.ratePlans[offer.offer_code].price = '';
                 $scope.ratePlans[offer.offer_code].urlParams = '?rate_code='+offer.offer_code+'&arrival_date='+arrival_date+'&departure_date='+departure_date+'&adults[]='+adults+'&children[]='+children+'&room_id='+offer.room_code;
                 $q.when(rt3api.getRatePlans(params)).then(function(response) {
-                      $(".floating-price").removeClass('loading-dots');
+                      $(".floating-price").show().removeClass('loading-dots');
                       $scope.noprice = 'NA';
                       if(response.code) {
                           $scope.ratePlans[response.code].price = '$' + Math.round(response.average_discounted_nightly_price || response.average_nightly_price);

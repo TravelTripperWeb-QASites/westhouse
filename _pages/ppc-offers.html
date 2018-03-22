@@ -67,11 +67,11 @@ meta_tags:
             <input type="hidden" name="offers_code[]" value="{{offer.offer_code}}" data-roomcode= "{{offer.room_code}}" />
 	    	<div class="col-lg-4">
 	            <div class="offer-item">
-                    <a ng-href="{{site.reztripUrl}}search[[ ratePlans.{{offer.offer_code}}.urlParams ]]" >
+                    <a ng-href="{{site.reztripUrl}}search[[ ratePlans.{{offer.offer_code}}.urlParams ]]" target="_blank">
     	                <div class="offer-image bg-cover" style="background-image: url({{offer.image.url}})">
-    	                    <p class="floating-price">[[ ratePlans.{{offer.offer_code}}.price || noprice]]</p>
-                            <a href="/" class="common-btn">Book Now</a>
-                            <!-- <p class="price-loading " ng-hide="ratePlans.{{offer.offer_code}}.price"></p> -->
+    	                    <p class="floating-price" style="display:none">[[ ratePlans.{{offer.offer_code}}.price || noprice]]</p>
+                            <a ng-href="{{site.reztripUrl}}search[[ ratePlans.{{offer.offer_code}}.urlParams ]]"  class="common-btn">Book Now</a>
+
     	                </div>
                     </a>
 	                <h2><a ng-href="{{site.reztripUrl}}search[[ ratePlans.{{offer.offer_code}}.urlParams ]]" class="show-details" >{{offer.title}}</a></h2>
