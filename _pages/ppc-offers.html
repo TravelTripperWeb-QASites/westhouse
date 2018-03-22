@@ -33,7 +33,7 @@ meta_tags:
                     <input type="text" name="departure_date" id="departure_date" class="date-field" placeholder="Daparture Date" aria-label="Departure Date">
                 </div>
                 <div class="input-holder">
-                    <select class="input-holder" name="adults" id="adults">
+                    <select name="adults" id="adults">
                         <option value="1"> 1 GUEST</option>
                         <option value="2"> 2 GUESTS</option>
                         <option value="3"> 3 GUESTS</option>
@@ -43,7 +43,7 @@ meta_tags:
                     <!-- <input type="number" id="adults" name="adults" placeholder="No. of Adults"> -->
                 </div>
                 <div class="input-holder">
-                    <select class="input-holder" name="children" id="children">
+                    <select name="children" id="children">
                         <option value="0"> 0 Children</option>
                         <option value="1"> 1 Child</option>
                         <option value="2"> 2 Children</option>
@@ -70,6 +70,7 @@ meta_tags:
                     <a ng-href="{{site.reztripUrl}}search[[ ratePlans.{{offer.offer_code}}.urlParams ]]" >
     	                <div class="offer-image bg-cover" style="background-image: url({{offer.image.url}})">
     	                    <p class="floating-price">[[ ratePlans.{{offer.offer_code}}.price || noprice]]</p>
+                            <a href="/" class="common-btn">Book Now</a>
                             <!-- <p class="price-loading " ng-hide="ratePlans.{{offer.offer_code}}.price"></p> -->
     	                </div>
                     </a>
