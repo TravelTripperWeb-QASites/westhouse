@@ -1,12 +1,12 @@
 {
-  "title": "Web",
-  "seo_title": "PPC Web",
-  "seo_description": "Book Direct and an additional discount!",
+  "title": "Website Exclusive",
+  "seo_title": "Website Exclusive",
+  "seo_description": "Enjoy our best available rates only when you book on our website.",
   "url_friendly_name": "ppc-web",
   "offer_code": "PPCWEB",
   "room_code": "WHQL",
-  "short_description": "Book Direct and an additional discount!",
-  "full_description": "<p>A nightly Residents Fee of $47 plus tax per adult is conveniently added to your folio and covers a vast array of bespoke, and unlimited, InResidence privileges:</p>\n<ul>\n<li>Sweet and savory breakfast presentations</li>\n<li>Barista bar and non-alcoholic beverages available all day</li>\n<li>Hours of Indulgence, light fare and curated selection of alcoholic beverages served daily</li>\n<li>High-speed Wi-Fi access</li>\n<li>Local and toll-free phone calls</li>\n<li>24-hour Fitness Center, on the 3rd floor</li>\n<li>24-hour business center services</li>\n<li>Bottled water in-room</li>\n</ul>\n<p>The Residence fee is not inclusive of service gratuities.</p>\n<p>Guarantee/Deposit and Change/Cancellation Fees will depend on selected dates and room/rate combination.</p>",
+  "short_description": "Enjoy our best available rates only when you book on our website.",
+  "full_description": "<p>Don&rsquo;t just day dream about your next vacation, book now and start planning your New York getaway in the city that never sleeps! To thank you for booking directly on our website we are offering you an extra discount along with 3 complimentary perks!</p>",
   "image": {
     "name": "people-said-about-us",
     "file_name": "people-said-about-us.jpg",
@@ -28,5 +28,5 @@
     "alt": "ppc-web",
     "caption": ""
   },
-  "sort_order": 1
+  "sort_order": 3
 }
