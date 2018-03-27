@@ -70,7 +70,7 @@ meta_tags:
                     <a ng-href="{{site.reztripUrl}}search[[ ratePlans.{{offer.offer_code}}.urlParams ]]" >
     	                <div class="offer-image bg-cover" style="background-image: url({{offer.image.url}})">
     	                    <p class="floating-price">[[ ratePlans.{{offer.offer_code}}.price || noprice]]</p>
-                            <a href="/" class="common-btn">Book Now</a>
+                            <a ng-href="{{site.reztripUrl}}search[[ ratePlans.{{offer.offer_code}}.urlParams ]]" class="common-btn" target="_blank">Book Now</a>
                             <!-- <p class="price-loading " ng-hide="ratePlans.{{offer.offer_code}}.price"></p> -->
     	                </div>
                     </a>
