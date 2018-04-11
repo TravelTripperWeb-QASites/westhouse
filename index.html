@@ -7,21 +7,30 @@ meta_tags:
   robots:
 ---
 
-<section class="hero-banner-section pattern hero-bg">
-  <div class="hero-banner-container bg-cover" style="background-image: url(/assets/images/westhouse-model-exterior.jpg);"></div>
+<section class="hero-banner-section pattern hero-bg mb-5">
+  <div class="hero-banner-container bg-cover" style="background-image: url(/assets/images/westhouse-model-exterior.jpg);">
+    <div class="home-banner">
+      {% regionblock welcome_heading, type:header %}
+        <h1>Welcome to Westhouse Hotel New York</h1>
+      {% endregionblock %}
+      {% regionblock welcome_text, type:text %}
+        <p>Your home away from home when you visit New York City.</p>
+      {% endregionblock %}
+    </div>
+  </div>
  <!--  <div class="nyc-finalist">
     <img src="/assets/images/nyc-finalist.png" alt="NYC FINALIST">
   </div> -->
 </section>
 
-<section class="welcome">
+<!--<section class="welcome">
   {% regionblock welcome_heading, type:header %}
     <h1>WELCOME TO WESTHOUSE HOTEL NEW YORK</h1>
   {% endregionblock %}
   {% regionblock welcome_text, type:text %}
     <p>Your home away from home when you visit New York City.</p>
   {% endregionblock %}
-</section>
+</section>-->
 
 
 <section class="hotel-info carousel-common">
