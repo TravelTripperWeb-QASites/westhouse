@@ -221,11 +221,11 @@
     }
 }
 .tripadvisor {
-    background-color: $grey;
-    padding: 4.500em 15px;
     text-align: center;
+    @extend .container;
     .tripadvisor-container {
-        @extend .container;
+      background-color: $grey;
+      padding: 3em 15px 4.500em;
     }
     .tripadvisor-row {
         @include make-row();
@@ -260,6 +260,12 @@
             left: 0;
             margin: 0;
             bottom: -2rem;
+          }
+          .carousel-control-prev{
+            left: 0;
+          }
+          .carousel-control-next{
+            right: 0;
           }
     }
 }

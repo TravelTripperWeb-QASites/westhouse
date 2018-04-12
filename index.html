@@ -7,7 +7,7 @@ meta_tags:
   robots:
 ---
 
-<section class="hero-banner-section pattern hero-bg mb-5">
+<section class="hero-banner-section pattern hero-bg">
   <div class="hero-banner-container bg-cover" style="background-image: url(/assets/images/westhouse-model-exterior.jpg);">
     <div class="home-banner">
       {% regionblock welcome_heading, type:header %}
@@ -32,6 +32,48 @@ meta_tags:
   {% endregionblock %}
 </section>-->
 
+<section class="tripadvisor carousel-common mb-5">
+  <div class="tripadvisor-container">
+    <div id="trpadvisor-carousel" class="main-carousel carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        {% for tripadvisor in site.data._models.tripadvisor %}
+          <li data-target="#trpadvisor-carousel" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+
+      <div class="carousel-inner">
+        {% for tripadvisor in site.data._models.tripadvisor %}
+          <div class="carousel-item{% if forloop.first == true %} active{% endif %}">
+            <div class="trip-logo">
+              <img src="/assets/images/tripadvisory.png" alt="TripAdvisor">
+            </div>
+            <div class="trip-comment">
+              <p>{{ tripadvisor.contents }}</p>
+            </div>
+            <div class="tripadvisor-author">
+              <p>{{ tripadvisor.credit }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <a class="carousel-control-prev" href="#trpadvisor-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true">
+          <img src="/assets/images/prev.png" alt="Previous Slide">
+        </span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#trpadvisor-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true">
+          <img src="/assets/images/next.png" alt="Next Slide">
+        </span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 <section class="hotel-info carousel-common">
   <div class="hotel-info-container">
@@ -197,49 +239,6 @@ meta_tags:
           {% endregionblock %}
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="tripadvisor carousel-common">
-  <div class="tripadvisor-container">
-    <div id="trpadvisor-carousel" class="main-carousel carousel slide" data-ride="carousel">
-
-      <ol class="carousel-indicators">
-        {% for tripadvisor in site.data._models.tripadvisor %}
-          <li data-target="#trpadvisor-carousel" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
-        {% endfor %}
-      </ol>
-
-      <div class="carousel-inner">
-        {% for tripadvisor in site.data._models.tripadvisor %}
-          <div class="carousel-item{% if forloop.first == true %} active{% endif %}">
-            <div class="trip-logo">
-              <img src="/assets/images/tripadvisory.png" alt="TripAdvisor">
-            </div>
-            <div class="trip-comment">
-              <p>{{ tripadvisor.contents }}</p>
-            </div>
-            <div class="tripadvisor-author">
-              <p>{{ tripadvisor.credit }}</p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-
-      <a class="carousel-control-prev" href="#trpadvisor-carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true">
-          <img src="/assets/images/prev.png" alt="Previous Slide">
-        </span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#trpadvisor-carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true">
-          <img src="/assets/images/next.png" alt="Next Slide">
-        </span>
-        <span class="sr-only">Next</span>
-      </a>
-
     </div>
   </div>
 </section>
