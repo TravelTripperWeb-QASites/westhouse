@@ -347,12 +347,33 @@
   h1{
     position: relative;
     text-align: center;
-    text-shadow: 0 0 16px $black;
+    text-shadow: 0 0 10px $black;
+    font-family: $primary-light;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(lg){
+      font-size: 3.5rem;
+      text-shadow: 0 0 16px $black;
+    }
   }
   p{
     color: $white;
     text-align: center;
     font-weight: bold;
     text-shadow: 0 0 10px $black;
+    font-size: 2rem;
+    transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    line-height: normal;
+    padding: 0 20px;
+    @include media-breakpoint-up(lg){
+      font-size: 3rem;
+      text-shadow: 0 0 16px $black;
+      padding: 0 100px;
+    }
   }
 }
