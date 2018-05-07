@@ -1,16 +1,17 @@
 .special-banner-bar {
   max-width: 100%;
-  margin: 0 auto;
-  padding: 15px 0;
+  margin: 2px auto;
+  padding: 10px 0;
   text-align: center;
-  background-color: #161515;
+  background-color: $paragraph;
   h2,a {
     display: inline-block;
     margin: 0 15px;
     vertical-align: middle;
   }
   h2 {
-    font-size: $type-size-5;
+    font-family: $primary-light;
+    font-size: $type-size-6;
     line-height: 1.3rem;
     color: $white;
     text-transform: uppercase;
@@ -19,7 +20,9 @@
     }
   }
   a {
-    display: inline-block;
+    padding: 5px 17px;
+    font-family: $primary-light;
+    font-size: $type-size-10;
     color: $white;
     text-shadow: none;
     text-transform: uppercase;
