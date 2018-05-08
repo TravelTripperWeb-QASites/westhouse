@@ -209,6 +209,55 @@ $(document).ready(function() {
     $('.merch-sec').removeClass('slideup');
   });
 
+  //Offer Promo Popup
+
+  function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+   var nowTime = new Date().getTime();
+    
+   var exposedofferPopup = localStorage.getItem('exposedofferPopup');
+   if (!exposedofferPopup) {
+       $('.message').css('display', 'none');
+       $('.promo-code-reminder').css('display', 'none');
+       $('.signup').css('display', 'block');
+   } else {
+       $('.message').css('display', 'none');
+       $('.promo-code-reminder').css('display', 'none');
+       $('.unlock').css('display', 'none');
+   } 
+   /*$('#mclose').click(function(){
+       document.location.href = '/';
+   });*/
+  if($.cookie('signupTime')){
+       if($.cookie('signupTime')){
+           $('.promo-code-reminder').css('display', 'block');
+       }
+   }
+   /*$('#mclose').click(function(){
+       document.location.href = '/';
+   });*/
+   if (getParameterByName('submit')) {
+       if (getParameterByName('submit') == 'success') {
+           if(!$.cookie('signupTime')){
+               $.cookie('signupDone', '1', { expires: 5, url:'/'});
+               $.cookie('signupTime', '1', { expires: 3, url:'/'}); 
+           }
+           localStorage.setItem('exposedofferPopup', true);
+           $('.message').css('display', 'block');
+           $('.promo-code-reminder').css('display', 'block');
+           $('.signup').css('display', 'none');
+           $('#offer-promo-popup').modal('show');
+           $('.unlock').css('display', 'none');
+       }
+   }
+
 });
 
 $(function() {
@@ -304,4 +353,5 @@ if($('#fb-root').length){
     document.getElementById('fb-root').appendChild(e);
   }());
 }
+
 
