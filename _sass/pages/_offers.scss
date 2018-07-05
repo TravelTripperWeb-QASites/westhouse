@@ -70,3 +70,18 @@
   }
 
 }
+
+.web-exc-aminities {
+  ul {
+    li {
+      list-style: disc;
+    }
+  }
+}
+
+.offers-aminities {
+  @include media-breakpoint-down(sm) {
+  margin-right: 15px;
+  margin-left: 15px;
+ }
+}
