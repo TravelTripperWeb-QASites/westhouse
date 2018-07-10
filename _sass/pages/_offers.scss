@@ -75,17 +75,14 @@
   ul {
     margin-left: 15px;
     li {
-      list-style: disc;
-      width: fit-content;
-      text-align: center;
       margin: 12px auto;
-      list-style-position: inside;
+      list-style: disc;
     }
   }
   p {
-      display: block;
-      text-align: center;
-      width: 100%;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
 
