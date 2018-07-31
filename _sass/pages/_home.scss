@@ -11,6 +11,63 @@
     @include media-breakpoint-up(md){
         height: 580px;
     }
+
+    .caption-price {
+      position: absolute;
+      // bottom: 136px;
+      right: 0;
+      bottom: 80px;
+      left: 0;
+      text-align: center;
+      text-transform: none;
+      // @media(max-width: 768px) {
+      //   bottom: 147px;
+      // }
+    }
+
+    .price-holder {
+      display: inline-block;
+      margin-right: 1px;
+      padding: 1px 20px;
+      font-family: $primary-medium;
+      font-size: 15px;
+      color: $black;
+      letter-spacing: 1px;
+      vertical-align: middle;
+      background-color: $white-bg;
+      @include media-breakpoint-down(sm) {
+        font-family: $primary-light;
+      }
+      @media (max-width: 1023px) {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+
+      .recentBookingNo {
+        display: inline-block;
+        // margin-top: 9px;
+        padding-right: 18px;
+        font-size: 30px;
+        color: $dark-red;
+        vertical-align: middle;
+        @media (max-width: 1023px) {
+          padding-right: 8px;
+          font-size: 20px;
+        }
+      }
+
+      .recentBookingText {
+        display: inline-block;
+        padding-top: 5px;
+        vertical-align: middle;
+      }
+      @include media-breakpoint-down(sm) {
+        &.tonight {
+          margin-top: 1px;
+        }
+      }
+    }
+
     .hero-banner-container {
         @include absolute(0,0,0,0,100%,100%); // (top,right,bottom,left,width,height)
         @include animation-fill-mode (both);

@@ -18,7 +18,11 @@ meta_tags:
         <p>Your home away from home when you visit New York City.</p>
       {% endregionblock %}
       {% endcomment %}
+
     </div>
+  </div>
+  <div class="caption-price" rt3-recent-bookings="recentBookings" ng-cloak>
+    <span class="price-holder" ng-show="recentBookings.totalBookings > 5"><span class="recentBookingNo">[[ recentBookings.totalBookings ]]</span><span class="recentBookingText">People booked our hotel in the last 2 days</span></span>
   </div>
  <!--  <div class="nyc-finalist">
     <img src="/assets/images/nyc-finalist.png" alt="NYC FINALIST">
