@@ -312,7 +312,9 @@ $(document).ready(function() {
      // immediately fire it to initialize buttons state
      .keyup();
 
-
+     setTimeout(function() {
+       $(".caption-price").show();
+     }, 2500);
 
 });
 
