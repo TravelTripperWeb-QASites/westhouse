@@ -541,6 +541,10 @@
   background-repeat: no-repeat;
 }
 #leaflet-map {
+  z-index: 9;
+  .leaflet-top {
+    z-index: 10;
+  }
   .leaflet-popup-content-wrapper {
     border-radius: 0 !important;
     h4 {
