@@ -21,9 +21,28 @@ meta_tags:
 
     </div>
   </div>
-  <div class="caption-price" rt3-recent-bookings="recentBookings" style="display: none">
-    <span class="price-holder" ng-show="recentBookings.totalBookings > 5"><span class="recentBookingNo">[[ recentBookings.totalBookings ]]</span><span class="recentBookingText">People booked our hotel in the last 2 days</span></span>
-  </div>
+  <section class="brg-widget" style="display: none">
+    <div class="caption-price" rt3-recent-bookings="recentBookings" >
+      <span class="price-holder" ng-show="recentBookings.totalBookings > 5"><span class="recentBookingNo">[[ recentBookings.totalBookings ]]</span><span class="recentBookingText">People booked our hotel in the last 2 days</span></span>
+    </div>
+    <div class="price-wrap" ng-show="browser.isRate">
+    <div class="best-rate-ota" ng-show="browser.otaRates.brgFound">
+      <div class="boxes">
+
+        <div class="tonight-rate ">
+          <p>Best Price Available</p>
+          <h4>Tonight's Rate <a href="{{ site.reztripUrl }}search" target="_blank"  class="homeTonightRate" ><span class="price">[[ portalInfo.default_currency_symbol ]][[ browser.toNightsRate ]]</span></a></h4>
+        </div>
+
+        <div class="ota-list">
+          <ul>
+            <li ng-repeat="(key, value) in browser.otaRates.brg">[[ key ]] <span>[[ portalInfo.default_currency_symbol ]][[ value ]]</span></li>
+          </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
  <!--  <div class="nyc-finalist">
     <img src="/assets/images/nyc-finalist.png" alt="NYC FINALIST">
   </div> -->
