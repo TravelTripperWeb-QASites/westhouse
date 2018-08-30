@@ -30,8 +30,13 @@ meta_tags:
       <div class="boxes">
 
         <div class="tonight-rate ">
-          <p>Best Price Available</p>
-          <h4>Tonight's Rate <a href="{{ site.reztripUrl }}search" target="_blank"  class="homeTonightRate" ><span class="price">[[ portalInfo.default_currency_symbol ]][[ browser.toNightsRate ]]</span></a></h4>
+          <div class="left-text">
+            <p>Best Price Available</p>
+            <h4>Tonight's Rate</h4>
+          </div>
+          <div class="link">
+            <a href="{{ site.reztripUrl }}search" target="_blank"  class="homeTonightRate" ><span class="price">[[ portalInfo.default_currency_symbol ]][[ browser.toNightsRate ]]</span></a>
+          </div>
         </div>
 
         <div class="ota-list">
