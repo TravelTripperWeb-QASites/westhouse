@@ -18,6 +18,7 @@
       bottom: 0;
       max-width: 680px;
       margin: 0 auto;
+      z-index: 9;
     }
     .caption-price {
       // position: absolute;
@@ -52,6 +53,7 @@
       }
 
       .recentBookingNo {
+        font-family: $primary-medium;
         display: inline-block;
         // margin-top: 9px;
         padding-right: 18px;
@@ -61,6 +63,10 @@
         @media (max-width: 1023px) {
           padding-right: 8px;
           font-size: 20px;
+        }
+        @media (max-width: 380px) {
+          padding-right: 0;
+          text-align: center;
         }
       }
 
@@ -111,15 +117,12 @@
             .left-text {
               display: inline-block;
               p {
-                margin: 0;
+                margin: 0 0 10px 0;
                 padding: 0;
                 font-size: 14px;
-                line-height: 10px;
+                line-height: 16px;
                 color: $white-bg;
                 text-align: left;
-                @media(max-width: 350px) {
-                  display: none;
-                }
               }
 
               h4 {
@@ -137,17 +140,7 @@
 
 
 
-                .price {
-                  padding: 10px 10px 5px;
-                  font-size: 30px;
-                  color: $dark-red;
-                  border: solid 1px #dec7a5;
-                  @media(max-width: 650px) {
-                    display: inline-block;
-                    float: none;
-                    margin-top: 10px;
-                  }
-                }
+
               }
             }
             .link {
@@ -163,6 +156,17 @@
                   font-size: 20px;
                 }
               }
+              // .price {
+              //   padding: 10px 10px 5px;
+              //   font-size: 30px;
+              //   color: $dark-red;
+              //   border: solid 1px #dec7a5;
+              //   @media(max-width: 650px) {
+              //     display: inline-block;
+              //     float: none;
+              //     margin-top: 10px;
+              //   }
+              // }
             }
           }
 
