@@ -19,6 +19,9 @@
       max-width: 680px;
       margin: 0 auto;
       z-index: 9;
+      @include media-breakpoint-up(md) {
+        bottom: 65px;
+      }
     }
     .caption-price {
       // position: absolute;
