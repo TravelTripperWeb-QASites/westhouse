@@ -23,16 +23,16 @@
     padding: 5px 17px;
     font-family: $primary-light;
     font-size: $type-size-10;
-    color: $white;
+    color: $dark-red;
     text-shadow: none;
     text-transform: uppercase;
     letter-spacing: .17em;
-    background-color: $dark-red;
+    background-color: transparent;
     border: solid 1px $white;
     border-radius: 0;
     transition: all .3s ease;
     &:hover {
-      color: $primary;
+      color: $dark-red;
       background-color: $white;
     }
   }
