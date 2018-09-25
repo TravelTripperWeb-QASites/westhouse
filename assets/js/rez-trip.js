@@ -106,8 +106,15 @@
 
         function fetchPPCOfferPrice() {
             $(".floating-price").addClass('loading-dots');
-            var arrival_date = $("#arrival_date").val() != '' ? $("#arrival_date").val() : null;
-            var departure_date = $("#departure_date").val() != '' ? $("#departure_date").val() : null;
+
+            var today = new Date();
+            var defaultArrival = today.toISOString().slice(0, 10);
+
+            var tomorrow         = new Date(today.setDate(today.getDate() + 1));
+            var defaultDeparture = tomorrow.toISOString().slice(0, 10);
+
+            var arrival_date = $("#arrival_date").val() != '' ? $("#arrival_date").val() : defaultArrival;
+            var departure_date = $("#departure_date").val() != '' ? $("#departure_date").val() : defaultDeparture;
             var adults = $("#adults").val();
             var children = $("#children").val();
 
