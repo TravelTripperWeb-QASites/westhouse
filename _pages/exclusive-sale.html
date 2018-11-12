@@ -7,7 +7,7 @@ meta_tags:
   robots:
 ---
 
-  <div class="inner-banner pattern bg-cover" ng-style="{'background-image':'url(' + offers.sRdetail.images[0].large + ')'}">
+  <div class="inner-banner pattern bg-cover" style="background-image:url('/assets/images/offers/exclusive-sale.jpg')">
     <h1>Exclusive Sale</h1>
   </div>
 
@@ -33,7 +33,7 @@ meta_tags:
 
   <section class="assets-details">
     <div class="assets-details-container">
-      <h3 ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h3>
+      <h3>Exclusive Sale</h3>
       <div class="assets-details-row">
 
         <div class="assets-details-calendar">
@@ -45,7 +45,7 @@ meta_tags:
               <form action="{{ site.reztripUrl }}search?" target="_blank" id="offerSearchForm" matho "get">
 
                 <div class="form-row">
-                  <input type="hidden" name="rate_code" value="[[offers.sRdetail.rate_plan_code]]">
+                  <input type="hidden" name="rate_code" value="CYBM18">
                   <div class="form-group col-md-6">
                     <input type="text" class="form-control" id="arrival_dates" name="arrival_date" placeholder="Arrival Date" aria-label="Arrival Date">
                   </div>
