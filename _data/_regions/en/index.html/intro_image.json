@@ -1,0 +1,31 @@
+[
+  {
+    "content": {
+      "name": "MoMa ",
+      "content_type": "image/jpeg",
+      "date_added": "2019-02-01-160529",
+      "url_thumb": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fill,g_faces,h_140,w_140/v1549055129/v5raixu4tugz84y2r2ug.jpg",
+      "url_xsmall": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_300,w_300/v1549055129/v5raixu4tugz84y2r2ug.jpg",
+      "url_small": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_768,w_768/v1549055129/v5raixu4tugz84y2r2ug.jpg",
+      "url_medium": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_992,w_992/v1549055129/v5raixu4tugz84y2r2ug.jpg",
+      "url_large": "http://res.cloudinary.com/traveltripperweb/image/upload/c_fit,h_1200,w_1200/v1549055129/v5raixu4tugz84y2r2ug.jpg",
+      "width": 3000,
+      "height": 2000,
+      "format": "jpg",
+      "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1549055129/v5raixu4tugz84y2r2ug.jpg",
+      "resource_type": "image",
+      "size": 2195893,
+      "s3_url": "//cdn.qa-traveltripper.info/site-assets/12_52_266/media/2019-02-01-160530/v5raixu4tugz84y2r2ug.jpg",
+      "s3_url_large": "//cdn.qa-traveltripper.info/site-assets/12_52_266/media/2019-02-01-160530/large_v5raixu4tugz84y2r2ug.jpg",
+      "s3_url_medium": "//cdn.qa-traveltripper.info/site-assets/12_52_266/media/2019-02-01-160530/medium_v5raixu4tugz84y2r2ug.jpg",
+      "s3_url_small": "//cdn.qa-traveltripper.info/site-assets/12_52_266/media/2019-02-01-160530/small_v5raixu4tugz84y2r2ug.jpg",
+      "s3_url_xsmall": "//cdn.qa-traveltripper.info/site-assets/12_52_266/media/2019-02-01-160530/xsmall_v5raixu4tugz84y2r2ug.jpg",
+      "s3_url_thumb": "//cdn.qa-traveltripper.info/site-assets/12_52_266/media/2019-02-01-160530/thumb_v5raixu4tugz84y2r2ug.jpg",
+      "git_file_name": "_assets/image_data/IMG-6498-Edit.jpg.json",
+      "path": "https://res.cloudinary.com/traveltripperweb/image/upload/v1549055129/v5raixu4tugz84y2r2ug.jpg",
+      "file_size": null,
+      "alt": "MoMa "
+    },
+    "_template": "image"
+  }
+]
